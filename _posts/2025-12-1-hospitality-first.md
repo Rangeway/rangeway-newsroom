@@ -41,7 +41,7 @@ Think about what we're asking people to do. We're asking them to spend 20 to 40 
 
 ## The Customer Expectation Gap
 
-I've spent over 15 years in hospitality, from properties like Wynn Las Vegas and the Cosmopolitan to boutique wellness retreats. In hospitality, we obsess over guest experience at every touchpoint. We think about arrival, about first impressions, about comfort during the stay, about departure. We design spaces that make people feel welcome and cared for.
+I've spent over 15 years in hospitality, from properties like Wynn Las Vegas and the Cosmopolitan of Las Vegas to boutique wellness retreats. In hospitality, we obsess over guest experience at every touchpoint. We think about arrival, about first impressions, about comfort during the stay, about departure. We design spaces that make people feel welcome and cared for.
 
 The charging industry has done almost none of this work.
 
@@ -83,7 +83,7 @@ We guarantee climate-controlled indoor comfort at every single location. Not "wh
 
 This is an industry first. No other network makes this guarantee. Most networks don't even attempt it. They deploy chargers in parking lots and hope that nearby businesses can fill the hospitality gap. We've decided that hope isn't a strategy.
 
-We think like hoteliers, not utility companies. That's not a tagline. It's how we make every decision, from site selection to amenity design to how we train our teams. When we evaluate a potential location, we don't just ask whether we can get power to it. We ask whether we can create an experience there that drivers will seek out and remember.
+We think like hotel operators, not utility companies. That's not a tagline. It's how we make every decision, from site selection to amenity design to how we train our teams. When we evaluate a potential location, we don't just ask whether we can get power to it. We ask whether we can create an experience there that drivers will seek out and remember.
 
 The goal isn't just to deliver electricity. It's to create experiences that make charging stops something to look forward to rather than endure. It's to transform what has been a pain point of EV ownership into a genuine pleasure.
 
