@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2025-12-01 06:00:00 -0800
+date: 2025-12-01 06:05:00 -0800
 author: Zak Winnick
 title: "Charging is Now a Hospitality Problem, Not a Utility Problem"
 subtitle: "The EV charging industry spent a decade deploying infrastructure. Now it needs to learn hospitality."
