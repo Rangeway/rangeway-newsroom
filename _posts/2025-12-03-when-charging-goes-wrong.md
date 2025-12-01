@@ -76,20 +76,3 @@ We're building Rangeway for the drives where the journey itself is part of the d
 Every decision we make comes back to a simple question: Are we thinking like a utility company or like a hotel? The utility company asks how to move electrons efficiently. The hotel asks how to make guests feel welcome. We know which approach we'd rather experience as customers, and we suspect you do too.
 
 Because at the end of the day, the best way to solve the "idle fee problem" isn't better penalties or smarter algorithms. It's creating an experience so good that customers never want to leave, but always do, because they can't wait to come back.
-
----
-
-## Join the Journey
-
-**Pathfinder Rewards:** Sign up free at [rangeway.app](https://rangeway.app) and start earning status toward premium benefits before our first locations open.
-
-**Trail Marker Podcast:** Follow our journey as we build America's first hospitality-driven EV charging network. New episodes cover everything from site selection to the future of electric road trips. Listen at [podcast.rangewayev.com](https://podcast.rangewayev.com) or wherever you get your podcasts.
-
-**Stay Connected:** Subscribe to our newsletter at [fieldnotes.rangewayev.com](https://fieldnotes.rangewayev.com) for updates on new locations, member events, and stories from the road.
-
----
-
-*See you on the road.*
-
-**Zak Winnick**
-Founder & CEO, Rangeway
