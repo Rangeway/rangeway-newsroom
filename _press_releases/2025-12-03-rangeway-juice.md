@@ -3,7 +3,11 @@ layout: press-release
 title: "Rangeway and Juice Partner to Bring Plug-and-Go Charging to Hospitality-Driven EV Network"
 date: 2025-12-03 06:00:00 -800
 description: "Rangeway partners with Juice to enable automatic plug-and-go charging across its hospitality-driven network, letting drivers register once and never think about apps, cards, or QR codes again."
+<<<<<<< HEAD
 image: /assets/images/rangeway-juice-ig.jpg
+=======
+image: /assets/images/rangeway-juice1.png
+>>>>>>> 975fffd4317817c9af33d71c09b39b908804490a
 ---
 
 *Strategic partnership enables automatic charging and payments, extending the seamless experience from charger to Driver's Lounge*
