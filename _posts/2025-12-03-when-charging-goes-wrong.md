@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2025-12-05 06:05:00 -0800
+date: 2025-12-05 06:00:00 -0800
 author: Zak Winnick
 title: "When Charging Goes Wrong: Why Hospitality Matters More Than Penalties"
 subtitle: "What the EV industry's approach to idle fees reveals about the difference between utility thinking and hospitality thinking"
