@@ -25,7 +25,7 @@ Let's start by acknowledging what's being built, because it's genuinely impressi
 
 Rove is creating premium urban and suburban charging destinations with high-end amenities, retail partnerships, and significant charger density at individual locations. Their Santa Ana flagship offers 40 chargers alongside a Gelson's market, car wash, and lounge. It's a compelling vision for the future of convenience charging in metropolitan areas.
 
-IONNA is tackling scale. With backing from BMW, GM, Honda, Hyundai, Kia, Mercedes-Benz, Stellantis, and Toyota, they're working toward 30,000 chargers coast-to-coast by 2030. They've developed a three-tier approach: Relay sites with canopies near existing amenities, Rechargery sites with curated retail partners like Sheetz or Wawa, and flagship Beacon locations with full amenity buildings, lounges, and restrooms. It's a thoughtful tiered strategy that addresses different market needs.
+IONNA is tackling scale. With backing from BMW, GM, Honda, Hyundai, Kia, Mercedes-Benz, Stellantis, and Toyota, they're working toward 30,000 chargers coast-to-coast by 2030. They've developed a four-tier approach: Relay sites with canopies but no owned amenity space, Rechargery At sites partnered with retailers like Sheetz or Wawa, full Rechargery locations with IONNA-owned amenity buildings, and flagship Beacon locations planned to include lounges and premium amenities. The Beacon tier is not yet built. It's a thoughtful tiered strategy that addresses different market needs.
 
 Tesla is experimenting too. Their Supercharger Diner in Santa Monica and the driver's lounge at Kettleman City show that even the company that built the largest charging network in the world recognizes that amenities matter. When Tesla starts adding diners and lounges to charging locations, it signals something important about where the industry is heading.
 
@@ -105,7 +105,7 @@ Our strategy is building a curated network in rural and underserved areas where 
 
 This focus allows us to do something important: guarantee consistency.
 
-When you're building 30,000 locations nationwide with multiple tiers, variability is almost unavoidable. A driver might arrive at a flagship location with a full lounge and premium restrooms, or they might arrive at a basic site with a canopy and whatever amenities happen to be nearby. The experience depends on which tier you happen to find along your route.
+When you're building 30,000 locations nationwide with multiple tiers, variability is almost unavoidable. A driver might eventually arrive at a flagship Beacon location with a lounge and restrooms (once they're built), or they might arrive at a Relay site with a canopy and whatever amenities happen to be nearby. IONNA has stated that 70-80% of their network at scale will be their higher-tier formats, but their current deployments are weighted toward the basic Relay tier. The experience you get depends on which tier you happen to find along your route.
 
 When you're building a curated network with intention, you can control every variable. Site selection, design standards, operational quality, brand execution. Every Rangeway location reflects the same standards because we're not stretching to be everywhere at once.
 
@@ -126,6 +126,8 @@ Every Rangeway stop meets the same standard. Climate-controlled indoor space. Pr
 Our loyalty program, Pathfinder Rewards, reflects the same philosophy. It's free to join, and everyone pays the same base rate for charging. Status is earned through usage, not purchased. As you move up through tiers, from Explorer to Voyager to Pioneer to the invite-only Trailblazer level, you earn credits back toward future charging plus experiential perks like complimentary beverages at Basecamps, lounge upgrades, and member events.
 
 No time-of-use pricing complexity. No surge rates. No wondering what you'll pay based on when you arrive. Predictability and transparency, because that's what hospitality looks like.
+
+While other networks are still developing their loyalty approaches, Pathfinder is designed to be live from day one.
 
 **Planning Made Easier**
 
