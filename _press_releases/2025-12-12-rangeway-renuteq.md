@@ -3,7 +3,7 @@ layout: press-release
 title: "Rangeway Partners with ReNuTeq to Bring Sustainable, Design-Forward Architecture to America's First Hospitality-Driven EV Charging Network"
 date: 2025-12-12 06:00:00 -800
 description: "Rangeway and ReNuTeq announce partnership bringing structural engineered bamboo architecture to America's first hospitality-driven EV charging destinations."
-image: /assets/images/rangeway-renuteq.png
+image: /assets/images/rangeway-renuteq-social.jpg
 ---
 
 *Strategic partnership pairs premium hospitality experience with carbon-negative structural bamboo technology*
