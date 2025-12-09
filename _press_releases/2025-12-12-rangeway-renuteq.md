@@ -14,7 +14,7 @@ The partnership unites Rangeway's hospitality-first philosophy with ReNuTeq's tw
 
 ReNuTeq's patented SEB technology transforms Guadua bamboo, sourced sustainably from Colombia, into architectural-grade structural materials that exceed the strength of traditional engineered wood products. The material is carbon-negative, LEED-qualified, and certified under the International Building Code. ReNuTeq's prefabricated, fully kitted approach enables rapid deployment without compromising design quality.
 
-"[QUOTE FROM LUKE D. SCHUETTE, FOUNDER AND CEO OF RENUTEQ]"
+"We have been working towards this type of ideal application of our materials for several years, since our work with BMW, Electrify America, and similar," said Luke D. Schuette, Founder and CEO of ReNuTeq. "Finally, Zak and his team have meticulously constructed the perfect business model and Driver's Lounge brand optimized for the USA traveler. We are honored that our SEB (Structural Engineered Bamboo) technology has been chosen to add innovation, performance, aesthetics, and sustainability to the Rangeway brand."
 
 The partnership establishes a signature architectural identity for Rangeway's network. In Europe, leading charging operators have demonstrated the power of distinctive station design, with recognizable canopies becoming as integral to their brand as the logo itself. Rangeway and ReNuTeq aim to bring that same design-forward approach to America, creating charging destinations drivers will recognize from the road.
 
@@ -48,7 +48,7 @@ Media Relations
 media@rangewayev.com
 
 **ReNuTeq**
-Luke Schuette
-luke@renuteq.com
+Media Relations
+info@renuteq.com
 
 ###
