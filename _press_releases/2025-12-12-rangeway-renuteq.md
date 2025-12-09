@@ -8,7 +8,7 @@ image: /assets/images/rangeway-renuteq-social.jpg
 
 *Strategic partnership pairs premium hospitality experience with carbon-negative structural bamboo technology*
 
-**[SAN FRANCISCO, CALIFORNIA]** — Rangeway, America's first hospitality-driven premium EV charging network, today announced a strategic partnership with ReNuTeq, the industry leader in Structural Engineered Bamboo (SEB) technology. ReNuTeq will design and construct Rangeway's signature Driver's Lounges and solar-powered charging canopies, creating a distinctive architectural identity for the network's premium charging destinations.
+**[SAN FRANCISCO, CA]** — Rangeway, America's first hospitality-driven premium EV charging network, today announced a strategic partnership with ReNuTeq, the industry leader in Structural Engineered Bamboo (SEB) technology. ReNuTeq will design and construct Rangeway's signature Driver's Lounges and solar-powered charging canopies, creating a distinctive architectural identity for the network's premium charging destinations.
 
 The partnership unites Rangeway's hospitality-first philosophy with ReNuTeq's two decades of innovation in sustainable structural design. ReNuTeq founder Luke D. Schuette has delivered EV charging infrastructure for automotive leaders including BMW, and led the ASTM task group that established SEB testing standards and added the material to the International Building Code in 2012.
 
