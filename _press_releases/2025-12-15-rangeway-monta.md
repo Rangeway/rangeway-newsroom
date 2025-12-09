@@ -6,8 +6,6 @@ description: "Rangeway announces Monta as its charge point management partner, b
 image: /assets/images/rangeway-monta-social.jpg
 ---
 
-*Partnership brings proven European platform to Rangeway's premium Driver's Lounge experience*
-
 **SAN FRANCISCO, CA** — Rangeway, America's first hospitality-driven premium EV charging network, today announced its selection of Monta as its charge point management software partner. The partnership positions Rangeway among Monta's early U.S. network partners as the Copenhagen-based platform expands its presence in North America.
 
 Monta's comprehensive platform will serve as the operational backbone for Rangeway's network of Basecamps and Waystations, managing everything from real-time charger monitoring and predictive diagnostics to seamless payment processing and dynamic pricing. The integration supports Rangeway's commitment to delivering consistent, premium experiences at every location.
