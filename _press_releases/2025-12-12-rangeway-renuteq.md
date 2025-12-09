@@ -18,6 +18,8 @@ ReNuTeq's patented SEB technology transforms Guadua bamboo, sourced sustainably 
 
 "[QUOTE FROM LUKE D. SCHUETTE, FOUNDER AND CEO OF RENUTEQ]"
 
+The partnership establishes a signature architectural identity for Rangeway's network. In Europe, leading charging operators have demonstrated the power of distinctive station design, with recognizable canopies becoming as integral to their brand as the logo itself. Rangeway and ReNuTeq aim to bring that same design-forward approach to America, creating charging destinations drivers will recognize from the road.
+
 Under the partnership, ReNuTeq will provide:
 
 - Custom-designed solar canopy structures featuring Structural Engineered Bamboo and integrated solar systems
