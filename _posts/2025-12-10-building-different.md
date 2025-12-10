@@ -101,7 +101,7 @@ One thing you'll notice about Rangeway: we're not trying to be everywhere.
 
 This is intentional, not a limitation.
 
-Our strategy is building a curated network in rural and underserved areas where premium charging infrastructure doesn't exist today. We're focusing on the routes that long-distance travelers actually use, the communities that have been passed over by networks chasing urban density and high-traffic interstate corridors.
+Our strategy is building a curated network where premium charging infrastructure doesn't exist today. We're focusing on the routes that long-distance travelers actually use, the communities that have been passed over by networks chasing urban density and high-traffic interstate corridors.
 
 This focus allows us to do something important: guarantee consistency.
 
