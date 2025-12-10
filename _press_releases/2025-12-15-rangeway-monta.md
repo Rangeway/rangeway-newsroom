@@ -12,7 +12,7 @@ Monta's comprehensive platform will serve as the operational backbone for Rangew
 
 "We evaluated charge point management platforms with the same rigor we apply to every aspect of our guest experience," said Zak Winnick, Founder and CEO of Rangeway. "Monta stood out for its reliability, proven scale across European markets, and the sophistication needed to support our Pathfinder Rewards program. Their platform gives us the foundation to deliver on our promise: that every Rangeway stop feels like part of the journey, not just a pause along the way."
 
-Monta's OCPP 2.0.1-compliant platform brings capabilities essential to Rangeway's hospitality-first approach, including Plug & Charge support for frictionless sessions, real-time monitoring and analytics across the entire network, dynamic pricing controls, and the integration infrastructure needed to power Pathfinder Rewards, Rangeway's earned-status loyalty program.
+Monta's OCPP 2.0.1-compliant platform brings capabilities essential to Rangeway's hospitality-first approach, including real-time monitoring and analytics across the entire network, dynamic pricing controls, and the integration infrastructure needed to power Pathfinder Rewards, Rangeway's earned-status loyalty program.
 
 Founded in Copenhagen in 2020, Monta has rapidly become Europe's leading EV charging software platform, now managing over 190,000 commercial charge points and processing more than two million monthly charging sessions. The company opened its U.S. headquarters in Miami in October 2024, backed by $87 million in Series B funding.
 
