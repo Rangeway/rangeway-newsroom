@@ -123,7 +123,7 @@ Every Rangeway stop meets the same standard. Climate-controlled indoor space. Pr
 
 **Pathfinder Rewards**
 
-Our loyalty program, Pathfinder Rewards, reflects the same philosophy. It's free to join, and everyone pays the same base rate for charging. Status is earned through usage, not purchased. As you move up through tiers, from Explorer to Voyager to Pioneer to the invite-only Trailblazer level, you earn credits back toward future charging plus experiential perks like complimentary beverages at Basecamps, lounge upgrades, and member events.
+Our loyalty program, Pathfinder Rewards, reflects the same philosophy. It's free to join, and everyone pays the same base rate for charging. Status is earned through usage, not purchased. As you move up through tiers, from Explorer to Voyager to Pioneer to the invite-only Trailblazer level, you earn credits back toward future charging plus experiential perks like complimentary beverages at Basecamps, exclusive merch, and member events.
 
 No time-of-use pricing complexity. No surge rates. No wondering what you'll pay based on when you arrive. Predictability and transparency, because that's what hospitality looks like.
 
@@ -143,7 +143,7 @@ It needs urban convenience hubs where commuters can top up quickly near home or 
 
 It needs nationwide coverage so drivers never worry about finding a charger on any highway in America. IONNA is building that.
 
-It also needs premium hospitality in the places those approaches don't reach: rural communities, smaller towns, the routes between major metros where long-distance travelers find themselves with few good options. That's what we're building.
+It also needs premium hospitality in the places those approaches don't reach: smaller towns, the routes between major metros where long-distance travelers find themselves with few good options. That's what we're building.
 
 These aren't competing visions. They're complementary pieces of a larger puzzle. The same driver might use all three networks at different moments in their life: IONNA on an interstate road trip, Rove near their office, Rangeway on a leisurely drive through wine country or out to visit family three states away.
 
