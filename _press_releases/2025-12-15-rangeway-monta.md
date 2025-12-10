@@ -10,7 +10,7 @@ image: /assets/images/rangeway-monta-social.jpg
 
 Monta's comprehensive platform will serve as the operational backbone for Rangeway's network of Basecamps and Waystations, managing everything from real-time charger monitoring and predictive diagnostics to seamless payment processing and dynamic pricing. The integration supports Rangeway's commitment to delivering consistent, premium experiences at every location.
 
-"We evaluated charge point management platforms with the same rigor we apply to every aspect of our guest experience," said Zak Winnick, Founder and CEO of Rangeway. "Monta stood out for its reliability, proven scale across European markets, and the sophistication needed to support our Pathfinder Rewards program. Their platform gives us the foundation to deliver on our promise: that every Rangeway stop feels like part of the journey, not just a pause along the way."
+"We evaluated charge point management platforms with the same standards we apply to every aspect of our guest experience," said Zak Winnick, Founder and CEO of Rangeway. "Monta stood out for its reliability, proven scale across European markets, and the sophistication needed to support our Pathfinder Rewards program. Their platform gives us the foundation to deliver on our promise: that every Rangeway stop feels like part of the journey, not just a pause along the way."
 
 Monta's OCPP 2.0.1-compliant platform brings capabilities essential to Rangeway's hospitality-first approach, including real-time monitoring and analytics across the entire network, dynamic pricing controls, and the integration infrastructure needed to power Pathfinder Rewards, Rangeway's earned-status loyalty program.
 
