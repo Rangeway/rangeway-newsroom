@@ -3,7 +3,7 @@ layout: press-release
 title: "Rangeway Selects Monta as Charge Point Management Partner to Power America's First Hospitality-Driven EV Charging Network"
 date: 2025-12-15 06:00:00 -800
 description: "Rangeway announces Monta as its charge point management partner, bringing Europe's leading EV charging platform to America's first hospitality-driven network featuring climate-controlled Driver's Lounges at every location."
-image: /assets/images/rangeway-monta-social.jpg
+image: /assets/images/rangeway-monta-social.png
 ---
 
 **SAN FRANCISCO, CA** — Rangeway, America's first hospitality-driven premium EV charging network, today announced its selection of Monta as its charge point management software (CPMS) partner. The partnership positions Rangeway among Monta's growing list of over twenty-five U.S. and Canadian network partners as the Copenhagen-founded platform completes its first full year in North America.
