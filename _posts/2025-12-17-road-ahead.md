@@ -13,26 +13,19 @@ When we set out to build Rangeway, we started with a simple belief: EV charging 
 
 It should also shape how we look.
 
-Today, we're introducing a refreshed Rangeway brand identity: a new logo, refined color palette, and typography system designed to reflect who we are and where we're headed.
-
-But before I show you where we landed, I want to share how we got here.
-
-<div class="brand-showcase" style="background: #2d2d2d; border-radius: 16px; padding: 48px; display: flex; align-items: center; justify-content: center; gap: 20px; margin: 32px 0;">
-  <svg width="64" height="72" viewBox="0 0 96 112">
-    <path d="M20 100 L20 16 C20 10 24 6 30 6 L56 6 C72 6 80 16 80 32 C80 46 72 54 58 56 L82 100"
-          stroke="#ffffff" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle cx="58" cy="32" r="10" fill="#f4a855"/>
-  </svg>
-  <span style="font-family: 'Raleway', sans-serif; font-size: 40px; font-weight: 700; color: white; letter-spacing: -0.01em;">Rangeway</span>
-</div>
+Today, we're introducing a refreshed Rangeway brand identity. But before I show you where we landed, I want to share how we got here.
 
 ## Where We Started
 
-Our original logo featured a stylized mountain with a rising sun. On paper, it made sense. We're building charging locations along America's highways, many of them near national parks and natural destinations. Mountains. Sunsets. The open road.
+Our original logo featured dark mountain silhouettes against a warm amber-orange gradient sky, with a pale sun rising in the corner. The colors were warm, the execution was clean, and as an app icon it looked professional.
 
 The problem was what it communicated.
 
-When people saw that logo, they thought "outdoor gear company." They thought camping equipment, hiking boots, adventure apparel. The visual language said "wilderness" when we needed it to say "welcome."
+When people saw that logo, they thought "outdoor brand." They thought trail apps, hiking guides, national park services. The mountain imagery said "wilderness" and "adventure" when we needed it to say "welcome" and "comfort."
+
+<div class="old-logo-showcase" style="background: #f5f1eb; border-radius: 12px; padding: 40px; display: flex; align-items: center; justify-content: center; gap: 16px; margin: 28px 0;">
+  <img src="/assets/images/logo-original.png" alt="Original Rangeway logo" style="width: 80px; height: 80px; border-radius: 16px;">
+</div>
 
 We're not an outdoor brand. We're a hospitality company. We happen to serve travelers on highways that pass through beautiful places, but our promise isn't adventure. Our promise is comfort. The warm glow of a Driver's Lounge after a long stretch of desert highway. The relief of stepping into climate control on a 110-degree afternoon. A clean restroom, a quality cup of coffee, a place designed for humans rather than just vehicles.
 
@@ -42,9 +35,11 @@ The mountain logo didn't capture any of that.
 
 The turning point came when we started describing what we do to potential partners and investors. We'd explain the indoor comfort guarantee, the hospitality-first philosophy, the way we think like hotel operators rather than utility companies. They'd get it. They'd be excited.
 
-Then they'd look at our logo and say, "So... you're like REI for electric cars?"
+Then they'd look at our logo and say:
 
-No. That's not it at all.
+> "Oh, so you're focused on national parks? Like a trail guide for EV drivers?"
+
+Not exactly. Yes, many of our locations will be near parks and natural destinations. But that's not what we're about. We're not selling the wilderness. We're selling the warm place you stop on the way there.
 
 We realized our visual identity was working against us. Every conversation started with correcting a first impression. We were spending energy explaining what we weren't instead of showing what we are.
 
@@ -63,11 +58,12 @@ The answer: relief. Anticipation. The sense that comfort is just ahead.
 That's when the Path Mark emerged.
 
 <div class="brand-showcase" style="background: #2d2d2d; border-radius: 16px; padding: 48px; display: flex; align-items: center; justify-content: center; gap: 20px; margin: 32px 0;">
-  <svg width="80" height="90" viewBox="0 0 96 112">
+  <svg width="64" height="72" viewBox="0 0 96 112">
     <path d="M20 100 L20 16 C20 10 24 6 30 6 L56 6 C72 6 80 16 80 32 C80 46 72 54 58 56 L82 100"
           stroke="#ffffff" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
     <circle cx="58" cy="32" r="10" fill="#f4a855"/>
   </svg>
+  <span style="font-family: 'Raleway', sans-serif; font-size: 40px; font-weight: 700; color: white; letter-spacing: -0.01em;">Rangeway</span>
 </div>
 
 At first glance, it's a distinctive "R." Look closer, and you'll see a road extending forward, with a warm dot marking your destination.
@@ -75,6 +71,21 @@ At first glance, it's a distinctive "R." Look closer, and you'll see a road exte
 That warmth isn't decorative. It represents the glow you see from the highway: the lit window of a Driver's Lounge, the signal that this stop will be different from the cold, utilitarian charging experiences you've had before.
 
 It says "destination" rather than "wilderness." It signals premium without pretension. It's unmistakably ours.
+
+<div class="comparison" style="display: flex; gap: 20px; margin: 28px 0; align-items: stretch;">
+  <div style="flex: 1; background: #f5f1eb; border-radius: 12px; padding: 32px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;">
+    <img src="/assets/images/logo-original.png" alt="Original logo" style="width: 56px; height: 56px; border-radius: 12px;">
+    <span style="font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: #666;">Before</span>
+  </div>
+  <div style="flex: 1; background: #2d2d2d; border-radius: 12px; padding: 32px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;">
+    <svg width="48" height="54" viewBox="0 0 96 112">
+      <path d="M20 100 L20 16 C20 10 24 6 30 6 L56 6 C72 6 80 16 80 32 C80 46 72 54 58 56 L82 100" 
+            stroke="#ffffff" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="58" cy="32" r="10" fill="#f4a855"/>
+    </svg>
+    <span style="font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.6);">After</span>
+  </div>
+</div>
 
 ## More Than a Logo
 
