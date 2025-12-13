@@ -37,7 +37,7 @@ The turning point came when we started describing what we do to potential partne
 
 Then they'd look at our logo and say:
 
-> "Oh, so you're focused on national parks? Like a trail guide for EV drivers?"
+> "Oh, so you're building at national parks?"
 
 Not exactly. Yes, many of our locations will be near parks and natural destinations. But that's not what we're about. We're not selling the wilderness. We're selling the warm place you stop on the way there.
 
