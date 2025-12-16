@@ -6,16 +6,16 @@ title: "A New Mark for the Road Ahead"
 subtitle: "Introducing Rangeway's refreshed brand identity"
 category: blog
 description: "Today, we're introducing a refreshed Rangeway brand identity: a new logo, refined color palette, and typography system designed to reflect who we are and where we're headed."
-image: /assets/images/blog2025-12-12.jpg
+image: /assets/images/blog2025-12-17.jpg
 ---
 
 When we set out to build Rangeway, we started with a simple belief: EV charging should be part of the journey, not an interruption to it. That philosophy shapes everything we do. It should also shape how we look.
 
-Today, we're introducing a refreshed brand identity. Here's how we got here.
+Today, we're introducing a refreshed brand identity that reflects who we are: a hospitality company, not a utility.
 
 ## Where We Started
 
-Our original logo featured mountain silhouettes against a warm amber sky. Clean execution, professional feel.
+Our original logo featured mountain silhouettes against a warm amber sky.
 
 <div class="old-logo-showcase" style="background: #f5f1eb; border-radius: 12px; padding: 40px; display: flex; align-items: center; justify-content: center; gap: 16px; margin: 28px 0;">
   <img src="/assets/images/logo-original.png" alt="Original Rangeway logo" style="width: 80px; height: 80px; border-radius: 16px;">
@@ -143,7 +143,7 @@ Beacon is our functional color: the deep teal you'll see on charging hardware an
 
 ## What This Means
 
-When you see the Path Mark from the highway, you'll know what's waiting: a Driver's Lounge with climate control, premium restrooms, comfortable seating, quality refreshments, and reliable charging.
+When you see the Path Mark from the highway, you'll know what's waiting: a Driver's Lounge with climate control, premium restrooms, comfortable seating, quality refreshments, and reliable charging. We think like hotel operators, not utility companies, and now our brand reflects that.
 
 The warm dot is a promise. This now feels like a place, not just infrastructure.
 
