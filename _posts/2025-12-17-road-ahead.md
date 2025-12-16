@@ -151,8 +151,6 @@ We're grateful to everyone who has supported us on this journey. The road ahead 
 
 ---
 
-*Learn more at [rangewayev.com](https://rangewayev.com)*
-
 <style>
 /* Brand refresh post styles - Light mode defaults */
 .color-label {
