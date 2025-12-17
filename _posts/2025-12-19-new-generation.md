@@ -6,7 +6,7 @@ title: "A New Generation of Charging is Here"
 subtitle: "Independent research confirms what EV travelers already know: the charging experience matters."
 category: blog
 description: "The EV charging industry is changing. After years of rapid expansion focused on port counts and coverage maps, a new generation of operators is emerging with a different priority: the experience itself."
-image: /assets/images/blog2025-12-19.png
+image: /assets/images/blog2025-12-19.jpg
 ---
 
 The EV charging industry is changing. 
