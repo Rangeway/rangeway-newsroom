@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2025-12-17 06:15:00 -0800
+date: 2025-12-17 06:10:00 -0800
 author: Zak Winnick
 title: "A New Mark for the Road Ahead"
 subtitle: "Introducing Rangeway's refreshed brand identity"
