@@ -11,7 +11,7 @@
     <link rel="canonical" href="{{ page.url | absolute_url }}">
 
     <!-- Theme Color for Mobile -->
-    <meta name="theme-color" content="#F09060">
+    <meta name="theme-color" content="#f4a855">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -29,10 +29,10 @@
     <meta property="twitter:image" content="{% if page.og_image %}{{ page.og_image }}{% else %}{{ site.url }}/assets/images/newsroom-og.jpg{% endif %}">
     <meta name="twitter:site" content="@rangewayenergy">
 
-    <!-- Fonts - Brand Guidelines: Montserrat for headlines, Source Sans Pro for body -->
+    <!-- Fonts - Brand Guidelines v2.0: Raleway for headlines, Source Sans Pro for body -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -64,26 +64,15 @@
     <div class="container">
         <div class="nav-wrapper">
             <div class="logo">
-                <a href="{{ '/' | relative_url }}" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
-                    <!-- Brand Logo - Full Color Version -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 34 34">
-                        <defs>
-                            <linearGradient id="navLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="#F09060"/>
-                                <stop offset="100%" stop-color="#FFB366"/>
-                            </linearGradient>
-                            <clipPath id="navLogoRounded">
-                                <rect width="34" height="34" rx="10" ry="10" />
-                            </clipPath>
-                        </defs>
-                        <rect width="34" height="34" rx="10" ry="10" fill="url(#navLogoGrad)" />
-                        <g clip-path="url(#navLogoRounded)">
-                            <path d="M 0 26 L 8 18 L 15 24 L 22 17 L 34 26 L 34 34 L 0 34 Z" fill="#2f2f2f" />
-                        </g>
-                        <circle cx="25" cy="7" r="4" fill="white" fill-opacity="0.6" />
+                <a href="{{ '/' | relative_url }}" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                    <!-- Brand Mark - R with warm accent dot -->
+                    <svg width="40" height="46" viewBox="0 0 96 112" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="color: var(--text-heading);">
+                        <path d="M20 100 L20 16 C20 10 24 6 30 6 L56 6 C72 6 80 16 80 32 C80 46 72 54 58 56 L82 100"
+                              stroke="currentColor" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="58" cy="32" r="10" fill="#f4a855"/>
                     </svg>
-                    <!-- Brand Wordmark - Montserrat Bold, All Caps, Generous Tracking -->
-                    <span style="font-family: 'Montserrat', -apple-system, sans-serif; font-size: 20px; font-weight: 800; letter-spacing: 0.08em; color: var(--text-heading);">RANGEWAY</span>
+                    <!-- Brand Wordmark - Raleway Bold, Title Case -->
+                    <span style="font-family: 'Raleway', -apple-system, sans-serif; font-size: 22px; font-weight: 700; letter-spacing: -0.01em; color: var(--text-heading);">Rangeway</span>
                 </a>
             </div>
             <div class="nav-menu" id="navMenu">

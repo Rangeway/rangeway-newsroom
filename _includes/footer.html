@@ -116,7 +116,15 @@
     <div class="container">
         <div class="footer-grid">
             <div class="footer-section">
-                <h4>{{ site.organization.name }}</h4>
+                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 1rem;">
+                    <!-- Footer Logo Mark - White version for dark background -->
+                    <svg width="32" height="37" viewBox="0 0 96 112" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M20 100 L20 16 C20 10 24 6 30 6 L56 6 C72 6 80 16 80 32 C80 46 72 54 58 56 L82 100"
+                              stroke="#ffffff" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="58" cy="32" r="10" fill="#f4a855"/>
+                    </svg>
+                    <span style="font-family: 'Raleway', sans-serif; font-size: 18px; font-weight: 700; letter-spacing: -0.01em; color: white;">Rangeway</span>
+                </div>
                 <a href="{{ '/' | relative_url }}">Home</a>
                 <a href="{{ '/press.html' | relative_url }}">Press Releases</a>
                 <a href="{{ '/case-studies.html' | relative_url }}">Case Studies</a>

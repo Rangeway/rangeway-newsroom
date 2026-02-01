@@ -1,11 +1,11 @@
-/* Brand Guidelines CSS - Test Version
-   Based on Rangeway Brand Guidelines v1.0
-   Colors: Sunset Coral, Golden Highway, Mountain Charcoal, Coastal Cream, Ocean Deep, Fog Gray
-   Typography: Montserrat/Raleway for headlines, Source Sans Pro/Open Sans for body
+/* Brand Guidelines CSS - Updated Brand v2.0
+   Based on Rangeway Brand Guidelines v2.0
+   Colors: Warm, Charcoal, Cream, Sage
+   Typography: Raleway for headlines, Source Sans Pro for body
 */
 
-/* Import Google Fonts - Montserrat for brand headlines */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Source+Sans+Pro:wght@300;400;600&display=swap');
+/* Import Google Fonts - Raleway for brand headlines */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&family=Source+Sans+Pro:wght@300;400;600&display=swap');
 
 /* Reset & Base Styles */
 * {
@@ -23,7 +23,7 @@ html {
     position: absolute;
     top: -40px;
     left: 0;
-    background: #F09060;
+    background: var(--warm);
     color: #fff;
     padding: 8px;
     text-decoration: none;
@@ -35,63 +35,78 @@ html {
     top: 0;
 }
 
-/* CSS Variables - Brand Colors from Guidelines */
+/* CSS Variables - Brand Colors from Guidelines v2.0 */
 :root {
     /* Brand Primary Colors */
-    --sunset-coral: #F09060;
-    --golden-highway: #FFB366;
-    --mountain-charcoal: #4A4A4A;
+    --warm: #f4a855;
+    --warm-light: #f7bc7a;
+    --warm-dark: #e09540;
+    --charcoal: #2d2d2d;
+    --charcoal-light: #3d3d3d;
+    --charcoal-deep: #1a1a1a;
 
     /* Brand Supporting Colors */
-    --coastal-cream: #F5DEB3;
-    --ocean-deep: #2C5F7C;
-    --fog-gray: #B8B8B8;
+    --cream: #f5f1eb;
+    --cream-dark: #ebe5dc;
+    --sage: #4a5d52;
+    --sage-light: #5a7266;
+    --sage-dark: #3a4d42;
+
+    /* Legacy color aliases for compatibility */
+    --sunset-coral: var(--warm);
+    --golden-highway: var(--warm-light);
+    --mountain-charcoal: var(--charcoal);
+    --coastal-cream: var(--cream);
+    --ocean-deep: var(--sage);
+    --fog-gray: #a0a0a0;
 
     /* Application Colors - Light Mode */
     --bg-primary: #FFFFFF;
-    --bg-secondary: #FAFAFA;
-    --text-primary: #2C3E50;
-    --text-secondary: #666666;
-    --text-heading: #4A4A4A;
+    --bg-secondary: var(--cream);
+    --text-primary: var(--charcoal);
+    --text-secondary: #555555;
+    --text-heading: var(--charcoal);
     --card-bg: #FFFFFF;
-    --border-color: #E6E6E6;
+    --border-color: var(--cream-dark);
     --shadow-light: rgba(0,0,0,0.08);
     --shadow-medium: rgba(0,0,0,0.12);
     --shadow-heavy: rgba(0,0,0,0.16);
-    --accent-color: #F09060;
-    --accent-hover: #e07a48;
+    --shadow-warm: rgba(244, 168, 85, 0.15);
+    --accent-color: var(--warm);
+    --accent-hover: var(--warm-dark);
     --nav-bg: #FFFFFF;
-    --footer-bg: #4A4A4A;
-    --footer-text: #F5DEB3;
-    --stats-bg: #FAFAFA;
+    --footer-bg: var(--charcoal);
+    --footer-text: var(--cream);
+    --stats-bg: var(--cream);
 }
 
 /* Dark Mode - Automatic based on system preference */
 @media (prefers-color-scheme: dark) {
     :root {
-        /* Application Colors - Dark Mode with Enhanced Color Palette */
-        --bg-primary: #1a1a1a;
-        --bg-secondary: #1e2831; /* Dark ocean blue tint */
+        /* Application Colors - Dark Mode with Brand v2.0 Palette */
+        --bg-primary: var(--charcoal-deep);
+        --bg-secondary: var(--charcoal);
         --text-primary: #e0e0e0;
         --text-secondary: #b0b0b0;
         --text-heading: #f5f5f5;
-        --card-bg: #252d35; /* Subtle blue-gray */
-        --border-color: #3a4854; /* Slightly blue-tinted border */
+        --card-bg: var(--charcoal-light);
+        --border-color: #4a4a4a;
         --shadow-light: rgba(0,0,0,0.3);
         --shadow-medium: rgba(0,0,0,0.4);
         --shadow-heavy: rgba(0,0,0,0.5);
-        --accent-color: #F09060;
-        --accent-hover: #FFB366;
-        --nav-bg: #1e2428; /* Slightly warmer dark */
-        --footer-bg: #151a1f; /* Dark blue-gray */
-        --footer-text: #F5DEB3;
-        --stats-bg: #1a2229; /* Dark with subtle blue */
-        --coastal-cream: #2a2a2a;
+        --accent-color: var(--warm);
+        --accent-hover: var(--warm-light);
+        --nav-bg: var(--charcoal-deep);
+        --footer-bg: var(--charcoal-deep);
+        --footer-text: var(--cream);
+        --stats-bg: var(--charcoal);
+        --coastal-cream: var(--charcoal);
+        --cream: var(--charcoal);
 
         /* Enhanced dark mode colors */
-        --dark-ocean: #1a2a35; /* Deep ocean blue for alternating sections */
-        --dark-coral-tint: rgba(240, 144, 96, 0.08); /* Very subtle coral overlay */
-        --dark-gold-tint: rgba(255, 179, 102, 0.08); /* Very subtle gold overlay */
+        --dark-sage: var(--sage-dark);
+        --dark-warm-tint: rgba(244, 168, 85, 0.08);
+        --dark-warm-glow: rgba(244, 168, 85, 0.15);
     }
 
     /* Ensure body text is visible in dark mode */
@@ -248,13 +263,13 @@ html {
         color: inherit !important;
     }
 
-    /* Footer - keep Coastal Cream text in dark mode */
+    /* Footer - keep Cream text in dark mode */
     .footer-section a {
-        color: var(--coastal-cream) !important;
+        color: var(--cream) !important;
     }
 
     .footer-section a:hover {
-        color: var(--golden-highway) !important;
+        color: var(--warm) !important;
     }
 
     .footer-section h4 {
@@ -262,7 +277,7 @@ html {
     }
 
     .footer-section p {
-        color: var(--coastal-cream) !important;
+        color: var(--cream) !important;
     }
 
     .footer-bottom p {
@@ -270,32 +285,32 @@ html {
     }
 
     .footer-social-icons a {
-        color: var(--coastal-cream) !important;
+        color: var(--cream) !important;
     }
 
     .footer-social-icons a:hover {
-        color: var(--golden-highway) !important;
+        color: var(--warm) !important;
     }
 
     .support-hours {
-        color: var(--coastal-cream) !important;
+        color: var(--cream) !important;
     }
 
     .support-hours strong {
-        color: var(--sunset-coral) !important;
+        color: var(--warm) !important;
     }
 
     .contact-phone {
-        color: var(--coastal-cream) !important;
+        color: var(--cream) !important;
     }
 
     /* Enhanced section backgrounds with subtle color */
     .services {
-        background: linear-gradient(135deg, var(--bg-primary) 0%, var(--dark-ocean) 100%) !important;
+        background: linear-gradient(135deg, var(--bg-primary) 0%, var(--charcoal) 100%) !important;
     }
 
     .network-map {
-        background: linear-gradient(135deg, var(--dark-ocean) 0%, #1e2a31 100%) !important;
+        background: linear-gradient(135deg, var(--charcoal) 0%, var(--charcoal-light) 100%) !important;
     }
 
     /* Card enhancements with subtle colored borders */
@@ -313,7 +328,7 @@ html {
         left: 0;
         right: 0;
         height: 3px;
-        background: linear-gradient(90deg, var(--sunset-coral) 0%, var(--golden-highway) 100%);
+        background: linear-gradient(90deg, var(--warm) 0%, var(--warm-light) 100%);
         opacity: 0;
         transition: opacity 0.3s ease;
     }
@@ -323,18 +338,18 @@ html {
     }
 
     .service-card:hover {
-        border-color: rgba(240, 144, 96, 0.3) !important;
-        box-shadow: 0 8px 30px rgba(240, 144, 96, 0.1) !important;
+        border-color: rgba(244, 168, 85, 0.3) !important;
+        box-shadow: 0 8px 30px var(--dark-warm-tint) !important;
     }
 
     /* Hero section with subtle gradient */
     .hero {
-        background: linear-gradient(180deg, var(--bg-primary) 0%, var(--dark-ocean) 100%) !important;
+        background: linear-gradient(180deg, var(--bg-primary) 0%, var(--charcoal) 100%) !important;
     }
 
     /* Network map cards with enhanced styling */
     .network-map-content {
-        background: var(--dark-coral-tint);
+        background: var(--dark-warm-tint);
         padding: 2rem;
         border-radius: 8px;
     }
@@ -356,16 +371,16 @@ html {
         background: var(--bg-primary) !important;
     }
 
-    /* Secondary buttons in dark mode - use sunset coral */
+    /* Secondary buttons in dark mode - use warm accent */
     .btn-secondary {
-        color: var(--sunset-coral) !important;
-        border-color: var(--sunset-coral) !important;
+        color: var(--warm) !important;
+        border-color: var(--warm) !important;
     }
 
     .btn-secondary:hover {
-        background: var(--sunset-coral) !important;
+        background: var(--warm) !important;
         color: white !important;
-        box-shadow: 0 4px 12px rgba(240, 144, 96, 0.3) !important;
+        box-shadow: 0 4px 12px var(--dark-warm-glow) !important;
     }
 }
 
@@ -382,9 +397,10 @@ body {
     padding: 0 20px;
 }
 
-/* Typography - Brand Guidelines */
+/* Typography - Brand Guidelines v2.0 */
 h1, h2, h3, h4 {
-    font-family: 'Montserrat', -apple-system, sans-serif;
+    font-family: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    letter-spacing: -0.01em;
 }
 
 h1 {
@@ -425,46 +441,46 @@ p {
 
 /* Buttons - Using Brand Colors */
 .btn-primary {
-    background: var(--golden-highway);
-    color: var(--mountain-charcoal);
+    background: var(--warm);
+    color: white;
     border: none;
     padding: 12px 28px;
-    border-radius: 6px;
+    border-radius: 8px;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Raleway', sans-serif;
     text-decoration: none;
     display: inline-block;
 }
 
 .btn-primary:hover {
-    background: var(--sunset-coral);
+    background: var(--warm-dark);
     color: white;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(240, 144, 96, 0.3);
+    box-shadow: 0 4px 12px var(--shadow-warm);
 }
 
 .btn-secondary {
     background: transparent;
-    color: var(--ocean-deep);
-    border: 2px solid var(--ocean-deep);
+    color: var(--sage);
+    border: 2px solid var(--sage);
     padding: 10px 26px;
-    border-radius: 6px;
+    border-radius: 8px;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Raleway', sans-serif;
     text-decoration: none;
 }
 
 .btn-secondary:hover {
-    background: var(--ocean-deep);
+    background: var(--sage);
     color: white;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(44, 95, 124, 0.3);
+    box-shadow: 0 4px 12px rgba(74, 93, 82, 0.3);
 }
 
 .btn-large {
@@ -580,7 +596,8 @@ p {
 /* Hero Section */
 .hero {
     padding: 120px 0 80px;
-    background: var(--bg-secondary);
+    background: linear-gradient(180deg, var(--cream) 0%, var(--bg-primary) 100%);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .hero-grid {
@@ -894,7 +911,7 @@ p {
 /* Pathfinder CTA Section */
 .pathfinder-cta {
     padding: 80px 0;
-    background: linear-gradient(135deg, var(--ocean-deep) 0%, #1e4559 100%);
+    background: linear-gradient(135deg, var(--sage) 0%, var(--sage-dark) 100%);
     text-align: center;
     color: white;
 }
@@ -919,27 +936,27 @@ p {
 /* Override secondary button styling in CTA section for better contrast */
 .pathfinder-cta .btn-secondary {
     background: white;
-    color: var(--ocean-deep);
+    color: var(--sage);
     border: 2px solid white;
 }
 
 .pathfinder-cta .btn-secondary:hover {
-    background: var(--golden-highway);
-    color: var(--mountain-charcoal);
-    border-color: var(--golden-highway);
+    background: var(--warm);
+    color: white;
+    border-color: var(--warm);
 }
 
-/* Footer - Mountain Charcoal background - Always dark regardless of mode */
+/* Footer - Charcoal background - Always dark regardless of mode */
 .footer {
     padding: 60px 0 30px;
-    background: #4A4A4A;
+    background: #2d2d2d;
     color: white;
 
     /* Force footer to ignore light/dark mode - always use these colors */
-    --text-primary: #F5DEB3;
-    --text-secondary: #F5DEB3;
+    --text-primary: #f5f1eb;
+    --text-secondary: #f5f1eb;
     --text-heading: white;
-    --footer-text: #F5DEB3;
+    --footer-text: #f5f1eb;
 }
 
 .footer-grid {
@@ -961,17 +978,17 @@ p {
 }
 
 .footer-section a {
-    color: #F5DEB3 !important;
+    color: #f5f1eb !important;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer-section a:hover {
-    color: #FFB366 !important;
+    color: #f4a855 !important;
 }
 
 .footer-section p {
-    color: #F5DEB3 !important;
+    color: #f5f1eb !important;
 }
 
 .footer-social-icons {
@@ -981,7 +998,7 @@ p {
 }
 
 .footer-social-icons a {
-    color: #F5DEB3 !important;
+    color: #f5f1eb !important;
     font-size: 1.5rem;
     transition: color 0.3s ease, transform 0.3s ease;
     display: flex;
@@ -990,7 +1007,7 @@ p {
 }
 
 .footer-social-icons a:hover {
-    color: #FFB366 !important;
+    color: #f4a855 !important;
     transform: translateY(-2px);
 }
 
@@ -1001,7 +1018,7 @@ p {
 }
 
 .footer-bottom p {
-    color: #B8B8B8 !important;
+    color: #a0a0a0 !important;
     font-size: 0.9rem;
 }
 
@@ -1189,7 +1206,7 @@ p {
 
 /* Investors Page Styles */
 .hero-investors {
-    background: linear-gradient(135deg, var(--sunset-coral) 0%, var(--golden-highway) 100%);
+    background: linear-gradient(135deg, var(--warm) 0%, var(--warm-light) 100%);
     padding: 8rem 0 6rem;
     margin-top: 70px;
 }

@@ -85,20 +85,22 @@ pdf: /assets/downloads/case-study.pdf  # Optional
 
 ## Brand System
 
-### Colors
-- Sunset Coral (#F09060) - Primary brand color
-- Golden Highway (#FFB366) - Accent/highlights
-- Mountain Charcoal (#4A4A4A) - Typography
-- Ocean Deep (#2C5F7C) - CTA sections
+### Colors (v2.0)
+- Warm (#f4a855) - Primary brand accent
+- Warm Light (#f7bc7a) - Accent highlights
+- Charcoal (#2d2d2d) - Primary dark, typography
+- Cream (#f5f1eb) - Light backgrounds
+- Sage (#4a5d52) - Secondary accent, CTA sections
 
 ### Typography
-- Headlines: Montserrat (Google Fonts)
+- Headlines: Raleway (Google Fonts) - weights 600, 700, 800
 - Body: Source Sans Pro (Google Fonts)
 
 ### Design Features
 - Automatic light/dark mode based on system preference
 - CSS variables in style-main.css control theming
 - Asset versioning via `asset_version` in _config.yml for cache busting
+- Border radius: 8px for buttons and cards
 
 ## Key Configuration
 
