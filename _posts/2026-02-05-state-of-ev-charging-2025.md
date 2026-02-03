@@ -1,12 +1,12 @@
 ---
 layout: post
-date: 2026-02-05 06:15:00 -0800
+date: 2026-02-04 06:15:00 -0800
 author: Rangeway Energy
 title: "The State of EV Charging in 2025: Quality Is Finally Winning"
 subtitle: "The numbers are in. Here's what they mean for the industry."
 category: blog
 description: "Paren's Q4 2025 report confirms what the data has been showing: execution, not price, drives utilization. The quality imperative creates a clear opportunity for networks built the right way."
-image: /assets/images/blog2026-02-05.jpg
+image: /assets/images/blog2026-02-04.jpg
 ---
 
 The numbers are in. Paren's Q4 2025 State of the Industry Report confirms what the data has been showing for years: EV charging infrastructure is growing fast, but quality is what separates the networks that thrive from those that struggle.
