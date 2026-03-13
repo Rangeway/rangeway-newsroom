@@ -51,7 +51,7 @@ Rangeway is America's first hospitality-driven premium EV charging network, buil
 
 **Ekoenergetyka America**<br>
 Media Relations<br>
-[contact@ekoenergetyka.com](contact@ekoenergetyka.com)
+[contact@ekoenergetyka.com](mailto:contact@ekoenergetyka.com)
 <p>
 **Rangeway**<br>
 Media Relations<br>
