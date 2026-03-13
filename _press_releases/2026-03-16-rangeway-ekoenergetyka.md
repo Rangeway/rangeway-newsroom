@@ -3,7 +3,7 @@ layout: press-release
 title: "Ekoenergetyka America Named Exclusive Hardware Partner for Rangeway Energy's Hospitality-Driven EV Charging Network"
 date: 2026-03-16 06:00:00 -0800
 description: "Ekoenergetyka America announces an exclusive partnership with Rangeway Energy, serving as the exclusive hardware provider for America's first hospitality-driven premium EV charging network."
-image: /assets/images/rangeway-ekoenergetyka-social.png
+image: /assets/images/rangeway-ekoenergetyka-social.jpg
 ---
 
 **IRVINE, CA** — Ekoenergetyka America today announced an exclusive partnership with Rangeway Energy, Inc., the pioneering EV charging company building America's first hospitality-driven premium charging network.
