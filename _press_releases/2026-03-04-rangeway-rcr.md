@@ -18,8 +18,6 @@ The on-site roasting model sets the partnership apart from typical charging netw
 
 Rangeway Basecamps are the network's flagship format: full-service destinations featuring 2,500+ square feet of climate-controlled indoor space, staffed by hospitality-trained Trailkeepers, with comfortable seating, premium restrooms, and high-speed Wi-Fi. The addition of Red Canyon's on-site roasting operation brings a café experience built specifically for the 20- to 30-minute charging window, offering freshly roasted and brewed single-origin coffee alongside a curated food and beverage menu.
 
-Red Canyon also operates independently as a direct-to-consumer coffee brand, roasting to order and shipping nationwide through **[shop.redcanyonroasting.co](https://shop.redcanyonroasting.co)**. The Rangeway Basecamp locations represent the only physical spaces where Red Canyon roasts on site.
-
 ## Sourcing and Sustainability
 
 Red Canyon sources exclusively from farming cooperatives that practice sustainable cultivation. The company pays above Fair Trade minimum prices and reinvests a portion of every sale into the communities where its coffee is grown. Full details on Red Canyon's sourcing commitment are available at **[redcanyonroasting.co](https://redcanyonroasting.co)**.
@@ -36,7 +34,7 @@ Rangeway is building America's first hospitality-driven premium EV charging netw
 
 ### About Red Canyon Roasting Company
 
-Red Canyon Roasting Company is a single-origin, small-batch coffee roaster founded by Zak Winnick. The company sources exclusively from farming cooperatives practicing sustainable cultivation, pays above Fair Trade minimums, and reinvests a portion of every sale into the communities where its coffee is grown. What started with an electric truck and a question about quality became a coffee brand with purpose. Red Canyon roasts to order for customers nationwide at **[shop.redcanyonroasting.co](https://shop.redcanyonroasting.co)** and roasts on site at every Rangeway Basecamp.
+Red Canyon Roasting Company is a single-origin, small-batch coffee roaster founded by Zak Winnick. The company sources exclusively from farming cooperatives practicing sustainable cultivation, pays above Fair Trade minimums, and reinvests a portion of every sale into the communities where its coffee is grown. What started with an electric truck and a question about quality became a coffee brand with purpose. Red Canyon roasts to order for customers nationwide at **[redcanyonroasting.co](https://redcanyonroasting.co)** and roasts on site at every Rangeway Basecamp.
 
 ---
 
