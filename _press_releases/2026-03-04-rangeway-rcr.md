@@ -3,7 +3,7 @@ layout: press-release
 title: "Rangeway Selects Red Canyon Roasting Company as Exclusive Coffee Partner, with On-Site Roasting at Every Basecamp"
 date: 2026-03-04 06:00:00 -0800
 description: "Rangeway announces Red Canyon Roasting Company as its exclusive coffee partner, bringing single-origin, small-batch on-site roasting to every Basecamp Driver's Lounge."
-image: /assets/images/rangeway-rcr.png
+image: /assets/images/rangeway-rcr-social.jpg
 ---
 
 **SAN FRANCISCO, CA** -- Rangeway, America's first hospitality-driven premium EV charging network, today announced that **Red Canyon Roasting Company** will serve as the exclusive coffee program at every Rangeway Basecamp. Red Canyon, also founded by Rangeway CEO Zak Winnick, will roast and brew single-origin coffee on site inside each Basecamp's climate-controlled Driver's Lounge.
