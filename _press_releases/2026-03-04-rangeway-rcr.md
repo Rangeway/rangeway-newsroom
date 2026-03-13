@@ -40,8 +40,6 @@ Red Canyon Roasting Company is a single-origin, small-batch coffee roaster found
 
 ---
 
-**Media Contact**
-
-Rangeway Media Relations
-
+**Media Contact**<br>
+Rangeway Media Relations<br>
 [media@rangewayev.com](mailto:media@rangewayev.com)
