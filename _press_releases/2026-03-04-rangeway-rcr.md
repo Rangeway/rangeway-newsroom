@@ -18,6 +18,8 @@ The on-site roasting model sets the partnership apart from typical charging netw
 
 Rangeway Basecamps are the network's flagship format: full-service destinations featuring 2,500+ square feet of climate-controlled indoor space, staffed by hospitality-trained Trailkeepers, with comfortable seating, premium restrooms, and high-speed Wi-Fi. The addition of Red Canyon's on-site roasting operation brings a café experience built specifically for the 20- to 30-minute charging window, offering freshly roasted and brewed single-origin coffee alongside a curated food and beverage menu.
 
+Travellers also have the option to have fresh coffee roasted on-site, to order, while they wait for their car to finish charging, offering a unique experience only found at Basecamp Red Canyon Roasting locations. 
+
 ## Sourcing and Sustainability
 
 Red Canyon sources exclusively from farming cooperatives that practice sustainable cultivation. The company pays above Fair Trade minimum prices and reinvests a portion of every sale into the communities where its coffee is grown. Full details on Red Canyon's sourcing commitment are available at **[redcanyonroasting.co](https://redcanyonroasting.co)**.
