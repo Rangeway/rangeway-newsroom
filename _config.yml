@@ -29,6 +29,7 @@ analytics:
   tinylytics_id: "Ttvq2PXhcrG1Fe7a9H-v"
 
 # Build settings
+timezone: America/Los_Angeles
 markdown: kramdown
 theme: null
 future: false  # Hide posts with future dates until their publish date
