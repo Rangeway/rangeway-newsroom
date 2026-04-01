@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2026-04-01 06:15:00 -0700
-author: Rangeway Energy
+author: Zak Winnick
 title: "The EV charging experience is getting better. We think that's not enough."
 subtitle: "Why the future of EV charging goes beyond faster chargers and nicer lounges."
 category: blog
