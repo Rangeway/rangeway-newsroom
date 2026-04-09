@@ -10,7 +10,7 @@ image: /assets/images/blog2026-04-09.png
 ---
 
 
-I was listening to a recent episode of [The eMobility Marketing Podcast](https://www.nexxtindustry.com/) where Theo Reichgelt sat down with Philip Meyer of Lazy Growth Partners to talk about building B2B pipeline through executive content on LinkedIn. Philip made a point that stuck with me: content isn't a campaign, it's pipeline infrastructure. He called it a trust layer, something you build consistently over time that makes people comfortable enough to raise their hand, often months after they first encountered your work.
+I was listening to the most recent episode of [The eMobility Marketing Podcast](https://www.nexxtindustry.com/) where Theo Reichgelt sat down with Philip Meyer of Lazy Growth Partners to talk about building B2B pipeline through executive content on LinkedIn. Philip made a point that stuck with me: content isn't a campaign, it's pipeline infrastructure. He called it a trust layer, something you build consistently over time that makes people comfortable enough to raise their hand, often months after they first encountered your work.
 
 That framing resonated because it describes exactly how Rangeway got built.
 
