@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2026-04-21 09:00:00 -0700
+date: 2026-04-21 08:00:00 -0700
 author: Zak Winnick
 title: "Infrastructure Isn't SaaS: What Nobody Tells Founders About Building Physical Things"
 subtitle: "Why the assumption that passenger and fleet charging live in separate worlds is breaking down, and what a corridor stop actually needs to look like when every kind of EV pulls in."
