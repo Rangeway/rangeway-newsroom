@@ -2,7 +2,7 @@
 layout: post
 date: 2026-04-21 08:00:00 -0700
 author: Zak Winnick
-title: "Infrastructure Isn't SaaS: What Nobody Tells Founders About Building Physical Things"
+title: "The Fleet Question: Why Freight Electrification Will Reshape the Corridor Stop"
 subtitle: "Why the assumption that passenger and fleet charging live in separate worlds is breaking down, and what a corridor stop actually needs to look like when every kind of EV pulls in."
 category: blog
 description: "Passenger EV drivers and commercial fleets are converging on the same corridors. The networks that don't plan for both are going to spend the next decade retrofitting sites that should have been designed right the first time."
