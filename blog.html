@@ -4,48 +4,45 @@ title: Blog
 permalink: /blog.html
 ---
 
-<!-- Hero Section -->
-<section class="hero" style="padding: 120px 0 80px;">
-    <div class="container">
-        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-            <h1>Rangeway <span style="color: var(--accent-color);">Blog</span></h1>
-            <p style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 2rem;">Company updates, insights, and behind-the-scenes</p>
-            <a href="{{ '/feed-blog.xml' | relative_url }}" class="btn-secondary">
-                <i class="fas fa-rss"></i> Subscribe to Feed
+<section class="listing">
+    <div class="listing__header">
+        <span class="eyebrow">Blog</span>
+        <h1>Company updates, insights &amp; stories</h1>
+        <p>Behind the scenes from the Rangeway team.</p>
+        <p style="margin-top: var(--space-5);">
+            <a href="{{ '/feed-blog.xml' | relative_url }}" class="btn btn-outline">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="19" r="1.5" fill="currentColor"/><path d="M4 4a16 16 0 0 1 16 16"/><path d="M4 11a9 9 0 0 1 9 9"/></svg>
+                Subscribe to Feed
             </a>
-        </div>
+        </p>
     </div>
-</section>
 
-<!-- All Blog Posts -->
-<section class="services">
     <div class="container">
-        <div class="services-grid">
+        <div class="grid-3">
             {% for post in site.posts %}
-            <a href="{{ post.url | relative_url }}" style="text-decoration: none; color: inherit; display: block;">
-                <div class="service-card">
-                    {% if post.image %}
-                    <div style="margin: -2.5rem -2.5rem 1.5rem -2.5rem; border-radius: 12px 12px 0 0; overflow: hidden;">
-                        <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" style="width: 100%; height: 200px; object-fit: cover; display: block;">
-                    </div>
-                    {% endif %}
-                    <div class="service-icon">
-                        <i class="fas fa-pen" style="font-size: 2rem;"></i>
-                    </div>
-                    <span style="display: block; color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">{{ post.date | date: "%B %d, %Y" }}</span>
-                    <h3>{{ post.title }}</h3>
-                    {% if post.author %}
-                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.5rem;">By {{ post.author }}</p>
-                    {% endif %}
-                    <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+            <a href="{{ post.url | relative_url }}" class="card card--link">
+                {% if post.image %}
+                <div class="card__media">
+                    <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy" decoding="async">
                 </div>
+                {% endif %}
+                <span class="card__tag">Blog</span>
+                <p class="card__date">{{ post.date | date: "%B %d, %Y" }}</p>
+                <h3 class="card__title">{{ post.title }}</h3>
+                {% if post.author %}
+                <p class="card__date">By {{ post.author }}</p>
+                {% endif %}
+                <p class="card__excerpt">{{ post.excerpt | strip_html | truncatewords: 24 }}</p>
+                <span class="card__more">Read more
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+                </span>
             </a>
             {% endfor %}
 
             {% if site.posts.size == 0 %}
-            <div class="service-card" style="grid-column: 1 / -1; text-align: center; padding: 4rem;">
-                <h3>No blog posts yet</h3>
-                <p>Check back soon for updates and insights.</p>
+            <div class="card" style="grid-column: 1 / -1; text-align: center; padding: var(--space-8);">
+                <h3 class="card__title">No blog posts yet</h3>
+                <p class="card__excerpt">Check back soon for updates and insights.</p>
             </div>
             {% endif %}
         </div>

@@ -4,162 +4,107 @@ title: Media Kit
 permalink: /media-kit.html
 ---
 
-<!-- Hero Section -->
-<section class="hero-modern" style="min-height: 50vh;">
-    <div class="hero-background" style="background: linear-gradient(135deg, var(--mountain-charcoal) 0%, var(--golden-highway) 100%);"></div>
-    <div class="hero-content-modern">
-        <h1 class="hero-title-modern">
-            Media <span class="hero-title-highlight">Kit</span>
-        </h1>
-        <p class="hero-description-modern">
-            Brand assets, fact sheets, and press resources
+<section class="page-hero">
+    <div class="container">
+        <div class="page-hero__inner">
+            <span class="eyebrow">Media Kit</span>
+            <h1>Brand assets, fact sheets &amp; press resources.</h1>
+            <p class="page-hero__lede">Everything journalists, analysts, and partners need to cover Rangeway Energy.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section section-cream reveal">
+    <div class="container">
+        <div class="grid-2">
+            <div class="card">
+                <span class="eyebrow">Media Contact</span>
+                <h2 class="card__title" style="font-size: 1.5rem;">For all press inquiries</h2>
+                <p class="card__excerpt">Interview requests, background briefings, and media opportunities — we respond within one business day.</p>
+                <p style="margin: 0 0 var(--space-2);">
+                    <strong>Email</strong> &middot; <a href="mailto:{{ site.organization.email }}">{{ site.organization.email }}</a>
+                </p>
+                <p style="margin: 0;">
+                    <strong>Phone</strong> &middot; {{ site.organization.phone }}
+                </p>
+            </div>
+            <div class="card">
+                <span class="eyebrow">About Rangeway</span>
+                <h2 class="card__title" style="font-size: 1.5rem;">Company overview</h2>
+                <p class="card__excerpt">{{ site.organization.name }} is building America's premier electric vehicle charging network for scenic corridors. Every location features climate-controlled indoor lounges, premium cafés, and ultra-fast charging — making EV road trips to America's most beautiful destinations preferable, not just possible.</p>
+                <dl style="display: grid; gap: var(--space-3); margin: 0;">
+                    <div><strong>Founded</strong> &middot; 2025</div>
+                    <div><strong>Headquarters</strong> &middot; San Francisco, California</div>
+                    <div><strong>First Location</strong> &middot; Baker Basecamp (2026), LA–Vegas corridor</div>
+                    <div><strong>Network Model</strong> &middot; Regional clusters of Basecamps &amp; Waystations</div>
+                </dl>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section reveal">
+    <div class="container">
+        <div class="listing__header">
+            <span class="eyebrow">Brand Assets</span>
+            <h2>Logos &amp; visual resources</h2>
+            <p>For media use — contact us for high-resolution originals.</p>
+        </div>
+        <div class="grid-3">
+            <div class="card">
+                <h3 class="card__title">Logos</h3>
+                <p class="card__excerpt">High-resolution Rangeway logos in various formats and color treatments.</p>
+                <a href="{{ site.organization.main_site }}" target="_blank" rel="noopener noreferrer" class="arrow-link">
+                    Visit main site
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+                </a>
+            </div>
+            <div class="card">
+                <h3 class="card__title">Photos</h3>
+                <p class="card__excerpt">High-resolution images of locations, renderings, and infrastructure.</p>
+                <a href="mailto:{{ site.organization.email }}?subject=Photo%20Request" class="arrow-link">
+                    Request photos
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+                </a>
+            </div>
+            <div class="card">
+                <h3 class="card__title">Brand Guidelines</h3>
+                <p class="card__excerpt">Color palette, typography, and usage guidelines.</p>
+                <a href="{{ '/brand.html' | relative_url }}" class="arrow-link">
+                    View guidelines
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-cream reveal">
+    <div class="container-narrow">
+        <span class="eyebrow">Boilerplate</span>
+        <h2 style="margin-bottom: var(--space-5);">Company boilerplate</h2>
+        <p id="boilerplate" class="prose-lg" style="font-style: italic; color: var(--color-text); border-left: 3px solid var(--color-warm); padding-left: var(--space-5);">
+            Rangeway is building America's premier electric vehicle charging network for scenic corridors. Every Rangeway location features climate-controlled indoor lounges, premium cafés, and ultra-fast charging infrastructure, eliminating the parking lot waits that plague traditional EV charging. Starting with Baker Basecamp on California's LA-Vegas corridor, Rangeway is making EV road trips to America's most beautiful destinations preferable, not just possible.
+        </p>
+        <p style="margin-top: var(--space-5);">
+            <button type="button" class="btn btn-primary" data-copy-target="#boilerplate">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                Copy boilerplate
+            </button>
         </p>
     </div>
 </section>
 
-<!-- Contact Information -->
-<section>
-    <div class="container" style="max-width: 800px;">
-        <div class="difference-card" style="padding: 2rem;">
-            <h2 style="color: var(--golden-highway); margin-bottom: 1.5rem;">Media Contact</h2>
-            <p style="font-size: 1.1rem; line-height: 1.8;">
-                For all press inquiries, interview requests, and media opportunities:
-            </p>
-            <p style="margin-top: 1.5rem;">
-                <strong style="color: var(--coastal-cream);">Email:</strong>
-                <a href="mailto:{{ site.organization.email }}" style="color: var(--golden-highway); text-decoration: none; margin-left: 0.5rem;">
-                    {{ site.organization.email }}
-                </a>
-            </p>
-            <p style="margin-top: 0.5rem;">
-                <strong style="color: var(--coastal-cream);">Phone:</strong>
-                <span style="color: var(--fog-gray); margin-left: 0.5rem;">{{ site.organization.phone }}</span>
-            </p>
-        </div>
-    </div>
-</section>
-
-<!-- Company Fact Sheet -->
-<section class="difference-section">
-    <div class="container">
-        <div class="section-header-modern">
-            <h2>Company Overview</h2>
-        </div>
-
-        <div class="difference-card" style="max-width: 900px; margin: 0 auto; padding: 3rem;">
-            <h3 style="color: var(--golden-highway); margin-bottom: 1.5rem;">About Rangeway</h3>
-            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">
-                {{ site.organization.name }} is building America's premier electric vehicle charging network for scenic corridors.
-                Unlike traditional charging stations, every Rangeway location features climate-controlled indoor lounges,
-                premium cafés, and ultra-fast charging infrastructure. We're making EV road trips to America's most beautiful
-                destinations preferable, not just possible.
-            </p>
-
-            <div style="display: grid; gap: 2rem; margin-top: 2rem;">
-                <div>
-                    <h4 style="color: var(--coastal-cream); margin-bottom: 0.5rem;">Founded</h4>
-                    <p style="color: var(--fog-gray);">2025</p>
-                </div>
-                <div>
-                    <h4 style="color: var(--coastal-cream); margin-bottom: 0.5rem;">Headquarters</h4>
-                    <p style="color: var(--fog-gray);">San Francisco, California</p>
-                </div>
-                <div>
-                    <h4 style="color: var(--coastal-cream); margin-bottom: 0.5rem;">First Location</h4>
-                    <p style="color: var(--fog-gray);">Baker Basecamp (Opening 2026) - Gateway to Death Valley on the LA-Vegas corridor</p>
-                </div>
-                <div>
-                    <h4 style="color: var(--coastal-cream); margin-bottom: 0.5rem;">Network Model</h4>
-                    <p style="color: var(--fog-gray);">Regional clusters of Basecamps (full-service locations) and Waystations (automated locations)</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Brand Assets -->
-<section>
-    <div class="container">
-        <div class="section-header-modern">
-            <h2>Brand Assets</h2>
-            <p>Logos and visual resources for media use</p>
-        </div>
-
-        <div class="difference-grid">
-            <div class="difference-card">
-                <h3>Logos</h3>
-                <p>High-resolution Rangeway logos in various formats.</p>
-                <p style="margin-top: 1rem; color: var(--fog-gray); font-size: 0.95rem;">
-                    Download logos from our main site at
-                    <a href="{{ site.organization.main_site }}" style="color: var(--golden-highway); text-decoration: none;">
-                        rangeway.energy
-                    </a>
-                </p>
-            </div>
-
-            <div class="difference-card">
-                <h3>Photos</h3>
-                <p>High-resolution images of locations, renderings, and infrastructure.</p>
-                <p style="margin-top: 1rem;">
-                    <a href="mailto:{{ site.organization.email }}?subject=Photo%20Request" style="color: var(--golden-highway); text-decoration: none; font-weight: 600;">
-                        Request photos <i class="fas fa-envelope"></i>
-                    </a>
-                </p>
-            </div>
-
-            <div class="difference-card">
-                <h3>Brand Guidelines</h3>
-                <p>Color palette, typography, and usage guidelines.</p>
-                <p style="margin-top: 1rem;">
-                    <a href="/brand.html" style="color: var(--golden-highway); text-decoration: none; font-weight: 600;">
-                        View guidelines <i class="fas fa-arrow-right"></i>
-                    </a>
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Boilerplate -->
-<section class="difference-section">
-    <div class="container">
-        <div class="section-header-modern">
-            <h2>Company Boilerplate</h2>
-            <p>Standard description for media use</p>
-        </div>
-
-        <div class="difference-card" style="max-width: 900px; margin: 0 auto; padding: 3rem;">
-            <p style="font-size: 1.05rem; line-height: 1.8; color: var(--coastal-cream); font-style: italic;">
-                Rangeway is building America's premier electric vehicle charging network for scenic corridors.
-                Every Rangeway location features climate-controlled indoor lounges, premium cafés, and ultra-fast
-                charging infrastructure—eliminating the parking lot waits that plague traditional EV charging.
-                Starting with Baker Basecamp on California's LA-Vegas corridor, Rangeway is making EV road trips
-                to America's most beautiful destinations preferable, not just possible.
-            </p>
-            <p style="margin-top: 1.5rem; text-align: center;">
-                <button onclick="navigator.clipboard.writeText(this.previousElementSibling.previousElementSibling.textContent.trim())"
-                        style="padding: 0.75rem 1.5rem; background: var(--golden-highway); color: var(--mountain-charcoal); border: none; border-radius: var(--radius-md); font-weight: 600; cursor: pointer;">
-                    <i class="fas fa-copy"></i> Copy Boilerplate
-                </button>
-            </p>
-        </div>
-    </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-section-modern">
-    <div class="container">
-        <div class="cta-content-modern">
-            <h2>Need Something Else?</h2>
-            <p>We're happy to provide additional resources, arrange interviews, or answer questions</p>
-            <div class="cta-buttons-modern">
-                <a href="mailto:{{ site.organization.email }}" class="btn-cta-primary">
-                    Contact Media Team
-                </a>
-                <a href="{{ site.organization.main_site }}" class="btn-cta-secondary" target="_blank" rel="noopener noreferrer">
-                    Visit Main Site
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
+<script>
+    document.querySelectorAll('[data-copy-target]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+            const target = document.querySelector(btn.getAttribute('data-copy-target'));
+            if (!target) return;
+            navigator.clipboard.writeText(target.textContent.trim()).then(() => {
+                const original = btn.innerHTML;
+                btn.textContent = 'Copied!';
+                setTimeout(() => { btn.innerHTML = original; }, 1800);
+            });
+        });
+    });
+</script>

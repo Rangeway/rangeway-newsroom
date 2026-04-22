@@ -4,46 +4,43 @@ title: Press Releases
 permalink: /press.html
 ---
 
-<!-- Hero Section -->
-<section class="hero" style="padding: 120px 0 80px;">
-    <div class="container">
-        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-            <h1>Press <span style="color: var(--accent-color);">Releases</span></h1>
-            <p style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 2rem;">Official announcements and company news</p>
-            <a href="{{ '/feed-press.xml' | relative_url }}" class="btn-secondary">
-                <i class="fas fa-rss"></i> Subscribe to Feed
+<section class="listing">
+    <div class="listing__header">
+        <span class="eyebrow">Press Releases</span>
+        <h1>Official announcements &amp; news</h1>
+        <p>The record of Rangeway Energy milestones, partnerships, and openings.</p>
+        <p style="margin-top: var(--space-5);">
+            <a href="{{ '/feed-press.xml' | relative_url }}" class="btn btn-outline">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="19" r="1.5" fill="currentColor"/><path d="M4 4a16 16 0 0 1 16 16"/><path d="M4 11a9 9 0 0 1 9 9"/></svg>
+                Subscribe to Feed
             </a>
-        </div>
+        </p>
     </div>
-</section>
 
-<!-- All Press Releases -->
-<section class="services">
     <div class="container">
-        <div class="services-grid">
-            {% assign published_releases = site.press_releases | where_exp: "release", "release.date <= site.time" %}
+        {% assign published_releases = site.press_releases | where_exp: "release", "release.date <= site.time" %}
+        <div class="grid-3">
             {% for release in published_releases reversed %}
-            <a href="{{ release.url | relative_url }}" style="text-decoration: none; color: inherit; display: block;">
-                <div class="service-card">
-                    {% if release.image %}
-                    <div style="margin: -2.5rem -2.5rem 1.5rem -2.5rem; border-radius: 12px 12px 0 0; overflow: hidden;">
-                        <img src="{{ release.image | relative_url }}" alt="{{ release.title }}" style="width: 100%; height: 200px; object-fit: cover; display: block;">
-                    </div>
-                    {% endif %}
-                    <div class="service-icon">
-                        <i class="fas fa-newspaper" style="font-size: 2rem;"></i>
-                    </div>
-                    <span style="display: block; color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">{{ release.date | date: "%B %d, %Y" }}</span>
-                    <h3>{{ release.title }}</h3>
-                    <p>{{ release.excerpt | strip_html | truncatewords: 30 }}</p>
+            <a href="{{ release.url | relative_url }}" class="card card--link">
+                {% if release.image %}
+                <div class="card__media">
+                    <img src="{{ release.image | relative_url }}" alt="{{ release.title }}" loading="lazy" decoding="async">
                 </div>
+                {% endif %}
+                <span class="card__tag">Press Release</span>
+                <p class="card__date">{{ release.date | date: "%B %d, %Y" }}</p>
+                <h3 class="card__title">{{ release.title }}</h3>
+                <p class="card__excerpt">{{ release.excerpt | strip_html | truncatewords: 24 }}</p>
+                <span class="card__more">Read release
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+                </span>
             </a>
             {% endfor %}
 
             {% if published_releases.size == 0 %}
-            <div class="service-card" style="grid-column: 1 / -1; text-align: center; padding: 4rem;">
-                <h3>No press releases yet</h3>
-                <p>Check back soon for official announcements.</p>
+            <div class="card" style="grid-column: 1 / -1; text-align: center; padding: var(--space-8);">
+                <h3 class="card__title">No press releases yet</h3>
+                <p class="card__excerpt">Check back soon for official announcements.</p>
             </div>
             {% endif %}
         </div>

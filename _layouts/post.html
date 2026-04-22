@@ -2,49 +2,19 @@
 layout: default
 ---
 
-<article class="blog-post">
+<article class="has-hero">
     {% include content-hero.html badge="Blog" title=page.title date=page.date author=page.author image=page.image %}
 
-    <!-- Content Section -->
-    <section style="padding: 40px 0;">
-        <div class="container" style="max-width: 800px;">
-            <div class="service-card" style="padding: 3rem;">
-                <div class="blog-content" style="color: var(--text-primary); line-height: 1.8; font-size: 1.1rem;">
-                    {{ content }}
-                </div>
-
-                {% include social-share.html title=page.title url=page.url type="post" %}
+    <section class="article">
+        <div class="container-narrow">
+            <div class="article__body">
+                {{ content }}
             </div>
+            {% include social-share.html title=page.title url=page.url type="post" %}
         </div>
     </section>
 
-    <!-- Recent Posts -->
     {% if site.posts.size > 1 %}
-    <section class="services" style="background: var(--bg-secondary);">
-        <div class="container">
-            <div style="text-align: center; margin-bottom: 3rem;">
-                <h2>Recent Posts</h2>
-            </div>
-            <div class="services-grid">
-                {% assign counter = 0 %}
-                {% for post in site.posts %}
-                    {% if post.url != page.url and counter < 3 %}
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-pen" style="font-size: 2rem;"></i>
-                        </div>
-                        <span style="display: block; color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">{{ post.date | date: "%b %d, %Y" }}</span>
-                        <h3>{{ post.title }}</h3>
-                        <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-                        <a href="{{ post.url | relative_url }}" class="card-link">
-                            Read more <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                    {% assign counter = counter | plus: 1 %}
-                    {% endif %}
-                {% endfor %}
-            </div>
-        </div>
-    </section>
+    {% include related-content.html title="Recent posts" collection=site.posts current_url=page.url show_date=true eyebrow="Keep reading" %}
     {% endif %}
 </article>

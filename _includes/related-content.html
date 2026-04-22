@@ -1,33 +1,37 @@
 {% comment %}
-Reusable Related Content Grid Component
+Related content grid.
+Usage: {% include related-content.html title="Recent Press Releases" collection=site.press_releases current_url=page.url show_date=true %}
 {% endcomment %}
-<section class="services" style="background: var(--bg-secondary);">
+<section class="section section-cream reveal">
     <div class="container">
-        <div style="text-align: center; margin-bottom: 3rem;">
+        <div class="listing__header">
+            <span class="eyebrow">{{ include.eyebrow | default: "More from Rangeway" }}</span>
             <h2>{{ include.title }}</h2>
         </div>
-        <div class="services-grid">
+        <div class="grid-3">
             {% assign counter = 0 %}
             {% assign items = include.collection %}
             {% for item in items reversed %}
-                {% assign item_url = item.url %}
-                {% if item_url != include.current_url and counter < 3 %}
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-{{ include.icon }}" style="font-size: 2rem;"></i>
+                {% if item.url != include.current_url and counter < 3 %}
+                <a href="{{ item.url | relative_url }}" class="card card--link">
+                    {% if item.image %}
+                    <div class="card__media">
+                        <img src="{{ item.image | relative_url }}" alt="{{ item.title }}" loading="lazy" decoding="async">
                     </div>
-                    {% if include.show_date %}
-                    <span style="display: block; color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">{{ item.date | date: "%b %d, %Y" }}</span>
                     {% endif %}
-                    <h3>{{ item.title }}</h3>
+                    {% if include.show_date and item.date %}
+                    <p class="card__date">{{ item.date | date: "%B %d, %Y" }}</p>
+                    {% endif %}
+                    <h3 class="card__title">{{ item.title }}</h3>
                     {% if item.subtitle %}
-                    <p style="color: var(--text-secondary); margin-top: 0.5rem;">{{ item.subtitle }}</p>
+                    <p class="card__excerpt">{{ item.subtitle }}</p>
+                    {% else %}
+                    <p class="card__excerpt">{{ item.excerpt | strip_html | truncatewords: 24 }}</p>
                     {% endif %}
-                    <p>{{ item.excerpt | strip_html | truncatewords: 30 }}</p>
-                    <a href="{{ item.url | relative_url }}" class="card-link">
-                        Read more <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
+                    <span class="card__more">Read more
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+                    </span>
+                </a>
                 {% assign counter = counter | plus: 1 %}
                 {% endif %}
             {% endfor %}

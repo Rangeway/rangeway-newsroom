@@ -1,174 +1,159 @@
-<!-- RSS Subscribe Section -->
-<section style="background: rgba(0, 0, 0, 0.2); padding: 4rem 0; border-top: 1px solid rgba(255, 255, 255, 0.1);">
-    <div class="container" style="max-width: 1000px;">
-        <div style="text-align: center; margin-bottom: 3rem;">
-            <h2 style="color: var(--text-heading); font-size: 2rem; margin-bottom: 0.75rem;">
-                <i class="fas fa-rss" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
-                Stay Updated with RSS
-            </h2>
-            <p style="color: var(--text-secondary); font-size: 1.1rem;">Subscribe to our feeds in your favorite RSS reader</p>
-        </div>
-
-        <style>
-            .rss-grid {
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
-                gap: 1.5rem;
-                max-width: 1400px;
-                margin: 0 auto;
-            }
-            @media (max-width: 1024px) {
-                .rss-grid { grid-template-columns: repeat(2, 1fr) !important; }
-            }
-            @media (max-width: 640px) {
-                .rss-grid { grid-template-columns: 1fr !important; }
-            }
-        </style>
-        <div class="rss-grid">
-            <!-- All Content Feed -->
-            <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 2rem; text-align: center; transition: all 0.3s ease; display: flex; flex-direction: column; height: 100%;">
-                <i class="fas fa-globe" style="color: var(--accent-color); font-size: 2.5rem; margin-bottom: 1.25rem; display: block;"></i>
-                <h3 style="color: var(--text-heading); font-size: 1.35rem; margin-bottom: 0.75rem;">All Content</h3>
-                <p style="color: var(--text-secondary); font-size: 1rem; margin-bottom: 1.5rem; flex-grow: 1;">Everything we publish</p>
-                <a href="{{ '/feed.xml' | relative_url }}"
-                   style="display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.85rem 1.75rem; background: var(--accent-color); color: white; text-decoration: none; font-weight: 600; border-radius: 6px; transition: all 0.3s ease; margin-top: auto; font-size: 0.95rem;">
-                    <i class="fas fa-rss"></i> Subscribe
-                </a>
-            </div>
-
-            <!-- Press Releases Feed -->
-            <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 2rem; text-align: center; transition: all 0.3s ease; display: flex; flex-direction: column; height: 100%;">
-                <i class="fas fa-newspaper" style="color: var(--accent-color); font-size: 2.5rem; margin-bottom: 1.25rem; display: block;"></i>
-                <h3 style="color: var(--text-heading); font-size: 1.35rem; margin-bottom: 0.75rem;">Press Releases</h3>
-                <p style="color: var(--text-secondary); font-size: 1rem; margin-bottom: 1.5rem; flex-grow: 1;">Official announcements</p>
-                <a href="{{ '/feed-press.xml' | relative_url }}"
-                   style="display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.85rem 1.75rem; background: var(--accent-color); color: white; text-decoration: none; font-weight: 600; border-radius: 6px; transition: all 0.3s ease; margin-top: auto; font-size: 0.95rem;">
-                    <i class="fas fa-rss"></i> Subscribe
-                </a>
-            </div>
-
-            <!-- Case Studies Feed -->
-            <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 2rem; text-align: center; transition: all 0.3s ease; display: flex; flex-direction: column; height: 100%;">
-                <i class="fas fa-chart-line" style="color: var(--accent-color); font-size: 2.5rem; margin-bottom: 1.25rem; display: block;"></i>
-                <h3 style="color: var(--text-heading); font-size: 1.35rem; margin-bottom: 0.75rem;">Case Studies</h3>
-                <p style="color: var(--text-secondary); font-size: 1rem; margin-bottom: 1.5rem; flex-grow: 1;">Data and insights</p>
-                <a href="{{ '/feed-case-studies.xml' | relative_url }}"
-                   style="display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.85rem 1.75rem; background: var(--accent-color); color: white; text-decoration: none; font-weight: 600; border-radius: 6px; transition: all 0.3s ease; margin-top: auto; font-size: 0.95rem;">
-                    <i class="fas fa-rss"></i> Subscribe
-                </a>
-            </div>
-
-            <!-- Blog Feed -->
-            <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 2rem; text-align: center; transition: all 0.3s ease; display: flex; flex-direction: column; height: 100%;">
-                <i class="fas fa-pen" style="color: var(--accent-color); font-size: 2.5rem; margin-bottom: 1.25rem; display: block;"></i>
-                <h3 style="color: var(--text-heading); font-size: 1.35rem; margin-bottom: 0.75rem;">Blog</h3>
-                <p style="color: var(--text-secondary); font-size: 1rem; margin-bottom: 1.5rem; flex-grow: 1;">Updates and stories</p>
-                <a href="{{ '/feed-blog.xml' | relative_url }}"
-                   style="display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.85rem 1.75rem; background: var(--accent-color); color: white; text-decoration: none; font-weight: 600; border-radius: 6px; transition: all 0.3s ease; margin-top: auto; font-size: 0.95rem;">
-                    <i class="fas fa-rss"></i> Subscribe
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Podcast Section -->
-<section style="background: var(--bg-primary); padding: 3rem 0; border-top: 1px solid var(--border-color); transition: background 0.3s ease;">
-    <div class="container" style="max-width: 800px;">
-        <div style="text-align: center; margin-bottom: 2rem;">
-            <h2 style="color: var(--text-heading); font-size: 1.75rem; margin-bottom: 0.5rem;">
-                Latest Podcast Episode
-            </h2>
-            <p style="color: var(--text-secondary);">Listen to the newest episode</p>
-        </div>
-        <div style="position: relative; width: 100%; max-width: 740px; margin: 0 auto;">
-            <div style="position: relative; padding-bottom: 27.03%; height: 0; overflow: hidden;">
-                <iframe src="https://player.fireside.fm/v2/los7u-af/latest?theme=dark"
-                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
-                        frameborder="0"
-                        scrolling="no"
-                        title="Latest Podcast Episode"></iframe>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Media Resources Section -->
-<section style="padding: 100px 0; background: #1a1a1a; color: white; text-align: center; transition: background 0.3s ease;">
+<!-- RSS Subscribe Band -->
+<section class="section section-cream reveal">
     <div class="container">
-        <div style="max-width: 800px; margin: 0 auto;">
-            <h2 style="color: white; font-size: 2.5rem; margin-bottom: 1rem;">Media Resources</h2>
-            <p style="color: rgba(255, 255, 255, 0.85); font-size: 1.2rem; margin-bottom: 2.5rem;">Everything you need to cover Rangeway Energy</p>
-            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                <a href="/brand.html" class="btn-primary" style="display: inline-flex; align-items: center; gap: 0.75rem;">
-                    Brand Guidelines
-                </a>
-                <a href="mailto:{{ site.organization.email }}" class="btn-primary" style="display: inline-flex; align-items: center; gap: 0.75rem;">
-                    Contact Media Team
-                </a>
+        <div class="listing__header">
+            <span class="eyebrow">Subscribe</span>
+            <h2>Stay updated with RSS</h2>
+            <p>Follow our feeds in your favorite RSS reader.</p>
+        </div>
+        <div class="rss-grid">
+            <div class="rss-card">
+                <div class="rss-card__icon" aria-hidden="true">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="19" r="1.5" fill="currentColor"/><path d="M4 4a16 16 0 0 1 16 16"/><path d="M4 11a9 9 0 0 1 9 9"/></svg>
+                </div>
+                <h3>All Content</h3>
+                <p>Everything we publish</p>
+                <a href="{{ '/feed.xml' | relative_url }}" class="btn btn-primary">Subscribe</a>
+            </div>
+            <div class="rss-card">
+                <div class="rss-card__icon" aria-hidden="true">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h12a2 2 0 0 1 2 2v12H6a2 2 0 0 1-2-2V5z"/><path d="M18 9h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2"/><line x1="8" y1="9" x2="14" y2="9"/><line x1="8" y1="13" x2="14" y2="13"/></svg>
+                </div>
+                <h3>Press Releases</h3>
+                <p>Official announcements</p>
+                <a href="{{ '/feed-press.xml' | relative_url }}" class="btn btn-primary">Subscribe</a>
+            </div>
+            <div class="rss-card">
+                <div class="rss-card__icon" aria-hidden="true">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5"/><path d="M4 19h16"/><polyline points="7,15 11,11 14,14 20,8"/></svg>
+                </div>
+                <h3>Case Studies</h3>
+                <p>Data and insights</p>
+                <a href="{{ '/feed-case-studies.xml' | relative_url }}" class="btn btn-primary">Subscribe</a>
+            </div>
+            <div class="rss-card">
+                <div class="rss-card__icon" aria-hidden="true">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4l10-10a2.83 2.83 0 0 0-4-4L4 16v4z"/><line x1="14" y1="6" x2="18" y2="10"/></svg>
+                </div>
+                <h3>Blog</h3>
+                <p>Updates and stories</p>
+                <a href="{{ '/feed-blog.xml' | relative_url }}" class="btn btn-primary">Subscribe</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Podcast -->
+<section class="podcast-band reveal">
+    <div class="container">
+        <span class="eyebrow eyebrow--plain" style="display: block; text-align: center;">Trail Marker Podcast</span>
+        <h2>Latest episode</h2>
+        <p>Listen to the newest episode.</p>
+        <div class="podcast-embed">
+            <iframe src="https://player.fireside.fm/v2/los7u-af/latest?theme=dark"
+                    frameborder="0"
+                    scrolling="no"
+                    title="Latest Podcast Episode"></iframe>
+        </div>
+    </div>
+</section>
+
+<!-- Media Resources CTA -->
+<section class="section-dark media-cta reveal">
+    <div class="container">
+        <div class="media-cta__inner">
+            <span class="eyebrow">Media Resources</span>
+            <h2>Everything you need to cover Rangeway Energy</h2>
+            <p>Brand assets, press kits, and media contact — all in one place.</p>
+            <div class="media-cta__actions">
+                <a href="{{ '/brand.html' | relative_url }}" class="btn btn-primary">Brand Guidelines</a>
+                <a href="mailto:{{ site.organization.email }}" class="btn btn-ghost">Contact Media Team</a>
             </div>
         </div>
     </div>
 </section>
 
 <!-- Footer -->
-<footer class="footer">
-    <div class="container">
-        <div class="footer-grid">
-            <div class="footer-section">
-                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 1rem;">
-                    <!-- Footer Logo Mark - White version for dark background -->
-                    <svg width="32" height="37" viewBox="0 0 96 112" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <path d="M20 100 L20 16 C20 10 24 6 30 6 L56 6 C72 6 80 16 80 32 C80 46 72 54 58 56 L82 100"
-                              stroke="#ffffff" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                        <circle cx="58" cy="32" r="10" fill="#f4a855"/>
-                    </svg>
-                    <span style="font-family: 'Raleway', sans-serif; font-size: 18px; font-weight: 700; letter-spacing: -0.01em; color: white;">Rangeway</span>
-                </div>
-                <a href="{{ '/' | relative_url }}">Home</a>
-                <a href="{{ '/press.html' | relative_url }}">Press Releases</a>
-                <a href="{{ '/case-studies.html' | relative_url }}">Case Studies</a>
-                <a href="{{ '/blog.html' | relative_url }}">Blog</a>
-                <a href="{{ site.organization.main_site }}" target="_blank" rel="noopener noreferrer">Main Site</a>
-            </div>
-            <div class="footer-section">
-                <h4>Resources</h4>
-                <a href="/brand.html">Brand Guidelines</a>
-                <a href="https://fieldnotes.rangewayev.com" target="_blank" rel="noopener noreferrer">Field Notes</a>
-                <a href="https://investors.rangewayev.com" target="_blank" rel="noopener noreferrer">Investor Portal</a>
-                <a href="https://rangeway.app" target="_blank" rel="noopener noreferrer">Pathfinder Rewards</a>
-                <a href="https://podcast.rangewayev.com" target="_blank" rel="noopener noreferrer">Trail Marker Podcast</a>
-            </div>
-            <div class="footer-section">
-                <h4>Media Contact</h4>
-                <p style="line-height: 1.6; margin-bottom: 1rem;">
-                    2661 Market Street<br>
-                    STE 85787<br>
-                    San Francisco, CA 94114
-                </p>
-                <a href="mailto:{{ site.organization.email }}">{{ site.organization.email }}</a>
-                <a href="tel:{{ site.organization.phone }}">{{ site.organization.phone }}</a>
-                <div class="footer-social-icons" style="margin-top: 1rem;">
-                    <a href="{{ site.social.twitter }}" target="_blank" rel="noopener noreferrer" aria-label="Follow us on X (Twitter)">
-                        <i class="fa-brands fa-x-twitter"></i>
-                    </a>
-                    <a href="{{ site.social.instagram }}" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="{{ site.social.linkedin }}" target="_blank" rel="noopener noreferrer" aria-label="Follow us on LinkedIn">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                    <a href="{{ site.social.youtube }}" target="_blank" rel="noopener noreferrer" aria-label="Subscribe to our YouTube channel">
-                        <i class="fa-brands fa-youtube"></i>
-                    </a>
-                </div>
+<footer class="site-footer">
+    <div class="container site-footer__inner">
+        <div class="site-footer__brand">
+            <a href="{{ '/' | relative_url }}" class="site-footer__logo" aria-label="Rangeway Newsroom home">
+                <svg width="34" height="40" viewBox="0 0 96 112" aria-hidden="true" role="presentation">
+                    <path d="M20 100 L20 16 C20 10 24 6 30 6 L56 6 C72 6 80 16 80 32 C80 46 72 54 58 56 L82 100"
+                          stroke="#F5F1EB" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="58" cy="32" r="10" fill="#F4A855"/>
+                </svg>
+                <span>Rangeway</span>
+            </a>
+            <p class="site-footer__tag">{{ site.organization.tagline | default: "Travel farther, stop better." }}</p>
+            <address class="site-footer__address">
+                2661 Market Street, STE 85787<br>
+                San Francisco, CA 94114
+            </address>
+            <ul class="site-footer__details-list">
+                <li><a href="tel:{{ site.organization.phone | replace: ' ', '' | replace: '(', '' | replace: ')', '' | replace: '-', '' }}">{{ site.organization.phone }}</a></li>
+                <li><a href="mailto:{{ site.organization.email }}">{{ site.organization.email }}</a></li>
+            </ul>
+            <div class="site-footer__social">
+                <a href="{{ site.social.instagram }}" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/></svg>
+                </a>
+                <a href="{{ site.social.linkedin }}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM3 9h4v12H3V9zm7 0h3.8v1.7h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.4c0-1.3-.03-2.98-1.82-2.98-1.82 0-2.1 1.42-2.1 2.88V21h-4V9z"/></svg>
+                </a>
+                <a href="{{ site.social.twitter }}" target="_blank" rel="noopener noreferrer" aria-label="X">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2H21l-6.52 7.45L22 22h-6.77l-5.3-6.93L3.75 22H1l7-8L1.55 2h6.93l4.8 6.34L18.24 2zm-2.37 18h1.86L7.21 4h-2L15.87 20z"/></svg>
+                </a>
+                <a href="{{ site.social.youtube }}" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M21.58 7.19a2.51 2.51 0 0 0-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42A2.51 2.51 0 0 0 2.42 7.19 26 26 0 0 0 2 12a26 26 0 0 0 .42 4.81 2.51 2.51 0 0 0 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42a2.51 2.51 0 0 0 1.77-1.77A26 26 0 0 0 22 12a26 26 0 0 0-.42-4.81zM10 15V9l5.2 3z"/></svg>
+                </a>
             </div>
         </div>
-        <div class="footer-bottom">
+
+        <div class="site-footer__columns">
+            <div>
+                <h4>Newsroom</h4>
+                <ul>
+                    <li><a href="{{ '/' | relative_url }}">Home</a></li>
+                    <li><a href="{{ '/press.html' | relative_url }}">Press Releases</a></li>
+                    <li><a href="{{ '/case-studies.html' | relative_url }}">Case Studies</a></li>
+                    <li><a href="{{ '/blog.html' | relative_url }}">Blog</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="{{ '/brand.html' | relative_url }}">Brand Guidelines</a></li>
+                    <li><a href="{{ '/media-kit.html' | relative_url }}">Media Kit</a></li>
+                    <li><a href="https://fieldnotes.rangewayev.com" target="_blank" rel="noopener noreferrer">Field Notes</a></li>
+                    <li><a href="https://investors.rangewayev.com" target="_blank" rel="noopener noreferrer">Investor Portal</a></li>
+                    <li><a href="https://podcast.rangewayev.com" target="_blank" rel="noopener noreferrer">Trail Marker Podcast</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Follow along</h4>
+                <ul>
+                    <li><a href="{{ site.organization.main_site }}" target="_blank" rel="noopener noreferrer">Main Site</a></li>
+                    <li><a href="{{ site.social.instagram }}" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                    <li><a href="{{ site.social.linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a href="{{ site.social.twitter }}" target="_blank" rel="noopener noreferrer">X</a></li>
+                    <li><a href="{{ site.social.youtube }}" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="site-footer__legal">
+        <div class="container site-footer__legal-row">
             <p>&copy; {{ 'now' | date: "%Y" }} {{ site.organization.name }}. All rights reserved.</p>
+            <p class="site-footer__legal-links">
+                <a href="{{ site.organization.main_site }}/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+                <span aria-hidden="true">·</span>
+                <a href="{{ site.organization.main_site }}/terms" target="_blank" rel="noopener noreferrer">Terms of Service</a>
+            </p>
         </div>
     </div>
 </footer>
 
-<!-- External JavaScript -->
+<!-- JS -->
 <script src="{{ '/assets/js/main.js' | relative_url }}?v={{ site.asset_version }}"></script>

@@ -2,57 +2,29 @@
 layout: default
 ---
 
-<article class="case-study">
+<article class="has-hero">
     {% include content-hero.html badge="Case Study" title=page.title subtitle=page.subtitle image=page.image %}
 
-    <!-- Content Section -->
-    <section style="padding: 40px 0;">
-        <div class="container" style="max-width: 900px;">
-            <div class="service-card" style="padding: 3rem;">
-                <div class="case-study-content" style="color: var(--text-primary); line-height: 1.8; font-size: 1.1rem;">
-                    {{ content }}
-                </div>
-
-                {% if page.pdf %}
-                <div style="margin-top: 3rem; text-align: center;">
-                    <a href="{{ page.pdf | relative_url }}" class="btn-primary" download>
-                        <i class="fas fa-download"></i> Download Full Case Study (PDF)
-                    </a>
-                </div>
-                {% endif %}
+    <section class="article">
+        <div class="container-narrow">
+            <div class="article__body">
+                {{ content }}
             </div>
+
+            {% if page.pdf %}
+            <div style="margin-top: var(--space-7); text-align: center;">
+                <a href="{{ page.pdf | relative_url }}" class="btn btn-primary" download>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    Download Full Case Study (PDF)
+                </a>
+            </div>
+            {% endif %}
+
+            {% include social-share.html title=page.title url=page.url type="case study" %}
         </div>
     </section>
 
-    <!-- Related Case Studies -->
     {% if site.case_studies.size > 1 %}
-    <section class="services" style="background: var(--bg-secondary);">
-        <div class="container">
-            <div style="text-align: center; margin-bottom: 3rem;">
-                <h2>More Case Studies</h2>
-            </div>
-            <div class="services-grid">
-                {% assign counter = 0 %}
-                {% for study in site.case_studies reversed %}
-                    {% if study.url != page.url and counter < 3 %}
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-chart-line" style="font-size: 2rem;"></i>
-                        </div>
-                        <h3>{{ study.title }}</h3>
-                        {% if study.subtitle %}
-                        <p style="color: var(--text-secondary); margin-top: 0.5rem;">{{ study.subtitle }}</p>
-                        {% endif %}
-                        <p>{{ study.excerpt | strip_html | truncatewords: 30 }}</p>
-                        <a href="{{ study.url | relative_url }}" class="card-link">
-                            Read case study <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                    {% assign counter = counter | plus: 1 %}
-                    {% endif %}
-                {% endfor %}
-            </div>
-        </div>
-    </section>
+    {% include related-content.html title="More case studies" collection=site.case_studies current_url=page.url eyebrow="Explore" %}
     {% endif %}
 </article>

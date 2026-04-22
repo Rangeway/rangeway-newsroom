@@ -4,47 +4,45 @@ title: Case Studies
 permalink: /case-studies.html
 ---
 
-<!-- Hero Section -->
-<section class="hero" style="padding: 120px 0 80px;">
-    <div class="container">
-        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-            <h1>Case <span style="color: var(--accent-color);">Studies</span></h1>
-            <p style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 2rem;">In-depth stories and data-driven insights</p>
-            <a href="{{ '/feed-case-studies.xml' | relative_url }}" class="btn-secondary">
-                <i class="fas fa-rss"></i> Subscribe to Feed
+<section class="listing">
+    <div class="listing__header">
+        <span class="eyebrow">Case Studies</span>
+        <h1>In-depth stories &amp; data</h1>
+        <p>How Rangeway's approach shapes the corridors we serve.</p>
+        <p style="margin-top: var(--space-5);">
+            <a href="{{ '/feed-case-studies.xml' | relative_url }}" class="btn btn-outline">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="19" r="1.5" fill="currentColor"/><path d="M4 4a16 16 0 0 1 16 16"/><path d="M4 11a9 9 0 0 1 9 9"/></svg>
+                Subscribe to Feed
             </a>
-        </div>
+        </p>
     </div>
-</section>
 
-<!-- All Case Studies -->
-<section class="services">
     <div class="container">
-        <div class="services-grid">
+        <div class="grid-3">
             {% for study in site.case_studies reversed %}
-            <a href="{{ study.url | relative_url }}" style="text-decoration: none; color: inherit; display: block;">
-                <div class="service-card">
-                    {% if study.image %}
-                    <div style="margin: -2.5rem -2.5rem 1.5rem -2.5rem; border-radius: 12px 12px 0 0; overflow: hidden;">
-                        <img src="{{ study.image | relative_url }}" alt="{{ study.title }}" style="width: 100%; height: 200px; object-fit: cover; display: block;">
-                    </div>
-                    {% endif %}
-                    <div class="service-icon">
-                        <i class="fas fa-chart-line" style="font-size: 2rem;"></i>
-                    </div>
-                    <h3>{{ study.title }}</h3>
-                    {% if study.subtitle %}
-                    <p style="color: var(--text-secondary); margin-top: 0.5rem;">{{ study.subtitle }}</p>
-                    {% endif %}
-                    <p>{{ study.excerpt | strip_html | truncatewords: 30 }}</p>
+            <a href="{{ study.url | relative_url }}" class="card card--link">
+                {% if study.image %}
+                <div class="card__media">
+                    <img src="{{ study.image | relative_url }}" alt="{{ study.title }}" loading="lazy" decoding="async">
                 </div>
+                {% endif %}
+                <span class="card__tag">Case Study</span>
+                <h3 class="card__title">{{ study.title }}</h3>
+                {% if study.subtitle %}
+                <p class="card__excerpt">{{ study.subtitle }}</p>
+                {% else %}
+                <p class="card__excerpt">{{ study.excerpt | strip_html | truncatewords: 24 }}</p>
+                {% endif %}
+                <span class="card__more">Read case study
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+                </span>
             </a>
             {% endfor %}
 
             {% if site.case_studies.size == 0 %}
-            <div class="service-card" style="grid-column: 1 / -1; text-align: center; padding: 4rem;">
-                <h3>No case studies yet</h3>
-                <p>Check back soon for in-depth insights.</p>
+            <div class="card" style="grid-column: 1 / -1; text-align: center; padding: var(--space-8);">
+                <h3 class="card__title">No case studies yet</h3>
+                <p class="card__excerpt">Check back soon for in-depth insights.</p>
             </div>
             {% endif %}
         </div>
