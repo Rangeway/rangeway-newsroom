@@ -4,6 +4,65 @@ title: Media Kit
 permalink: /media-kit.html
 ---
 
+<style>
+    /* Tightened spacing scoped to the media kit page */
+    .media-kit .page-hero {
+        padding: calc(var(--nav-height) + var(--space-5)) 0 var(--space-6);
+    }
+    .media-kit .page-hero h1 {
+        font-size: clamp(2.2rem, 4vw, 3rem);
+        margin-bottom: var(--space-3);
+    }
+    .media-kit .page-hero__lede {
+        font-size: 1.08rem;
+        margin-bottom: 0;
+    }
+    .media-kit .section {
+        padding: var(--space-7) 0;
+    }
+    .media-kit .listing__header {
+        margin: 0 auto var(--space-6);
+    }
+    .media-kit .listing__header h2 {
+        font-size: clamp(1.7rem, 3.2vw, 2.2rem);
+        margin-bottom: var(--space-2);
+    }
+    .media-kit .listing__header p {
+        font-size: 1rem;
+    }
+    .media-kit .grid-2,
+    .media-kit .grid-3 {
+        gap: var(--space-5);
+    }
+    .media-kit .card {
+        padding: var(--space-5);
+    }
+    .media-kit .card .eyebrow {
+        margin-bottom: var(--space-3);
+    }
+    .media-kit .card__title {
+        font-size: 1.25rem !important;
+        margin-bottom: var(--space-3);
+    }
+    .media-kit .card__excerpt {
+        margin-bottom: var(--space-4);
+    }
+    .media-kit .card dl {
+        gap: var(--space-2) !important;
+        font-size: 0.98rem;
+    }
+    .media-kit .boilerplate-block {
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+    @media (max-width: 560px) {
+        .media-kit .section { padding: var(--space-6) 0; }
+        .media-kit .page-hero { padding: calc(var(--nav-height) + var(--space-4)) 0 var(--space-5); }
+    }
+</style>
+
+<div class="media-kit">
+
 <section class="page-hero">
     <div class="container">
         <div class="page-hero__inner">
@@ -82,7 +141,7 @@ permalink: /media-kit.html
     <div class="container-narrow">
         <span class="eyebrow">Boilerplate</span>
         <h2 style="margin-bottom: var(--space-5);">Company boilerplate</h2>
-        <p id="boilerplate" class="prose-lg" style="font-style: italic; color: var(--color-text); border-left: 3px solid var(--color-warm); padding-left: var(--space-5);">
+        <p id="boilerplate" class="boilerplate-block" style="font-style: italic; color: var(--color-text); border-left: 3px solid var(--color-warm); padding-left: var(--space-5); margin: 0 0 var(--space-5);">
             Rangeway is America's first hospitality-driven premium EV charging network. Built on the conviction that EV charging is a hospitality problem, not a utility one, Rangeway treats every stop as an experience worth designing. Across four complementary formats, Trailhead, Waystation, Basecamp, and Summit, every Rangeway location is built around a climate-controlled driver's lounge and the principle that the stop itself should be worth the time. The company partners with leading hardware, energy, structural, and software providers to deliver a network held to a single hospitality standard, at the scale each corridor requires.
         </p>
         <p style="margin-top: var(--space-5);">
@@ -93,6 +152,8 @@ permalink: /media-kit.html
         </p>
     </div>
 </section>
+
+</div><!-- /.media-kit -->
 
 <script>
     document.querySelectorAll('[data-copy-target]').forEach((btn) => {
