@@ -38,6 +38,7 @@
       color: var(--charcoal);
       line-height: 1.6;
       font-size: 16px;
+      overflow-x: hidden;
     }
     
     .wordmark {
@@ -219,6 +220,95 @@
       .main { margin-left: 0; }
       .hero, .section { padding: 48px 24px; }
       .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+
+      /* Scale hero + sections for mobile */
+      .hero h1 { font-size: 36px; line-height: 1.15; }
+      .hero p { font-size: 16px; }
+      .section-title { font-size: 28px; }
+      .section-intro { font-size: 16px; }
+
+      /* Collapse custom grids that don't use .grid-* */
+      .promise-grid { grid-template-columns: 1fr; gap: 16px; }
+      .thesis-grid,
+      .donts-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      .voice-table { grid-template-columns: 1fr; gap: 16px; }
+
+      /* Logo display boxes shrink */
+      .logo-box { padding: 28px; gap: 12px; flex-wrap: wrap; justify-content: center; }
+      .logo-box .wordmark { font-size: 24px; }
+
+      /* Min-sizes: let items wrap instead of overflowing */
+      .min-sizes {
+        flex-wrap: wrap;
+        gap: 24px;
+        padding: 20px;
+        justify-content: center;
+      }
+
+      /* Essence box scales down */
+      .essence-box { padding: 32px 20px; }
+      .essence-box .tagline { font-size: 22px; }
+
+      /* Clearspace demo padding */
+      .clearspace-demo { padding: 24px; }
+
+      /* Usage table — allow horizontal scroll so columns don't crush */
+      .usage-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+      .usage-table { min-width: 480px; }
+
+      /* Footer stacks vertically */
+      .footer {
+        flex-direction: column;
+        gap: 12px;
+        padding: 32px 24px;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 30px; }
+      .donts-grid { grid-template-columns: 1fr 1fr; }
+      .logo-box .wordmark { font-size: 20px; }
+    }
+
+    /* Mobile TOC — horizontal chip bar */
+    .mobile-toc {
+      display: none;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: var(--charcoal);
+      padding: 10px 16px;
+      overflow-x: auto;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .mobile-toc::-webkit-scrollbar { display: none; }
+
+    .mobile-toc a {
+      display: inline-block;
+      padding: 8px 14px;
+      margin-right: 6px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      color: rgba(255,255,255,0.82);
+      font-family: 'Raleway', sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      text-decoration: none;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .mobile-toc a:hover,
+    .mobile-toc a:focus {
+      background: var(--warm);
+      color: var(--charcoal);
+    }
+
+    @media (max-width: 900px) {
+      .mobile-toc { display: block; }
     }
     
     /* Cards */
@@ -579,6 +669,16 @@
     </div>
   </nav>
   
+  <!-- Mobile TOC (hidden on desktop) -->
+  <nav class="mobile-toc" aria-label="Section navigation">
+    <a href="#brand-foundation">Foundation</a>
+    <a href="#logo">Logo</a>
+    <a href="#colors">Colors</a>
+    <a href="#typography">Typography</a>
+    <a href="#voice">Voice &amp; Tone</a>
+    <a href="#usage">Usage</a>
+  </nav>
+
   <!-- Main Content -->
   <main class="main">
     
@@ -1000,7 +1100,8 @@
       
       <div class="subsection">
         <h3 class="subsection-title">Logo Application Guide</h3>
-        
+
+        <div class="usage-table-wrap">
         <table class="usage-table">
           <thead>
             <tr>
@@ -1057,9 +1158,10 @@
             </tr>
           </tbody>
         </table>
+        </div>
       </div>
     </section>
-    
+
     <!-- Footer -->
     <footer class="footer">
       <div>© 2025 Rangeway. All rights reserved.</div>
