@@ -38,7 +38,7 @@ That's not a sustainability talking point. It's an operational decision. The car
 
 This is going to be the dividing line in the next chapter of the industry. It won't be who has the most ports. It won't be who paid for the most renders. It won't be who has the prettiest map. It will be who can put real power in the places drivers actually need it, on a timeline that matters, without the grid as a single point of failure. The networks that figure this out are going to spend the next five years building. The networks that don't are going to spend the next five years explaining to their investors why their pipeline keeps slipping.
 
-The first site is the proof. The foundation goes in soon. The chargers come online in early 2027. The rest of the network is already moving.
+Our first site will be the proof of all of this. The foundation goes in soon, the chargers come online in early 2027, and there are more sites behind it that we're not ready to name yet.
 
 If you want to follow the build, subscribe to Field Notes at [fieldnotes.rangewayev.com](https://fieldnotes.rangewayev.com). If you're building toward the same thing, working in this space, or thinking about backing what comes next, we'd like to hear from you. Reach us at [hello@rangewayev.com][def].
 
