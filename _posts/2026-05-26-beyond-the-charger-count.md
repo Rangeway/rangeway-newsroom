@@ -11,7 +11,7 @@ image: /assets/images/blog2026-05-26.png
 
 By Zak Winnick
 
-A new report from Zutobi landed last month with a headline most coverage skimmed past. For the first time in years, public charging infrastructure in the United States grew faster than the EV fleet itself. The vehicle count rose 26.7 percent year over year. The port count rose 34.6 percent. The ratio of chargers to electric vehicles, after a long stretch of slipping backward, finally turned the other way.
+A recent from Zutobi with a headline most coverage skimmed past. For the first time in years, public charging infrastructure in the United States grew faster than the EV fleet itself. The vehicle count rose 26.7 percent year over year. The port count rose 34.6 percent. The ratio of chargers to electric vehicles, after a long stretch of slipping backward, finally turned the other way.
 
 That is genuinely good news, and it deserves to be read as such. It is also worth reading twice.
 
