@@ -37,8 +37,9 @@ title: Rangeway Energy Newsroom
 </section>
 {% endif %}
 
+{% assign latest_case_study = site.case_studies | reverse | first %}
 {% assign latest_post = site.posts | first %}
-{% if latest_release or latest_post %}
+{% if latest_release or latest_case_study or latest_post %}
 <section class="section reveal">
     <div class="container">
         <div class="listing__header">
@@ -47,7 +48,7 @@ title: Rangeway Energy Newsroom
             <p>Fresh news across every category.</p>
         </div>
 
-        <div class="grid-2">
+        <div class="grid-3">
             {% if latest_release %}
             <a href="{{ latest_release.url | relative_url }}" class="card card--link">
                 {% if latest_release.image %}
@@ -60,6 +61,26 @@ title: Rangeway Energy Newsroom
                 <h3 class="card__title">{{ latest_release.title }}</h3>
                 <p class="card__excerpt">{{ latest_release.excerpt | strip_html | truncatewords: 24 }}</p>
                 <span class="card__more">Read more
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+                </span>
+            </a>
+            {% endif %}
+
+            {% if latest_case_study %}
+            <a href="{{ latest_case_study.url | relative_url }}" class="card card--link">
+                {% if latest_case_study.image %}
+                <div class="card__media">
+                    <img src="{{ latest_case_study.image | relative_url }}" alt="{{ latest_case_study.title }}" loading="lazy" decoding="async">
+                </div>
+                {% endif %}
+                <span class="card__tag">Case Study</span>
+                <h3 class="card__title">{{ latest_case_study.title }}</h3>
+                {% if latest_case_study.subtitle %}
+                <p class="card__excerpt">{{ latest_case_study.subtitle }}</p>
+                {% else %}
+                <p class="card__excerpt">{{ latest_case_study.excerpt | strip_html | truncatewords: 24 }}</p>
+                {% endif %}
+                <span class="card__more">Read case study
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
                 </span>
             </a>
