@@ -1,5 +1,6 @@
 ---
 layout: case-study
+date: 2026-05-15 06:00:00 -0700
 title: "The Nevada Electric Highway"
 subtitle: "What happens when public capital builds infrastructure without an operator behind it."
 description: "A field-grounded look at the Nevada Electric Highway, the $130M+ program that was supposed to electrify the state's corridors, and what its failure modes reveal about how to actually build a charging network that works."
@@ -9,7 +10,7 @@ pdf: /assets/downloads/nevada-electric-highway.pdf
 
 In June 2015, Nevada Governor Brian Sandoval, the Governor's Office of Energy, and NV Energy announced what they called the first state-led electric highway in the country. The plan was straightforward and ambitious: a DC fast charger every 50 miles along every major Nevada corridor by 2020, starting with US 95 between Las Vegas and Reno. The initial incentive budget ran to roughly $15 million. The Volkswagen environmental mitigation settlement later added $22.5 million more. In 2021, the state legislature authorized NV Energy to spend up to $100 million on EV charging through SB448. The Nevada Department of Transportation pulled in another $38 million in federal NEVI funding under the bipartisan infrastructure law.
 
-In total, Nevada had access to more than $130 million in dedicated EV charging capital. Eleven years later, fewer than four dozen stations had been built, the program had gone defunct, and most of what remained on the ground was not working.
+In total, Nevada had access to more than $130 million in dedicated EV charging capital. Eleven years later, 29 stations had been built across the state under the Nevada Electric Highway program, the program had gone defunct, and as of the end of 2025, only 7 remained operational. A 24% survival rate.
 
 This case study is not a critique of the public officials who launched the program. It is a strategic post-mortem on what the Nevada Electric Highway proves about the gap between capital deployment and operational infrastructure. The short version is the thesis Rangeway has built the company around: capital can build chargers, but only operators keep them running. A network without an operator is not a network. It is a depreciating asset that strands drivers.
 
@@ -20,6 +21,8 @@ Phase I of the Nevada Electric Highway deployed along US 95. The first station o
 By 2026, that hardware is multiple generations behind current ultra-fast equipment, in a market where 350 kilowatt stations are now common and 400 to 800 kilowatt MCS deployments are entering commercial rollout. None of the original deployments included NACS plugs, which were not yet standardized when the hardware was specified.
 
 The Governor's Office of Energy officially wound down the Nevada Electric Highway program in June 2023 and transferred remaining EV infrastructure work to the Nevada Department of Transportation. NDOT, according to the Nevada Independent's March 2026 reporting, failed to obligate its $38 million in federal NEVI funds in time, and Congress subsequently reduced that allocation to roughly $25 million. SB448's $100 million NV Energy authorization has produced limited visible deployment relative to the 120-site, 1,800-port plan it was supposed to fund.
+
+Scott Allison's January 2026 site-by-site audit of all 29 stations surfaced a pattern that turns out to be the heart of the story. All 7 surviving sites share two things: they are on the EV Connect network, and they use ABB hardware. Every other operator's sites are dead. Shell was the largest operator on the network with 12 sites, all of which went offline when Shell exited third-party DC fast charging on April 30, 2025. Chargers manufactured by BTC Power, efacec, and Freewire are all defunct as well, even though only Freewire has actually gone out of business. The other two vendors are still operating as companies. Their Nevada Electric Highway sites are dead anyway. The operator decided to walk away, and the hardware became a depreciating asset on a concrete pad.
 
 ## The field report
 
@@ -48,7 +51,7 @@ First, the working sites work in spite of the network, not because of it. Cold S
 
 Second, the survivor pricing is punitive. Allison paid $0.95 per kilowatt-hour at Cold Springs Station and Austin, which he describes as among the most expensive charging in the country. For a driver crossing a corridor with no alternatives, this is captive pricing on aging hardware. It is not what a healthy network looks like.
 
-Third, the failure at Middlegate Station is the most instructive single data point on the entire route. The site is an off-grid solar and battery installation, conceptually well-located on a corridor that desperately needs reliable charging, and exactly the kind of build that should represent the future of rural EV infrastructure. It is offline because the hardware vendor, Freewire, went bankrupt. The unit cannot be serviced. The vendor's corporate solvency, not the technology itself, is what killed the site.
+Third, the failure at Middlegate Station is the most instructive single data point on the entire route. The site is an off-grid solar and battery installation, conceptually well-located on a corridor that desperately needs reliable charging, and exactly the kind of build that should represent the future of rural EV infrastructure. It is offline because the hardware vendor, Freewire, went bankrupt and the unit can no longer be serviced. What makes the data point sharper is that Freewire is the exception, not the rule. Most defunct Nevada Electric Highway sites are running hardware from vendors that are still in business. The hardware is not what killed those sites. The operator walking away is what killed them.
 
 ## Why it failed
 
@@ -58,11 +61,11 @@ The Nevada Electric Highway did not fail because Nevada is too remote or because
 
 **No revenue model that paid for maintenance.** Charging revenue at the deployed kilowatt levels does not generate enough margin to fund equipment maintenance, network connectivity fees, and replacement reserves, particularly at low-utilization rural sites. Many of the original sites were positioned as a public good, with host agreements requiring free charging for years. Free-charging public goods do not generate the cash flow needed to keep aging hardware operational.
 
-**Hardware vendor concentration risk.** Freewire's bankruptcy bricked the Middlegate installation. Other Nevada Electric Highway sites face similar exposure as their vendors consolidate, pivot, or exit. A network without a viable hardware service-and-support chain is a depreciating asset on a five-to-seven-year half-life.
+**Operator pullout risk.** Freewire's bankruptcy bricked the Middlegate installation. The bigger pattern is bigger than bankruptcies. Shell's exit from third-party DC fast charging in April 2025 took 12 Nevada Electric Highway sites offline in a single corporate decision, even though the hardware on those sites is fine and the manufacturers are still in business. Networks built on operators who can decide to walk away are networks that can disappear overnight.
 
 **No experience layer to retain drivers.** Even when the chargers work, there is nothing to do at most sites except wait. The hosts that have thrived succeeded because they were already destinations. The chargers that sit in empty parking lots have no second product to fall back on when the primary product fails.
 
-**Program discontinuity.** When the Governor's Office of Energy wound down the program in June 2023 and handed remaining work to NDOT, institutional continuity broke. The follow-on $100 million SB448 authorization has produced limited visible deployment. Federal NEVI funds went unspent. Capital allocated is not the same as infrastructure delivered.
+**Program discontinuity.** When the Governor's Office of Energy wound down the program in June 2023 and handed remaining work to NDOT, institutional continuity broke. The follow-on $100 million SB448 authorization has produced limited visible deployment. Federal NEVI funds went partially unspent, and policy changes at the federal level have since made the remaining allocation difficult or impossible for states to deploy. Capital allocated is not the same as infrastructure delivered.
 
 > "Renders are easy, execution is the moat." The Nevada Electric Highway had renders. It had ribbon cuttings, press releases, and a governor's vision. What it did not have was an operator on the hook for every driver who pulled in expecting the charger to work.
 
@@ -76,7 +79,7 @@ Five things Nevada teaches us about the network we are building.
 
 **Reliability is a corridor property, not a site property.** Allison rejected the direct 215-mile US 95 route from Las Vegas and added 967 miles of detour because of how unreliable the corridor was overall. EV drivers route at the corridor level, not the site level. A Rangeway location does not just have to work for the driver pulling in. It has to work for the driver three sites back deciding whether to take that route at all. This is why corridor density and consistent operating standards matter more than any single site's specifications.
 
-**Hardware partner solvency is a procurement criterion.** Freewire's bankruptcy bricked a site that should still be operating. Our exclusive hardware partnership for Rangeway-owned Waystation and Basecamp deployments with an established European manufacturer is not just a quality choice. It is a counterparty risk choice. Long-term serviceability, parts availability, and corporate stability now matter as much as kilowatt rating.
+**Counterparty risk is a procurement criterion.** Freewire's bankruptcy bricked Middlegate, but the larger risk on display in Nevada is operator pullout. Shell's exit took 12 sites offline at once. A network built on operators who can decide their charging division is no longer strategic is a network with a single point of failure that no driver can see. Our owner-operator model and our exclusive hardware partnership for Rangeway-owned Waystation and Basecamp deployments with an established European manufacturer are both counterparty risk decisions. Long-term commitment, by us and by our partners, matters as much as kilowatt rating.
 
 **The opportunity in Nevada is wide open.** Nevada has more than 65,000 EV drivers today and one of the highest EV growth rates in the country. The state's rural corridors are a charging desert. The two corridors that most resemble the Rangeway thesis, US 50 across the Loneliest Road and US 93 between Las Vegas and Ely, are precisely the kind of long-distance leisure routes our network is built to serve. The question is not whether demand exists. The question is who builds the operator-led network that actually shows up.
 
@@ -88,6 +91,6 @@ The next time someone asks why we are not chasing a network-wide grant program, 
 
 ---
 
-*Primary source: Scott Allison, ["Driving Nevada's Loneliest Highway in an EV,"](https://scottexplains.com/f/driving-nevada%E2%80%99s-loneliest-highway-in-an-ev) scottexplains.com, May 10, 2026, and the companion video on the Scott Explains YouTube channel. Additional reporting from the Nevada Independent ("More than $130M was allocated for EV charger buildout in Nevada. Few were built," March 2026), U.S. News and World Report (September 2024), and program documentation from the Nevada Governor's Office of Energy, NV Energy, and the Nevada Department of Transportation.*
+*Primary sources: Scott Allison, ["Nevada Built an EV Highway and Then Abandoned It,"](https://scottexplains.com/f/nevada-built-an-ev-highway-and-then-abandoned-it) scottexplains.com, January 16, 2026, and ["Driving Nevada's Loneliest Highway in an EV,"](https://scottexplains.com/f/driving-nevada%E2%80%99s-loneliest-highway-in-an-ev) scottexplains.com, May 10, 2026, plus the companion video on the Scott Explains YouTube channel. Site-level status data drawn from Allison's January 2026 audit of all 29 Nevada Electric Highway stations. Additional reporting from the Nevada Independent ("More than $130M was allocated for EV charger buildout in Nevada. Few were built," March 2026), U.S. News and World Report (September 2024), and program documentation from the Nevada Governor's Office of Energy, NV Energy, and the Nevada Department of Transportation.*
 
 *Rangeway is building America's first hospitality-driven premium EV charging network. Learn more at [rangewayev.com](https://rangewayev.com).*
