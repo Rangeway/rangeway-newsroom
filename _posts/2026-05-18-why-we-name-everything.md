@@ -45,4 +45,4 @@ This is why we name everything. A name is the cheapest, fastest way to tell a dr
 
 The trail starts where you start. We named it.
 
-*Learn more about what we are building at [rangewayev.com](https://rangewayev.com).*
+*Learn more about what we are building at [rangeway.co](https://rangeway.co).*

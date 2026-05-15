@@ -49,4 +49,4 @@ We are paying attention to where those stops need to be.
 
 *Source: Zutobi, The 2026 EV Charging Station Report: State-by-State Breakdown, updated April 16, 2026. Methodology draws on the Alternative Fuels Data Center and the Bureau of Transportation Statistics.*
 
-*Learn more about how we are building the network at [rangewayev.com](https://rangewayev.com).*
+*Learn more about how we are building the network at [rangeway.co](https://rangeway.co).*

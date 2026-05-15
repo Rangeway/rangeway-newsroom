@@ -33,7 +33,7 @@ The partnership reflects both companies' commitment to sustainability without co
 
 ## About Rangeway
 
-Rangeway is building America's first hospitality-driven premium EV charging network. Every Rangeway location guarantees a climate-controlled Driver's Lounge with premium restrooms, comfortable seating, and high-speed Wi-Fi. Rangeway's Pathfinder Rewards program offers free membership with credits back earned through loyalty. For more information, visit [rangewayev.com](https://rangewayev.com).
+Rangeway is building America's first hospitality-driven premium EV charging network. Every Rangeway location guarantees a climate-controlled Driver's Lounge with premium restrooms, comfortable seating, and high-speed Wi-Fi. Rangeway's Pathfinder Rewards program offers free membership with credits back earned through loyalty. For more information, visit [rangeway.co](https://rangeway.co).
 
 ## About ReNüTeq
 
@@ -45,7 +45,7 @@ Founded in 2016 and headquartered in St. Louis, Missouri, ReNüTeq is the world 
 
 **Rangeway**
 Media Relations
-media@rangewayev.com
+media@rangeway.co
 
 **ReNüTeq**
 Media Relations

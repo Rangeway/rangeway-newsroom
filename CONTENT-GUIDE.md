@@ -50,7 +50,7 @@ More content with full Markdown support...
 Rangeway Energy is building America's premier electric vehicle charging network for scenic corridors. Every Rangeway location features climate-controlled indoor lounges, premium cafés, and ultra-fast charging infrastructure—eliminating the parking lot waits that plague traditional EV charging.
 
 ### Media Contact
-**Email:** media@rangeway.energy
+**Email:** media@rangeway.co
 **Phone:** (650) 420-6300
 ```
 
@@ -98,7 +98,7 @@ Numbered lists:
 
 ## Adding Links
 
-[Link to main site](https://rangewayev.com)
+[Link to main site](https://rangeway.co)
 
 ## Adding Images
 
@@ -110,7 +110,7 @@ Numbered lists:
 
 ---
 
-*Want to stay updated? Subscribe to our [Field Notes newsletter](https://fieldnotes.rangewayev.com).*
+*Want to stay updated? Subscribe to our [Field Notes newsletter](https://fieldnotes.rangeway.co).*
 ```
 
 **Example filename:** `2024-11-15-construction-update-baker.md`
@@ -338,8 +338,8 @@ git push origin main
 
 ### Links
 ```markdown
-[Link text](https://rangewayev.copm)
-[Link with title](https://rangewayev.com "Rangeway Homepage")
+[Link text](https://rangeway.co)
+[Link with title](https://rangeway.co "Rangeway Homepage")
 ```
 
 ### Images
@@ -484,7 +484,7 @@ Check these files in the repo for reference:
 - Or use a separate branch and merge when ready
 
 ### Contact
-For questions about the newsroom site: **media@rangewayev.com**
+For questions about the newsroom site: **media@rangeway.co**
 
 ---
 

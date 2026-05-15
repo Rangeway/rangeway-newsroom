@@ -59,4 +59,4 @@ The corridor stop of the next decade is not a gas station with chargers bolted o
 
 We are going to get there. The only real question is which networks will be ready when the traffic arrives, and which ones will be scrambling. I know which side we are building for.
 
-If you are working on freight electrification, whether as a shipper, a carrier, a charge point operator, or an alliance coordinating the rollout, I would like to hear from you. Rangeway Fleet Relations can be reached at [fleets@rangewayev.com](mailto:fleets@rangewayev.com).
+If you are working on freight electrification, whether as a shipper, a carrier, a charge point operator, or an alliance coordinating the rollout, I would like to hear from you. Rangeway Fleet Relations can be reached at [fleets@rangeway.co](mailto:fleets@rangeway.co).

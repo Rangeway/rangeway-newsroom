@@ -20,7 +20,7 @@ This partnership represents another step in Rangeway's mission to transform EV c
 
 ### About Rangeway
 
-Rangeway is America's first hospitality-driven premium EV charging network, building destination experiences where EV charging becomes part of your journey. Every Rangeway location features a climate-controlled Driver's Lounge with premium restrooms, high-speed Wi-Fi, and comfortable seating, an industry first. The company operates two formats: Basecamps with staffed cafés and full amenities, and Waystations with automated retail and the same indoor comfort guarantee. Pathfinder Rewards, Rangeway's free-to-join loyalty program, lets members earn credits back and unlock experiential perks through their charging activity. Learn more at [rangewayev.com](https://rangewayev.com).
+Rangeway is America's first hospitality-driven premium EV charging network, building destination experiences where EV charging becomes part of your journey. Every Rangeway location features a climate-controlled Driver's Lounge with premium restrooms, high-speed Wi-Fi, and comfortable seating, an industry first. The company operates two formats: Basecamps with staffed cafés and full amenities, and Waystations with automated retail and the same indoor comfort guarantee. Pathfinder Rewards, Rangeway's free-to-join loyalty program, lets members earn credits back and unlock experiential perks through their charging activity. Learn more at [rangeway.co](https://rangeway.co).
 
 ### About Monta
 
@@ -30,7 +30,7 @@ Monta established its North American headquarters in Miami in 2024 and has alrea
 
 **Rangeway**<br>
 Media Relations<br>
-[media@rangewayev.com](mailto:media@rangewayev.com)
+[media@rangeway.co](mailto:media@rangeway.co)
 
 **Monta**<br>
 Emile Josselin<br>

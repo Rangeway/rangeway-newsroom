@@ -45,4 +45,4 @@ This industry is ready for more. So are the drivers.
 
 ---
 
-*Rangeway is building America's first hospitality-driven premium EV charging network. Learn more at [rangewayev.com](https://rangewayev.com).*
+*Rangeway is building America's first hospitality-driven premium EV charging network. Learn more at [rangeway.co](https://rangeway.co).*

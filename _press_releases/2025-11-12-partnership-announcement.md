@@ -25,10 +25,10 @@ Currently seeking Pre-Seed investors, Rangeway has assembled the technology part
 
 ## **About Rangeway Energy**
 
-Rangeway Energy is building a premium EV charging network where infrastructure meets hospitality. The company serves adventure travelers and road-trippers who expect the same level of thoughtfulness from charging infrastructure that they find at the best roadside stops. By focusing exclusively on tourism routes and gateway communities, Rangeway fills a critical gap left by networks that prioritize urban and interstate corridors. For more information, visit rangeway.energy.
+Rangeway Energy is building a premium EV charging network where infrastructure meets hospitality. The company serves adventure travelers and road-trippers who expect the same level of thoughtfulness from charging infrastructure that they find at the best roadside stops. By focusing exclusively on tourism routes and gateway communities, Rangeway fills a critical gap left by networks that prioritize urban and interstate corridors. For more information, visit rangeway.co.
 
 ## **Media Contact**
 
 Rangeway Media Team  
-[media@rangeway.energy](mailto:media@rangeway.energy)  
+[media@rangeway.co](mailto:media@rangeway.co)  
 650.420.6300

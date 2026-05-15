@@ -151,9 +151,9 @@ This site is configured for GitHub Pages. Push to the main branch and GitHub wil
 
 ## Brand Consistency
 
-This site uses the same design system as the main Rangeway site (rangewayev.com), ensuring brand consistency across all properties.
+This site uses the same design system as the main Rangeway site (rangeway.co), ensuring brand consistency across all properties.
 
-**Note:** The main site (rangewayev.com) has been updated to Version 4.0 with new brand colors:
+**Note:** The main site (rangeway.co) has been updated to Version 4.0 with new brand colors:
 - Warm (#f4a855)
 - Charcoal (#2d2d2d)
 - Cream (#f5f1eb)
@@ -169,7 +169,7 @@ The newsroom may be updated to match in a future release.
 
 ## Contact
 
-For media inquiries: media@rangewayev.com
+For media inquiries: media@rangeway.co
 
 ---
 

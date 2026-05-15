@@ -166,4 +166,4 @@ This case study is based on Paren's Q3 2025 State of the U.S. EV Fast Charging I
 ---
 <br>
 
-*Want to stay updated on EV charging infrastructure insights? Subscribe to our [Field Notes newsletter](https://fieldnotes.rangeway.energy) or visit [rangeway.energy](https://rangeway.energy) to learn more about our approach to reliable, accessible EV charging.*
+*Want to stay updated on EV charging infrastructure insights? Subscribe to our [Field Notes newsletter](https://fieldnotes.rangeway.co) or visit [rangeway.co](https://rangeway.co) to learn more about our approach to reliable, accessible EV charging.*

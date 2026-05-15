@@ -40,6 +40,6 @@ This is going to be the dividing line in the next chapter of the industry. It wo
 
 Our first site will be the proof of all of this. The foundation goes in soon, the chargers come online in early 2027, and there are more sites behind it that we're not ready to name yet.
 
-If you want to follow the build, subscribe to Field Notes at [fieldnotes.rangewayev.com](https://fieldnotes.rangewayev.com). If you're building toward the same thing, working in this space, or thinking about backing what comes next, we'd like to hear from you. Reach us at [hello@rangewayev.com][def].
+If you want to follow the build, subscribe to Field Notes at [fieldnotes.rangeway.co](https://fieldnotes.rangeway.co). If you're building toward the same thing, working in this space, or thinking about backing what comes next, we'd like to hear from you. Reach us at [hello@rangeway.co][def].
 
-[def]: mailto:hello@rangewayev.com
+[def]: mailto:hello@rangeway.co
