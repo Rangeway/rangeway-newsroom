@@ -68,8 +68,8 @@
             <ul class="nav-links" aria-label="Primary">
                 <li><a href="{{ '/' | relative_url }}" {% if page.url == '/' or page.url == '/index.html' %}aria-current="page"{% endif %}>Home</a></li>
                 <li><a href="{{ '/press.html' | relative_url }}" {% if page.url contains '/press' %}aria-current="page"{% endif %}>Press Releases</a></li>
-                <li><a href="{{ '/case-studies.html' | relative_url }}" {% if page.url contains '/case-studies' %}aria-current="page"{% endif %}>Case Studies</a></li>
                 <li><a href="{{ '/blog.html' | relative_url }}" {% if page.url contains '/blog' %}aria-current="page"{% endif %}>Blog</a></li>
+                <li><a href="{{ '/case-studies.html' | relative_url }}" {% if page.url contains '/case-studies' %}aria-current="page"{% endif %}>Case Studies</a></li>
                 <li><a href="{{ '/media-kit.html' | relative_url }}" {% if page.url contains '/media-kit' %}aria-current="page"{% endif %}>Media Kit</a></li>
                 <li><a href="{{ site.organization.main_site }}" target="_blank" rel="noopener noreferrer">Main Site</a></li>
                 <li class="nav-social" aria-label="Social">
@@ -105,8 +105,8 @@
         <div class="nav-mobile" id="mobile-menu" hidden data-mobile>
             <a href="{{ '/' | relative_url }}">Home</a>
             <a href="{{ '/press.html' | relative_url }}">Press Releases</a>
-            <a href="{{ '/case-studies.html' | relative_url }}">Case Studies</a>
             <a href="{{ '/blog.html' | relative_url }}">Blog</a>
+            <a href="{{ '/case-studies.html' | relative_url }}">Case Studies</a>
             <a href="{{ '/media-kit.html' | relative_url }}">Media Kit</a>
             <a href="{{ site.organization.main_site }}" target="_blank" rel="noopener noreferrer">Main Site</a>
             <div class="nav-mobile__social">

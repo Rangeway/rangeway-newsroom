@@ -66,6 +66,23 @@ title: Rangeway Energy Newsroom
             </a>
             {% endif %}
 
+            {% if latest_post %}
+            <a href="{{ latest_post.url | relative_url }}" class="card card--link">
+                {% if latest_post.image %}
+                <div class="card__media">
+                    <img src="{{ latest_post.image | relative_url }}" alt="{{ latest_post.title }}" loading="lazy" decoding="async">
+                </div>
+                {% endif %}
+                <span class="card__tag">Blog</span>
+                <p class="card__date">{{ latest_post.date | date: "%B %d, %Y" }}</p>
+                <h3 class="card__title">{{ latest_post.title }}</h3>
+                <p class="card__excerpt">{{ latest_post.excerpt | strip_html | truncatewords: 24 }}</p>
+                <span class="card__more">Read more
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+                </span>
+            </a>
+            {% endif %}
+
             {% if latest_case_study %}
             <a href="{{ latest_case_study.url | relative_url }}" class="card card--link">
                 {% if latest_case_study.image %}
@@ -81,23 +98,6 @@ title: Rangeway Energy Newsroom
                 <p class="card__excerpt">{{ latest_case_study.excerpt | strip_html | truncatewords: 24 }}</p>
                 {% endif %}
                 <span class="card__more">Read case study
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
-                </span>
-            </a>
-            {% endif %}
-
-            {% if latest_post %}
-            <a href="{{ latest_post.url | relative_url }}" class="card card--link">
-                {% if latest_post.image %}
-                <div class="card__media">
-                    <img src="{{ latest_post.image | relative_url }}" alt="{{ latest_post.title }}" loading="lazy" decoding="async">
-                </div>
-                {% endif %}
-                <span class="card__tag">Blog</span>
-                <p class="card__date">{{ latest_post.date | date: "%B %d, %Y" }}</p>
-                <h3 class="card__title">{{ latest_post.title }}</h3>
-                <p class="card__excerpt">{{ latest_post.excerpt | strip_html | truncatewords: 24 }}</p>
-                <span class="card__more">Read more
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
                 </span>
             </a>
