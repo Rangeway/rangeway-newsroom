@@ -11,7 +11,7 @@ The Rangeway newsroom serves as the media center for Rangeway, featuring:
 - Media kit and brand assets
 - RSS feeds for all content types
 
-**Live URL:** https://newsroom.rangeway.energy
+**Live URL:** https://newsroom.rangeway.co
 
 ## Brand Guidelines Implementation
 
@@ -145,7 +145,7 @@ This site is configured for GitHub Pages. Push to the main branch and GitHub wil
 
 ### Custom Domain Setup
 
-1. In repository settings, add `newsroom.rangeway.energy` as custom domain
+1. In repository settings, add `newsroom.rangeway.co` as custom domain
 2. Add CNAME record in DNS pointing to your GitHub Pages URL
 3. Enable HTTPS in repository settings
 
