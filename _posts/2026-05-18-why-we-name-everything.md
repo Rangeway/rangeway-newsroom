@@ -8,7 +8,7 @@ description: "Notes on naming as brand strategy in EV charging. Why we are Range
 image: /assets/images/blog2026-05-18.png
 ---
 
-I sat down with Theo Reichgelt a few weeks ago on The eMobility Marketing Podcast. Theo runs Nexxt Industry out of Arnhem and has been working with charge point operators across Europe for nearly a decade. He has seen the naming question handled well and handled badly more times than almost anyone in this industry. We spent a chapter of the conversation on a small piece of it: the moment we decided to drop "Energy" from the public-facing version of our brand.
+I sat down with Theo Reichgelt a few weeks ago on ‘The eMobility Marketing Podcast’. Theo runs Nexxt Industry out of Arnhem and has been working with charge point operators across Europe for nearly a decade. He has seen the naming question handled well and handled badly more times than almost anyone in this industry. We spent a chapter of the conversation on a small piece of it: the moment we decided to drop "Energy" from the public-facing version of our brand.
 
 That decision sounds minor. It is not.
 
