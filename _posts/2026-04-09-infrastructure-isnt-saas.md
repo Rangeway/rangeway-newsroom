@@ -62,4 +62,4 @@ Renders are easy. Execution is the moat. The funding tools exist for companies b
 
 *Listen to the full episode: [Philip Meyer on building B2B pipeline through executive authority on The eMobility Marketing Podcast](https://youtu.be/TkdXccPSrhk?si=0o33dPbnWBUYq47u).*
 
-*Rangeway is building America's first hospitality-driven premium EV charging network. Learn more at [rangewayev.com](https://rangewayev.com).*
+*Rangeway is building America's first hospitality-driven premium EV charging network. Learn more at [rangeway.co](https://rangeway.co).*

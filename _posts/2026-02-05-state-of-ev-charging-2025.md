@@ -95,4 +95,4 @@ That's where the opportunity lies. That's where the future is being built.
 
 ---
 
-*Rangeway is building America's first hospitality-driven premium EV charging network. Learn more at [rangewayev.com](https://rangewayev.com).*
+*Rangeway is building America's first hospitality-driven premium EV charging network. Learn more at [rangeway.co](https://rangeway.co).*

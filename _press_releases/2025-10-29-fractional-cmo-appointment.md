@@ -32,8 +32,8 @@ Rangeway's Phase 1 deployment focuses on the California desert corridor, with th
 
 Rangeway Energy is building America's premier electric vehicle charging network for scenic corridors. Every Rangeway location features climate-controlled indoor lounges, premium cafés, and ultra-fast charging infrastructure—eliminating the parking lot waits that plague traditional EV charging. The company's hub-satellite model delivers 99% uptime at Basecamp hubs and 98% uptime at Waystation satellites, with member rates that remain flat regardless of time of day. Founded by hospitality entrepreneur Zak Winnick, Rangeway is headquartered in San Francisco with its first Basecamp location under development in Baker, California.
 
-For more information, visit [rangeway.energy](https://rangeway.energy).
+For more information, visit [rangeway.co](https://rangeway.co).
 
 ### Media Contact
-**Email:** media@rangeway.energy  
+**Email:** media@rangeway.co  
 **Phone:** (650) 420-6300

@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Rangeway Newsroom is a Jekyll-based static site serving as the media center for Rangeway Energy (America's premier scenic highway EV charging network). Hosted on GitHub Pages at https://newsroom.rangeway.energy.
+Rangeway Newsroom is a Jekyll-based static site serving as the media center for Rangeway Energy (America's premier scenic highway EV charging network). Hosted on GitHub Pages at https://newsroom.rangeway.co.
 
 ## Common Commands
 
@@ -105,5 +105,5 @@ pdf: /assets/downloads/case-study.pdf  # Optional
 ## Key Configuration
 
 - Jekyll config: `_config.yml`
-- Custom domain: `CNAME` file (newsroom.rangeway.energy)
+- Custom domain: `CNAME` file (newsroom.rangeway.co)
 - GitHub Actions: `.github/workflows/scheduled-build.yml`

@@ -1,5 +1,5 @@
 /* Rangeway Newsroom
-   Design system v3.0 — matches rangewayev.com
+   Design system v3.0 — matches rangeway.co
    Tokens adapted from rangeway-pages/src/styles/global.css
 */
 
@@ -1237,7 +1237,7 @@ body:not(.has-hero) main {
 /* RSS grid (on newsroom home + footer band) */
 .rss-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: var(--space-5);
 }
 

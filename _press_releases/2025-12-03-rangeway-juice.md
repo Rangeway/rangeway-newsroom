@@ -42,7 +42,7 @@ As the network grows, the companies plan to share data-backed case studies on ho
 
 Rangeway is building America's first hospitality-driven EV charging network, focused on scenic highways and gateway communities. By pairing reliable fast charging with climate-controlled Driver's Lounges, premium amenities, and thoughtful design, Rangeway serves road-trippers and adventure travelers who expect the same level of care from a charging stop that they get from their favorite roadside destinations. We think like hoteliers, not utility companies.
 
-For more information, visit rangewayev.com.
+For more information, visit rangeway.co.
 
 ## About Juice
 
@@ -53,7 +53,7 @@ For more information, visit www.js.eco
 ## Media Contacts
 
 **Rangeway Media Team**
-Email: media@rangewayev.com
+Email: media@rangeway.co
 
 **Juice Media Contact**
 Name: James Murfin

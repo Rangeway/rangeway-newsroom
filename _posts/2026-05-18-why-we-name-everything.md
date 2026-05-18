@@ -1,6 +1,7 @@
 ---
 layout: post
 date: 2026-05-18 06:00:00 -0700
+author: Zak Winnick
 title: "Why We Name Everything"
 subtitle: "Why a hospitality-first charging network picked Trailheads instead of stations, Trailkeepers instead of attendants, and what most CPOs miss about the cheapest tool in their marketing toolkit."
 category: blog
@@ -44,4 +45,4 @@ This is why we name everything. A name is the cheapest, fastest way to tell a dr
 
 The trail starts where you start. We named it.
 
-*Learn more about what we are building at [rangewayev.com](https://rangewayev.com).*
+*Learn more about what we are building at [rangeway.co](https://rangeway.co).*

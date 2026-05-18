@@ -32,7 +32,7 @@ Red Canyon is fully integrated into Rangeway's Pathfinder Rewards loyalty progra
 
 ### About Rangeway
 
-Rangeway is building America's first hospitality-driven premium EV charging network. The company guarantees climate-controlled indoor comfort at every Basecamp and Waystation, an industry first. Founded by a hospitality operator with 15+ years at properties including Wynn Las Vegas, Cosmopolitan of Las Vegas, and Grand Hyatt Nashville, Rangeway thinks like hotel operators, not utility companies. The network serves premium EV travelers along America's highways through three formats: Trailheads, Waystations, and Basecamps, all unified by the Pathfinder Rewards loyalty program. Learn more at **[rangewayev.com](https://rangewayev.com)**.
+Rangeway is building America's first hospitality-driven premium EV charging network. The company guarantees climate-controlled indoor comfort at every Basecamp and Waystation, an industry first. Founded by a hospitality operator with 15+ years at properties including Wynn Las Vegas, Cosmopolitan of Las Vegas, and Grand Hyatt Nashville, Rangeway thinks like hotel operators, not utility companies. The network serves premium EV travelers along America's highways through three formats: Trailheads, Waystations, and Basecamps, all unified by the Pathfinder Rewards loyalty program. Learn more at **[rangeway.co](https://rangeway.co)**.
 
 ### About Red Canyon Roasting Company
 
@@ -42,4 +42,4 @@ Red Canyon Roasting Company is a single-origin, small-batch coffee roaster found
 
 **Media Contact**<br>
 Rangeway Media Relations<br>
-[media@rangewayev.com](mailto:media@rangewayev.com)
+[media@rangeway.co](mailto:media@rangeway.co)
