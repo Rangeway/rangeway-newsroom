@@ -41,7 +41,7 @@ Rangeway is America's first hospitality-driven premium EV charging network, buil
 
 ### About LoüTeq
 
-LoüTeq is a St. Louis-based sustainable structure manufacturer specializing in engineered bamboo and modular building systems for commercial and infrastructure applications. The company designs and fabricates structural solutions that combine architectural ambition with sustainable materials.
+LoüTeq is a St. Louis-based sustainable structure manufacturer specializing in engineered bamboo and modular building systems for commercial and infrastructure applications. The company designs and fabricates structural solutions that combine architectural ambition with sustainable materials. Learn more at [louteq.com](https://louteq.com].
 
 ### Media Contacts
 
