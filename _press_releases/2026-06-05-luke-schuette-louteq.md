@@ -1,7 +1,7 @@
 ---
 layout: press-release
 title: "Rangeway Forms St. Louis Joint Venture with LoüTeq, Names Luke Schuette Director of Design and Construction"
-date: 2026-MM-DD 06:15:00 -0700
+date: 2026-06-05 06:15:00 -0700
 description: "Rangeway forms Rangeway St. Louis joint venture with sustainable structure manufacturer LoüTeq and names founder and CEO Luke Schuette Director of Design and Construction."
 image: /assets/images/rangeway-louteq-stlouis-social.jpg
 ---
