@@ -24,7 +24,7 @@ Delivering that elevated experience requires partners who think about charging t
 
 In his role on the Rangeway leadership team, Schuette will oversee architectural design and construction execution across Rangeway's growing network of Trailheads, Waystations, Basecamps, and Summit destinations. LoüTeq remains Rangeway's preferred structural and building partner across all four network formats, with materials and fabrication produced at the company's St. Louis facility.
 
-![Luke Schuette standing beside an engineered bamboo solar charging canopy he designed for BMW.](/assets/images/rangeway-louteq-luke-bmw.jpg)
+![Luke Schuette standing beside an engineered bamboo solar charging canopy he designed for BMW.](/assets/images/rangeway-louteq-luke-bmw.png)
 *Luke Schuette with an engineered bamboo solar charging canopy he designed for BMW, prior to joining Rangeway.*
 
 ### Rangeway St. Louis
