@@ -6,8 +6,6 @@ description: "Rangeway forms Rangeway St. Louis joint venture with sustainable s
 image: /assets/images/rangeway-louteq-stlouis-social.jpg
 ---
 
-![Rangeway St. Louis concept rendering at dusk, with a curved engineered-bamboo canopy, glass-walled driver's lounge, and observation tower framed against the St. Louis skyline.](/assets/images/rangeway-louteq-stlouis-social.jpg)
-
 **ST. LOUIS, MO**: Rangeway, America's first hospitality-driven premium EV charging network, is excited to announce the formation of Rangeway St. Louis, a joint venture with sustainable structure manufacturer LoüTeq (formerly ReNuTeq) to develop premium EV charging locations across the St. Louis market. As part of the partnership, LoüTeq founder and CEO Luke Schuette joins the Rangeway leadership team as Director of Design and Construction.
 
 Rangeway St. Louis will operate as a majority-owned Rangeway entity, with Schuette holding the joint venture partnership position. The venture combines Rangeway's hospitality-driven network model with LoüTeq's sustainable building expertise to deliver Rangeway's premium driver experience across the region.
