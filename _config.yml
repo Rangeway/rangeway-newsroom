@@ -70,5 +70,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+  - DEPLOY.md
   - .gitignore
   - vendor
