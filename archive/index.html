@@ -105,7 +105,8 @@ title: Rangeway Energy Newsroom
 
         <div class="services-grid">
             {% assign counter = 0 %}
-            {% for release in site.press_releases reversed %}
+            {% assign published_releases = site.press_releases | where_exp: "release", "release.date <= site.time" %}
+            {% for release in published_releases reversed %}
                 {% if counter < 6 %}
                 <div class="service-card">
                     <div class="service-icon">

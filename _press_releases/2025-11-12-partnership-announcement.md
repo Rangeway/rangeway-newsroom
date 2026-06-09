@@ -1,7 +1,7 @@
 ---
 layout: press-release
 title: "Rangeway Energy Announces Strategic Technology Partnerships to Power Premium Scenic Corridor Charging Network"
-date: 2025-11-12 06:00:00 -800
+date: 2025-11-12 06:00:00 -0800
 description: "ChargeMate, WattsUp, and HyWatts Join Rangeway's Mission to Transform EV Charging Along America's Scenic Highways"
 image: /assets/images/partners1.jpg
 ---

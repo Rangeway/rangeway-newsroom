@@ -21,7 +21,8 @@ permalink: /press/
 <section class="services">
     <div class="container">
         <div class="services-grid">
-            {% for release in site.press_releases reversed %}
+            {% assign published_releases = site.press_releases | where_exp: "release", "release.date <= site.time" %}
+            {% for release in published_releases reversed %}
             <div class="service-card">
                 <div class="service-icon">
                     <i class="fas fa-newspaper" style="font-size: 2rem;"></i>
@@ -35,7 +36,7 @@ permalink: /press/
             </div>
             {% endfor %}
 
-            {% if site.press_releases.size == 0 %}
+            {% if published_releases.size == 0 %}
             <div class="service-card" style="grid-column: 1 / -1; text-align: center; padding: 4rem;">
                 <h3>No press releases yet</h3>
                 <p>Check back soon for official announcements.</p>

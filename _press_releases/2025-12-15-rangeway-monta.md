@@ -1,7 +1,7 @@
 ---
 layout: press-release
 title: "Rangeway Selects Monta as Charge Point Management Partner to Power America's First Hospitality-Driven EV Charging Network"
-date: 2025-12-15 06:00:00 -800
+date: 2025-12-15 06:00:00 -0800
 description: "Rangeway announces Monta as its charge point management partner, bringing Europe's leading EV charging platform to America's first hospitality-driven network."
 image: /assets/images/rangeway-monta-social.png
 ---
