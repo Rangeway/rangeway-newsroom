@@ -1,0 +1,156 @@
+<!-- RSS Subscribe Section -->
+<section style="background: rgba(0, 0, 0, 0.2); padding: 4rem 0; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+    <div class="container" style="max-width: 1000px;">
+        <div style="text-align: center; margin-bottom: 3rem;">
+            <h2 style="color: var(--text-heading); font-size: 2rem; margin-bottom: 0.75rem;">
+                <i class="fas fa-rss" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                Stay Updated with RSS
+            </h2>
+            <p style="color: var(--text-secondary); font-size: 1.1rem;">Subscribe to our feeds in your favorite RSS reader</p>
+        </div>
+
+        <style>
+            .rss-grid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 1.5rem;
+                max-width: 1400px;
+                margin: 0 auto;
+            }
+            @media (max-width: 1024px) {
+                .rss-grid { grid-template-columns: repeat(2, 1fr) !important; }
+            }
+            @media (max-width: 640px) {
+                .rss-grid { grid-template-columns: 1fr !important; }
+            }
+        </style>
+        <div class="rss-grid">
+            <!-- All Content Feed -->
+            <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 2rem; text-align: center; transition: all 0.3s ease; display: flex; flex-direction: column; height: 100%;">
+                <i class="fas fa-globe" style="color: var(--accent-color); font-size: 2.5rem; margin-bottom: 1.25rem; display: block;"></i>
+                <h3 style="color: var(--text-heading); font-size: 1.35rem; margin-bottom: 0.75rem;">All Content</h3>
+                <p style="color: var(--text-secondary); font-size: 1rem; margin-bottom: 1.5rem; flex-grow: 1;">Everything we publish</p>
+                <a href="{{ '/feed.xml' | relative_url }}"
+                   style="display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.85rem 1.75rem; background: var(--accent-color); color: white; text-decoration: none; font-weight: 600; border-radius: 6px; transition: all 0.3s ease; margin-top: auto; font-size: 0.95rem;">
+                    <i class="fas fa-rss"></i> Subscribe
+                </a>
+            </div>
+
+            <!-- Press Releases Feed -->
+            <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 2rem; text-align: center; transition: all 0.3s ease; display: flex; flex-direction: column; height: 100%;">
+                <i class="fas fa-newspaper" style="color: var(--accent-color); font-size: 2.5rem; margin-bottom: 1.25rem; display: block;"></i>
+                <h3 style="color: var(--text-heading); font-size: 1.35rem; margin-bottom: 0.75rem;">Press Releases</h3>
+                <p style="color: var(--text-secondary); font-size: 1rem; margin-bottom: 1.5rem; flex-grow: 1;">Official announcements</p>
+                <a href="{{ '/feed-press.xml' | relative_url }}"
+                   style="display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.85rem 1.75rem; background: var(--accent-color); color: white; text-decoration: none; font-weight: 600; border-radius: 6px; transition: all 0.3s ease; margin-top: auto; font-size: 0.95rem;">
+                    <i class="fas fa-rss"></i> Subscribe
+                </a>
+            </div>
+
+            <!-- Case Studies Feed -->
+            <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 2rem; text-align: center; transition: all 0.3s ease; display: flex; flex-direction: column; height: 100%;">
+                <i class="fas fa-chart-line" style="color: var(--accent-color); font-size: 2.5rem; margin-bottom: 1.25rem; display: block;"></i>
+                <h3 style="color: var(--text-heading); font-size: 1.35rem; margin-bottom: 0.75rem;">Case Studies</h3>
+                <p style="color: var(--text-secondary); font-size: 1rem; margin-bottom: 1.5rem; flex-grow: 1;">Data and insights</p>
+                <a href="{{ '/feed-case-studies.xml' | relative_url }}"
+                   style="display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.85rem 1.75rem; background: var(--accent-color); color: white; text-decoration: none; font-weight: 600; border-radius: 6px; transition: all 0.3s ease; margin-top: auto; font-size: 0.95rem;">
+                    <i class="fas fa-rss"></i> Subscribe
+                </a>
+            </div>
+
+            <!-- Blog Feed -->
+            <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 2rem; text-align: center; transition: all 0.3s ease; display: flex; flex-direction: column; height: 100%;">
+                <i class="fas fa-pen" style="color: var(--accent-color); font-size: 2.5rem; margin-bottom: 1.25rem; display: block;"></i>
+                <h3 style="color: var(--text-heading); font-size: 1.35rem; margin-bottom: 0.75rem;">Blog</h3>
+                <p style="color: var(--text-secondary); font-size: 1rem; margin-bottom: 1.5rem; flex-grow: 1;">Updates and stories</p>
+                <a href="{{ '/feed-blog.xml' | relative_url }}"
+                   style="display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.85rem 1.75rem; background: var(--accent-color); color: white; text-decoration: none; font-weight: 600; border-radius: 6px; transition: all 0.3s ease; margin-top: auto; font-size: 0.95rem;">
+                    <i class="fas fa-rss"></i> Subscribe
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Podcast Section -->
+<section style="background: var(--bg-primary); padding: 3rem 0; border-top: 1px solid var(--border-color); transition: background 0.3s ease;">
+    <div class="container" style="max-width: 800px;">
+        <div style="text-align: center; margin-bottom: 2rem;">
+            <h2 style="color: var(--text-heading); font-size: 1.75rem; margin-bottom: 0.5rem;">
+                Latest Podcast Episode
+            </h2>
+            <p style="color: var(--text-secondary);">Listen to the newest episode</p>
+        </div>
+        <div style="position: relative; width: 100%; max-width: 740px; margin: 0 auto;">
+            <div style="position: relative; padding-bottom: 27.03%; height: 0; overflow: hidden;">
+                <iframe src="https://player.fireside.fm/v2/los7u-af/latest?theme=dark"
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+                        frameborder="0"
+                        scrolling="no"
+                        title="Latest Podcast Episode"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Media Resources Section -->
+<section style="padding: 100px 0; background: #1a1a1a; color: white; text-align: center; transition: background 0.3s ease;">
+    <div class="container">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="color: white; font-size: 2.5rem; margin-bottom: 1rem;">Media Resources</h2>
+            <p style="color: rgba(255, 255, 255, 0.85); font-size: 1.2rem; margin-bottom: 2.5rem;">Everything you need to cover Rangeway Energy</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="mailto:{{ site.organization.email }}" class="btn-primary" style="display: inline-flex; align-items: center; gap: 0.75rem;">
+                    Contact Media Team
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h4>{{ site.organization.name }}</h4>
+                <a href="{{ '/' | relative_url }}">Home</a>
+                <a href="{{ '/press/' | relative_url }}">Press Releases</a>
+                <a href="{{ '/case-studies/' | relative_url }}">Case Studies</a>
+                <a href="{{ '/blog/' | relative_url }}">Blog</a>
+                <a href="{{ site.organization.main_site }}" target="_blank" rel="noopener noreferrer">Main Site</a>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <a href="https://pathfinder.rangeway.energy" target="_blank" rel="noopener noreferrer">Pathfinder Rewards</a>
+                <a href="https://investors.rangeway.energy" target="_blank" rel="noopener noreferrer">Investor Portal</a>
+                <a href="https://fieldnotes.rangeway.energy" target="_blank" rel="noopener noreferrer">Field Notes</a>
+            </div>
+            <div class="footer-section">
+                <h4>Media Contact</h4>
+                <a href="mailto:{{ site.organization.email }}">{{ site.organization.email }}</a>
+                <a href="tel:{{ site.organization.phone }}">{{ site.organization.phone }}</a>
+                <div class="footer-social-icons" style="margin-top: 1rem;">
+                    <a href="{{ site.social.twitter }}" target="_blank" rel="noopener noreferrer" aria-label="Follow us on X (Twitter)">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="{{ site.social.instagram }}" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="{{ site.social.linkedin }}" target="_blank" rel="noopener noreferrer" aria-label="Follow us on LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="{{ site.social.youtube }}" target="_blank" rel="noopener noreferrer" aria-label="Subscribe to our YouTube channel">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; {{ 'now' | date: "%Y" }} {{ site.organization.name }}. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- External JavaScript -->
+<script src="{{ '/assets/js/main.js' | relative_url }}?v={{ site.asset_version }}"></script>

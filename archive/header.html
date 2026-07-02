@@ -1,0 +1,101 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <meta name="title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="author" content="{{ site.organization.name }}">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+
+    <!-- Theme Color for Mobile -->
+    <meta name="theme-color" content="#F09060">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
+    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta property="og:image" content="{% if page.og_image %}{{ page.og_image }}{% else %}{{ site.url }}/assets/images/newsroom-og.jpg{% endif %}">
+    <meta property="og:site_name" content="{{ site.organization.name }}">
+
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ page.url | absolute_url }}">
+    <meta property="twitter:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
+    <meta property="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta property="twitter:image" content="{% if page.og_image %}{{ page.og_image }}{% else %}{{ site.url }}/assets/images/newsroom-og.jpg{% endif %}">
+    <meta name="twitter:site" content="@rangewayenergy">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ site.asset_version }}">
+
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://tinylytics.app">
+
+    <!-- RSS Feeds -->
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }} - All Content" href="{{ '/feed.xml' | absolute_url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }} - Press Releases" href="{{ '/feed-press.xml' | absolute_url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }} - Case Studies" href="{{ '/feed-case-studies.xml' | absolute_url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }} - Blog" href="{{ '/feed-blog.xml' | absolute_url }}">
+
+    {% if site.analytics.enabled %}
+    <!-- Analytics -->
+    <script src="https://tinylytics.app/embed/{{ site.analytics.tinylytics_id }}.js" defer></script>
+    {% endif %}
+</head>
+
+<!-- Skip to main content for accessibility -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="container">
+        <div class="nav-wrapper">
+            <div class="logo">
+                <a href="{{ '/' | relative_url }}">
+                    <img src="https://rangeway.energy/images/banner.png" alt="Rangeway Energy" class="logo-img">
+                </a>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="{{ '/' | relative_url }}" class="nav-link" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a>
+                <a href="{{ '/press/' | relative_url }}" class="nav-link" {% if page.url contains '/press/' %}aria-current="page"{% endif %}>Press Releases</a>
+                <a href="{{ '/case-studies/' | relative_url }}" class="nav-link" {% if page.url contains '/case-studies/' %}aria-current="page"{% endif %}>Case Studies</a>
+                <a href="{{ '/blog/' | relative_url }}" class="nav-link" {% if page.url contains '/blog/' %}aria-current="page"{% endif %}>Blog</a>
+                <a href="{{ site.organization.main_site }}" target="_blank" rel="noopener noreferrer" class="nav-link">Main Site</a>
+            </div>
+            <div class="nav-actions">
+                <div class="social-icons">
+                    <a href="{{ site.social.twitter }}" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="X (Twitter)">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="{{ site.social.instagram }}" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="{{ site.social.linkedin }}" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="{{ site.social.youtube }}" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+</nav>
