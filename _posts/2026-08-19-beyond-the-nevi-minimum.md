@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2026-08-19 07:00:00
-author: Rangeway
+author: Zak Winnick
 title: "Beyond the NEVI Minimum"
 subtitle: "Four fast chargers can make a corridor compliant. Building a place drivers can reliably use takes more."
 category: blog
