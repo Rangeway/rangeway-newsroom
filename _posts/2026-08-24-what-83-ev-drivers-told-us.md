@@ -1,12 +1,12 @@
 ---
 layout: post
-date: 2026-08-23 22:00:00
+date: 2026-08-24 07:00:00
 author: Zak Winnick
 title: "What 83 EV Drivers Told Us About Better Charging Stops"
 subtitle: "The strongest signal was not more amenities. It was getting the charging right, then building the stop around what drivers actually do."
 category: blog
 description: "Rangeway surveyed 83 EV drivers about charging-stop choice, amenities, pricing, and behavior. The results support a practical hospitality model."
-image: /assets/images/blog2026-08-23.png
+image: /assets/images/blog2026-08-24.png
 ---
 
 We started the Rangeway EV Driver Study with a straightforward question: when the basic charging experience is comparable, does the quality of the stop change where drivers choose to charge?
