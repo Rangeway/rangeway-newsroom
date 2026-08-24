@@ -2,10 +2,10 @@
 layout: post
 date: 2026-08-24 07:00:00
 author: Zak Winnick
-title: "What 83 EV Drivers Told Us About Better Charging Stops"
+title: "What EV Drivers Told Us About Better Charging Stops"
 subtitle: "The strongest signal was not more amenities. It was getting the charging right, then building the stop around what drivers actually do."
 category: blog
-description: "Rangeway surveyed 83 EV drivers about charging-stop choice, amenities, pricing, and behavior. The results support a practical hospitality model."
+description: "Rangeway surveyed EV drivers about charging-stop choice, amenities, pricing, and behavior. The results support a practical hospitality model."
 image: /assets/images/blog2026-08-24.png
 ---
 
@@ -13,7 +13,7 @@ We started the Rangeway EV Driver Study with a straightforward question: when th
 
 The answer was clear, but more nuanced than simply saying drivers want more amenities.
 
-We received 83 completed responses from EV drivers, many of whom have significant experience using public fast charging on longer trips. When charging reliability, speed, price, and total route time were held comparable, more than nine in ten respondents said they would be likely to choose the hospitality-focused charging stop.
+We received almost 100 responses from EV drivers, many of whom have significant experience using public fast charging on longer trips. When charging reliability, speed, price, and total route time were held comparable, more than nine in ten respondents said they would be likely to choose the hospitality-focused charging stop.
 
 That is a strong preference. It is also only part of the story.
 
