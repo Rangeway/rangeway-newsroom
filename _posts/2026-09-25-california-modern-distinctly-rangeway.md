@@ -1,11 +1,11 @@
 ---
 layout: post
-date: 2026-09-25 07:00:00 -0700
+date: 2026-09-25 07:00:00
 author: Zak Winnick
 title: "California Modern, Distinctly Rangeway"
 subtitle: "Rangeway's coastal beginnings still shape how we think about comfort, design, and a sense of place."
 category: blog
-description: "Zak Winnick shares how California Modern, warm materials, and a sense of place shape Rangeway's approach to charging-stop design."
+description: "Zak Winnick shares how California Modern, warm materials, and a sense of place shape Rangeway's approach to charging stop design."
 image: /assets/images/blog2026-09-25.png
 ---
 
