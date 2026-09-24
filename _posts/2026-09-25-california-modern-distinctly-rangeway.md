@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2026-09-25 07:00:00
+date: 2026-09-25 07:00:00 -0700
 author: Zak Winnick
 title: "California Modern, Distinctly Rangeway"
 subtitle: "Rangeway's coastal beginnings still shape how we think about comfort, design, and a sense of place."
