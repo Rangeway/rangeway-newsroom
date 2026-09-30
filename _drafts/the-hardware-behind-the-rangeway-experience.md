@@ -1,12 +1,13 @@
 ---
 layout: post
+published: false
 date: 2026-10-02 07:00:00 -0700
 author: Zak Winnick
 title: "The Hardware Behind the Rangeway Experience"
 subtitle: "Why we chose Ekoenergetyka as our primary hardware provider."
 category: blog
 description: "Zak Winnick explains Rangeway's choice of Ekoenergetyka, from service and cold-weather capability to a charging experience designed around the driver."
-image: /assets/images/blog2026-10-02.png
+image: /assets/images/hardware-behind-rangeway-experience-winter.png
 ---
 
 *Why we chose Ekoenergetyka as our primary hardware provider.*
