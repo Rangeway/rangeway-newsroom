@@ -6,7 +6,7 @@ title: "Hospitality Was in the Brief"
 subtitle: "The details of a better charging stop have shaped Rangeway from the beginning."
 category: blog
 description: "Zak Winnick explains how hospitality shaped Rangeway from day one, from well-kept amenities to an app-free charging experience and guest recognition."
-image: /assets/images/blog2026-10-02.png
+image: /assets/images/blog2026-10-02.png?v=20260930
 ---
 
 *The details of a better charging stop have shaped Rangeway from the beginning.*
