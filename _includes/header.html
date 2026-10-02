@@ -10,6 +10,8 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="{{ page.url | absolute_url }}">
 
+    <link rel="icon" type="image/svg+xml" href="/assets/images/brand/rangeway-avatar.svg">
+
     <!-- Theme Color for Mobile -->
     <meta name="theme-color" content="#f4a855">
 
@@ -18,7 +20,7 @@
     <meta property="og:url" content="{{ page.url | absolute_url }}">
     <meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
     <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-    <meta property="og:image" content="{% if page.og_image %}{{ page.og_image }}{% else %}{{ site.url }}/assets/images/newsroom-og.jpg{% endif %}">
+    <meta property="og:image" content="{% if page.og_image %}{{ page.og_image }}{% else %}{{ site.url }}/assets/images/brand/rangeway-social.png{% endif %}">
     <meta property="og:site_name" content="{{ site.organization.name }}">
 
     <!-- Twitter Card -->
@@ -26,7 +28,7 @@
     <meta property="twitter:url" content="{{ page.url | absolute_url }}">
     <meta property="twitter:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
     <meta property="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-    <meta property="twitter:image" content="{% if page.og_image %}{{ page.og_image }}{% else %}{{ site.url }}/assets/images/newsroom-og.jpg{% endif %}">
+    <meta property="twitter:image" content="{% if page.og_image %}{{ page.og_image }}{% else %}{{ site.url }}/assets/images/brand/rangeway-social.png{% endif %}">
     <meta name="twitter:site" content="@rangewayenergy">
 
     <!-- Fonts: Raleway + Source Sans 3 -->
@@ -57,12 +59,8 @@
     <div class="container">
         <div class="nav-inner">
             <a class="nav-brand" href="{{ '/' | relative_url }}" aria-label="Rangeway Newsroom home">
-                <svg width="26" height="30" viewBox="0 0 96 112" aria-hidden="true" role="presentation">
-                    <path d="M20 100 L20 16 C20 10 24 6 30 6 L56 6 C72 6 80 16 80 32 C80 46 72 54 58 56 L82 100"
-                          stroke="#ffffff" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                    <circle cx="58" cy="32" r="10" fill="#F4A855"/>
-                </svg>
-                <span class="nav-brand-text">Rangeway<span class="nav-brand-sub">Newsroom</span></span>
+                <img class="nav-brand-logo" src="/assets/images/brand/rangeway-cream-amber.svg" alt="Rangeway" width="332" height="72">
+                <span class="nav-brand-sub">Newsroom</span>
             </a>
 
             <ul class="nav-links" aria-label="Primary">

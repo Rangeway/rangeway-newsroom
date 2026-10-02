@@ -4,17 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rangeway Brand Guidelines</title>
+  <link rel="icon" type="image/svg+xml" href="/assets/images/brand/rangeway-avatar.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --charcoal: #2d2d2d;
+      --charcoal: #282a29;
       --warm: #f4a855;
-      --warm-dark: #e8923a;
-      --cream: #f5f1eb;
-      --sage: #4a5d52;
-      --beacon: #2C5F7C;
+      --warm-dark: #f4a855;
+      --cream: #f5ebdd;
+      --sage: #505b4d;
       --white: #ffffff;
       --gray-100: #f8f7f5;
       --gray-200: #e5e5e5;
@@ -69,6 +69,12 @@
       border-bottom: 1px solid rgba(255,255,255,0.1);
     }
     
+    .brand-wordmark { width: 260px; max-width: 100%; height: auto; }
+    .nav-logo .brand-wordmark { width: 180px; }
+    .logo-box > .brand-wordmark { width: min(100%, 320px); }
+    .brand-downloads { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; }
+    .brand-downloads a { color: var(--charcoal); text-underline-offset: 4px; }
+
     .nav-logo span {
       color: var(--white);
       font-size: 20px;
@@ -642,12 +648,7 @@
   <!-- Navigation -->
   <nav class="nav">
     <div class="nav-logo">
-      <svg width="24" height="28" viewBox="0 0 96 112">
-        <path d="M20 100 L20 16 C20 10 24 6 30 6 L56 6 C72 6 80 16 80 32 C80 46 72 54 58 56 L82 100" 
-              stroke="#ffffff" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        <circle cx="58" cy="32" r="10" fill="#f4a855"/>
-      </svg>
-      <span class="wordmark">Rangeway</span>
+      <img class="brand-wordmark" src="/assets/images/brand/rangeway-cream-amber.svg" alt="Rangeway" width="332" height="72">
     </div>
     
     <div class="nav-section">
@@ -686,7 +687,7 @@
     <header class="hero">
       <h1>Brand Guidelines</h1>
       <p>A comprehensive guide to the Rangeway brand identity, visual system, and communication standards.</p>
-      <div class="hero-version">Version 1.0 · December 2025</div>
+      <div class="hero-version">Updated October 2026</div>
     </header>
     
     <!-- Brand Foundation -->
@@ -723,22 +724,18 @@
       <div class="section-header">
         <div class="section-number">02</div>
         <h2 class="section-title">Logo System</h2>
-        <p class="section-intro">Our logo combines the Path Mark with the Rangeway wordmark, creating a distinctive identity that represents journey, destination, and hospitality.</p>
+        <p class="section-intro">The stylized R is the first letter of Rangeway, followed directly by angeway. The amber path mark sits inside the R. Always use the approved vector artwork.</p>
       </div>
       
       <div class="subsection">
         <h3 class="subsection-title">Primary Logo</h3>
-        <p class="subsection-text">The primary logo should be used in most applications. White mark and wordmark on charcoal background is our default configuration.</p>
+        <p class="subsection-text">The primary logo should be used in most applications. The cream wordmark with its amber path mark on charcoal is our default configuration.</p>
         
         <div class="logo-box charcoal">
-          <svg width="64" height="72" viewBox="0 0 96 112">
-            <path d="M20 100 L20 16 C20 10 24 6 30 6 L56 6 C72 6 80 16 80 32 C80 46 72 54 58 56 L82 100" 
-                  stroke="#ffffff" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle cx="58" cy="32" r="10" fill="#f4a855"/>
-          </svg>
-          <span class="wordmark light" style="font-size: 40px;">Rangeway</span>
+          <img class="brand-wordmark" src="/assets/images/brand/rangeway-cream-amber.svg" alt="Rangeway" width="332" height="72">
         </div>
-        <p class="logo-caption">Primary logo: White mark with warm accent on charcoal background</p>
+        <p class="logo-caption">Primary logo: Cream wordmark with amber path mark on charcoal</p>
+        <div class="brand-downloads"><a href="/assets/images/brand/rangeway-cream-amber.svg" download>Download cream SVG</a><a href="/assets/images/brand/rangeway-charcoal-amber.svg" download>Download charcoal SVG</a><a href="/assets/images/brand/rangeway-charcoal-mono.svg" download>Download monochrome SVG</a></div>
       </div>
       
       <div class="subsection">
@@ -748,48 +745,28 @@
         <div class="grid-2">
           <div>
             <div class="logo-box warm">
-              <svg width="48" height="56" viewBox="0 0 96 112">
-                <path d="M20 100 L20 16 C20 10 24 6 30 6 L56 6 C72 6 80 16 80 32 C80 46 72 54 58 56 L82 100" 
-                      stroke="#ffffff" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                <circle cx="58" cy="32" r="10" fill="#2d2d2d"/>
-              </svg>
-              <span class="wordmark light">Rangeway</span>
+              <img class="brand-wordmark" src="/assets/images/brand/rangeway-charcoal-mono.svg" alt="Rangeway" width="332" height="72">
             </div>
             <p class="logo-caption">On warm: Marketing, merchandise, events</p>
           </div>
           
           <div>
             <div class="logo-box cream">
-              <svg width="48" height="56" viewBox="0 0 96 112">
-                <path d="M20 100 L20 16 C20 10 24 6 30 6 L56 6 C72 6 80 16 80 32 C80 46 72 54 58 56 L82 100" 
-                      stroke="#2d2d2d" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                <circle cx="58" cy="32" r="10" fill="#f4a855"/>
-              </svg>
-              <span class="wordmark dark">Rangeway</span>
+              <img class="brand-wordmark" src="/assets/images/brand/rangeway-charcoal-amber.svg" alt="Rangeway" width="332" height="72">
             </div>
             <p class="logo-caption">On light: Partnerships, documents, proposals</p>
           </div>
           
           <div>
             <div class="logo-box sage">
-              <svg width="48" height="56" viewBox="0 0 96 112">
-                <path d="M20 100 L20 16 C20 10 24 6 30 6 L56 6 C72 6 80 16 80 32 C80 46 72 54 58 56 L82 100" 
-                      stroke="#ffffff" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                <circle cx="58" cy="32" r="10" fill="#f4a855"/>
-              </svg>
-              <span class="wordmark light">Rangeway</span>
+              <img class="brand-wordmark" src="/assets/images/brand/rangeway-cream-amber.svg" alt="Rangeway" width="332" height="72">
             </div>
             <p class="logo-caption">On sage: Special campaigns, seasonal content</p>
           </div>
           
           <div>
             <div class="logo-box white">
-              <svg width="48" height="56" viewBox="0 0 96 112">
-                <path d="M20 100 L20 16 C20 10 24 6 30 6 L56 6 C72 6 80 16 80 32 C80 46 72 54 58 56 L82 100" 
-                      stroke="#2d2d2d" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                <circle cx="58" cy="32" r="10" fill="#2d2d2d"/>
-              </svg>
-              <span class="wordmark dark">Rangeway</span>
+              <img class="brand-wordmark" src="/assets/images/brand/rangeway-charcoal-mono.svg" alt="Rangeway" width="332" height="72">
             </div>
             <p class="logo-caption">Monochrome: Single-color print applications</p>
           </div>
@@ -802,12 +779,7 @@
         
         <div class="clearspace-demo">
           <div class="clearspace-box">
-            <svg width="40" height="46" viewBox="0 0 96 112">
-              <path d="M20 100 L20 16 C20 10 24 6 30 6 L56 6 C72 6 80 16 80 32 C80 46 72 54 58 56 L82 100" 
-                    stroke="#2d2d2d" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-              <circle cx="58" cy="32" r="10" fill="#f4a855"/>
-            </svg>
-            <span class="wordmark" style="font-size: 24px; color: #2d2d2d;">Rangeway</span>
+            <img class="brand-wordmark" src="/assets/images/brand/rangeway-charcoal-amber.svg" alt="Rangeway" width="332" height="72">
           </div>
         </div>
       </div>
@@ -818,48 +790,16 @@
         
         <div class="min-sizes">
           <div class="min-size-item">
-            <div class="icon-bg" style="width: 64px; height: 64px; border-radius: 14px;">
-              <svg width="36" height="40" viewBox="0 0 96 112">
-                <path d="M20 100 L20 16 C20 10 24 6 30 6 L56 6 C72 6 80 16 80 32 C80 46 72 54 58 56 L82 100" 
-                      stroke="#ffffff" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                <circle cx="58" cy="32" r="11" fill="#f4a855"/>
-              </svg>
-            </div>
+            <img src="/assets/images/brand/rangeway-avatar.svg" alt="Rangeway app icon" width="64" height="64">
             <span>64px digital</span>
           </div>
-          
           <div class="min-size-item">
-            <div class="icon-bg" style="width: 32px; height: 32px; border-radius: 6px;">
-              <svg width="18" height="20" viewBox="0 0 96 112">
-                <path d="M20 100 L20 16 C20 10 24 6 30 6 L56 6 C72 6 80 16 80 32 C80 46 72 54 58 56 L82 100" 
-                      stroke="#ffffff" stroke-width="16" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                <circle cx="58" cy="32" r="14" fill="#f4a855"/>
-              </svg>
-            </div>
-            <span>32px minimum</span>
+            <img src="/assets/images/brand/rangeway-avatar.svg" alt="Rangeway app icon" width="32" height="32">
+            <span>32px icon</span>
           </div>
-          
           <div class="min-size-item">
-            <div class="icon-bg" style="width: 16px; height: 16px; border-radius: 3px;">
-              <svg width="10" height="11" viewBox="0 0 96 112">
-                <path d="M20 100 L20 16 C20 10 24 6 30 6 L56 6 C72 6 80 16 80 32 C80 46 72 54 58 56 L82 100" 
-                      stroke="#ffffff" stroke-width="20" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                <circle cx="58" cy="32" r="16" fill="#f4a855"/>
-              </svg>
-            </div>
+            <img src="/assets/images/brand/rangeway-avatar.svg" alt="Rangeway favicon" width="16" height="16">
             <span>16px favicon</span>
-          </div>
-          
-          <div class="min-size-item">
-            <div style="display: flex; align-items: center; gap: 8px; background: #2d2d2d; padding: 8px 16px; border-radius: 6px;">
-              <svg width="16" height="18" viewBox="0 0 96 112">
-                <path d="M20 100 L20 16 C20 10 24 6 30 6 L56 6 C72 6 80 16 80 32 C80 46 72 54 58 56 L82 100" 
-                      stroke="#ffffff" stroke-width="14" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                <circle cx="58" cy="32" r="12" fill="#f4a855"/>
-              </svg>
-              <span class="wordmark" style="font-size: 12px; color: white;">Rangeway</span>
-            </div>
-            <span>0.75" print minimum</span>
           </div>
         </div>
       </div>
@@ -870,35 +810,19 @@
         
         <div class="donts-grid">
           <div class="dont-item">
-            <svg width="32" height="36" viewBox="0 0 96 112" style="transform: rotate(15deg);">
-              <path d="M20 100 L20 16 C20 10 24 6 30 6 L56 6 C72 6 80 16 80 32 C80 46 72 54 58 56 L82 100" 
-                    stroke="#2d2d2d" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-              <circle cx="58" cy="32" r="10" fill="#f4a855"/>
-            </svg>
+            <img src="/assets/images/brand/rangeway-icon-charcoal.svg" alt="Rangeway mark" width="32" style="transform: rotate(15deg);">
             <span>Don't rotate</span>
           </div>
           <div class="dont-item">
-            <svg width="32" height="36" viewBox="0 0 96 112" style="opacity: 0.4;">
-              <path d="M20 100 L20 16 C20 10 24 6 30 6 L56 6 C72 6 80 16 80 32 C80 46 72 54 58 56 L82 100" 
-                    stroke="#2d2d2d" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-              <circle cx="58" cy="32" r="10" fill="#f4a855"/>
-            </svg>
+            <img src="/assets/images/brand/rangeway-icon-charcoal.svg" alt="Rangeway mark" width="32" style="opacity: 0.4;">
             <span>Don't reduce opacity</span>
           </div>
           <div class="dont-item">
-            <svg width="32" height="36" viewBox="0 0 96 112">
-              <path d="M20 100 L20 16 C20 10 24 6 30 6 L56 6 C72 6 80 16 80 32 C80 46 72 54 58 56 L82 100" 
-                    stroke="#5588dd" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-              <circle cx="58" cy="32" r="10" fill="#44bb77"/>
-            </svg>
+            <img src="/assets/images/brand/rangeway-icon-charcoal.svg" alt="Incorrectly recolored Rangeway mark" width="32" style="filter: sepia(1) saturate(4) hue-rotate(150deg);">
             <span>Don't change colors</span>
           </div>
           <div class="dont-item">
-            <svg width="44" height="28" viewBox="0 0 96 112" preserveAspectRatio="none">
-              <path d="M20 100 L20 16 C20 10 24 6 30 6 L56 6 C72 6 80 16 80 32 C80 46 72 54 58 56 L82 100" 
-                    stroke="#2d2d2d" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-              <circle cx="58" cy="32" r="10" fill="#f4a855"/>
-            </svg>
+            <img src="/assets/images/brand/rangeway-icon-charcoal.svg" alt="Incorrectly stretched Rangeway mark" width="32" style="transform: scaleX(1.5);">
             <span>Don't stretch</span>
           </div>
         </div>
@@ -921,7 +845,7 @@
             <div class="color-info">
               <div class="color-name">Charcoal</div>
               <div class="color-values">
-                <code>#2d2d2d</code> · RGB 45, 45, 45<br>
+                <code>#282a29</code> · RGB 40, 42, 41<br>
                 Primary backgrounds, text, mark
               </div>
             </div>
@@ -929,7 +853,7 @@
           <div class="color-card">
             <div class="color-swatch warm"></div>
             <div class="color-info">
-              <div class="color-name">Warm</div>
+              <div class="color-name">Amber</div>
               <div class="color-values">
                 <code>#f4a855</code> · RGB 244, 168, 85<br>
                 Accent, destination dot, CTAs
@@ -941,13 +865,13 @@
       
       <div class="subsection">
         <h3 class="subsection-title">Secondary Colors</h3>
-        <div class="grid-3">
+        <div class="grid-2">
           <div class="color-card">
             <div class="color-swatch cream"></div>
             <div class="color-info">
               <div class="color-name">Cream</div>
               <div class="color-values">
-                <code>#f5f1eb</code> · RGB 245, 241, 235<br>
+                <code>#f5ebdd</code> · RGB 245, 235, 221<br>
                 Light backgrounds, alternate layouts
               </div>
             </div>
@@ -957,18 +881,8 @@
             <div class="color-info">
               <div class="color-name">Sage</div>
               <div class="color-values">
-                <code>#4a5d52</code> · RGB 74, 93, 82<br>
+                <code>#505b4d</code> · RGB 80, 91, 77<br>
                 Campaigns, seasonal, secondary accent
-              </div>
-            </div>
-          </div>
-          <div class="color-card">
-            <div class="color-swatch beacon"></div>
-            <div class="color-info">
-              <div class="color-name">Beacon</div>
-              <div class="color-values">
-                <code>#2C5F7C</code> · RGB 44, 95, 124<br>
-                Charging hardware, wayfinding, links
               </div>
             </div>
           </div>
@@ -986,7 +900,7 @@
       
       <div class="subsection">
         <h3 class="subsection-title">Wordmark & Headlines</h3>
-        <p class="subsection-text">Raleway Bold is used for the wordmark and all headlines. Title case, with slight negative letter-spacing.</p>
+        <p class="subsection-text">Use the outlined SVG artwork for the wordmark; do not recreate it with a font. Raleway is used for headlines, with Source Sans 3 for body copy.</p>
         
         <div class="type-sample">
           <div class="type-sample-text large">Rangeway</div>
@@ -1001,11 +915,11 @@
       
       <div class="subsection">
         <h3 class="subsection-title">Body Copy</h3>
-        <p class="subsection-text">Source Sans Pro (or Source Sans 3) is used for body copy, providing excellent readability across all sizes.</p>
+        <p class="subsection-text">Source Sans 3 is used for body copy, providing excellent readability across all sizes.</p>
         
         <div class="type-sample">
           <div class="type-sample-text body">Rangeway transforms necessary charging stops into memorable moments along America's most iconic routes. We're not infrastructure providers. We're journey enablers.</div>
-          <div class="type-meta">Source Sans Pro · Regular (400) · 16px base size</div>
+          <div class="type-meta">Source Sans 3 · Regular (400) · 16px base size</div>
         </div>
       </div>
       

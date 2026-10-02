@@ -6,12 +6,12 @@ title: Rangeway Energy Newsroom
 description: "Official newsroom for Rangeway Energy. Latest announcements, press releases, and media kit for America's premier scenic corridor charging network."
 url: "https://newsroom.rangeway.co"
 baseurl: ""
-asset_version: "4.1"
+asset_version: "2026-10-01-brand"
 
 # Organization info
 organization:
   name: Rangeway Energy
-  tagline: "Indoor Comfort. Every Stop."
+  tagline: "Travel farther. Stop better."
   main_site: "https://rangeway.co"
   email: media@rangeway.co
   phone: "(650) 420-6300"
