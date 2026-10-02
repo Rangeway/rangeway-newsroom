@@ -12,6 +12,9 @@ footer{background:var(--ink);color:var(--cream);padding:64px var(--gutter) 28px}
 @media(max-width:440px){.brand span{display:none}.masthead{align-items:flex-start;flex-direction:column;gap:12px}.masthead p{text-align:left;max-width:none}.masthead p br{display:none}.lead-copy{padding:27px}.lead h2{font-size:40px}.story-grid,.related-grid{grid-template-columns:1fr}.story-tile:nth-child(-n+2) h3,.story-tile h3{font-size:30px}.story-tile{padding-bottom:24px;border-bottom:1px solid var(--rule)}.story-image{margin-bottom:18px}.filters{gap:16px}.filters button{font-size:12px}.article-cover img{aspect-ratio:1.25}.footer-bottom span{font-size:12px}.article-head h1{font-size:44px}.prose h2{font-size:29px}.read-next .section-heading h2{font-size:29px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
 
+/* Related cards use their own two-column grid, never the six-column story spans. */
+.related-grid > .story-tile{grid-column:auto}
+
 /* Keep the live Fireside player on a consistent dark surface in either theme. */
 .podcast{grid-template-columns:minmax(220px,.65fr) minmax(0,1.35fr);gap:36px}
 .podcast-embed{min-width:0;overflow:hidden;container-type:inline-size;container-name:fireside}

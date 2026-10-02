@@ -3,7 +3,4 @@ layout: default
 title: Stories
 permalink: /blog/
 ---
-<div class="archive-head wrap"><span class="eyebrow">Newsroom archive</span><h1>Stories<span class="amber-dot">.</span></h1><p>Ideas, design, and firsthand work from Rangeway.</p><a href="{{ '/feed-blog.xml' | relative_url }}" class="text-link">Subscribe to the blog feed ↗</a></div>
-<section class="latest wrap" aria-label="All stories"><div class="section-heading"><h2>All stories</h2></div><div class="story-grid">
-{% for post in site.posts %}{% if post.date <= site.time %}{% include editorial-card.html item=post category='Stories' %}{% endif %}{% endfor %}
-</div></section>
+{% include editorial-archive.html kind='blog' %}

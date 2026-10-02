@@ -44,14 +44,24 @@
     });
   });
   document.querySelectorAll('[data-copy-target]').forEach(button => {
-    button.addEventListener('click', () => {
+    const original = button.innerHTML;
+    let restoreTimer;
+    button.addEventListener('click', async () => {
       const target = document.querySelector(button.getAttribute('data-copy-target'));
-      if (!target || !navigator.clipboard) return;
-      navigator.clipboard.writeText(target.textContent.trim()).then(() => {
-        const original = button.textContent;
+      if (!target || button.disabled) return;
+      clearTimeout(restoreTimer);
+      button.disabled = true;
+      try {
+        if (!navigator.clipboard?.writeText) throw new Error('Clipboard unavailable');
+        await navigator.clipboard.writeText(target.textContent.trim());
         button.textContent = 'Copied!';
-        setTimeout(() => { button.textContent = original; }, 1800);
-      });
+      } catch (_) {
+        button.textContent = 'Copy failed';
+      }
+      restoreTimer = setTimeout(() => {
+        button.innerHTML = original;
+        button.disabled = false;
+      }, 1800);
     });
   });
 })();

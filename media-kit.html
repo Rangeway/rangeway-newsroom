@@ -154,17 +154,3 @@ permalink: /media-kit.html
 </section>
 
 </div><!-- /.media-kit -->
-
-<script>
-    document.querySelectorAll('[data-copy-target]').forEach((btn) => {
-        btn.addEventListener('click', () => {
-            const target = document.querySelector(btn.getAttribute('data-copy-target'));
-            if (!target) return;
-            navigator.clipboard.writeText(target.textContent.trim()).then(() => {
-                const original = btn.innerHTML;
-                btn.textContent = 'Copied!';
-                setTimeout(() => { btn.innerHTML = original; }, 1800);
-            });
-        });
-    });
-</script>

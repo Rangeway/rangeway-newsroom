@@ -3,8 +3,4 @@ layout: default
 title: Press Releases
 permalink: /press.html
 ---
-<div class="archive-head wrap"><span class="eyebrow">The official record</span><h1>Announcements<span class="amber-dot">.</span></h1><p>Rangeway news and press releases.</p><a href="{{ '/feed-press.xml' | relative_url }}" class="text-link">Subscribe to the press feed ↗</a></div>
-{% assign releases = site.press_releases | sort: 'date' | reverse %}
-<section class="latest wrap" aria-label="All press releases"><div class="section-heading"><h2>Press archive</h2></div><div class="story-grid">
-{% for release in releases %}{% if release.date <= site.time %}{% include editorial-card.html item=release category='Announcements' %}{% endif %}{% endfor %}
-</div></section>
+{% include editorial-archive.html kind='press' %}

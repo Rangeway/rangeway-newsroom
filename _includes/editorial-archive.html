@@ -1,0 +1,36 @@
+{% case include.kind %}
+{% when 'blog' %}
+  {% assign eyebrow = 'Newsroom archive' %}
+  {% assign heading = 'Stories' %}
+  {% assign description = 'Ideas, design, and firsthand work from Rangeway.' %}
+  {% assign feed = '/feed-blog.xml' %}
+  {% assign feed_label = 'blog' %}
+  {% assign section_label = 'All stories' %}
+  {% assign section_heading = 'All stories' %}
+  {% assign category = 'Stories' %}
+  {% assign items = site.posts %}
+{% when 'press' %}
+  {% assign eyebrow = 'The official record' %}
+  {% assign heading = 'Announcements' %}
+  {% assign description = 'Rangeway news and press releases.' %}
+  {% assign feed = '/feed-press.xml' %}
+  {% assign feed_label = 'press' %}
+  {% assign section_label = 'All press releases' %}
+  {% assign section_heading = 'Press archive' %}
+  {% assign category = 'Announcements' %}
+  {% assign items = site.press_releases | sort: 'date' | reverse %}
+{% when 'case-studies' %}
+  {% assign eyebrow = 'Field work and analysis' %}
+  {% assign heading = 'Case studies' %}
+  {% assign description = 'What infrastructure can teach us about better charging.' %}
+  {% assign feed = '/feed-case-studies.xml' %}
+  {% assign feed_label = 'case study' %}
+  {% assign section_label = 'All case studies' %}
+  {% assign section_heading = 'Case study archive' %}
+  {% assign category = 'Case studies' %}
+  {% assign items = site.case_studies | sort: 'date' | reverse %}
+{% endcase %}
+<div class="archive-head wrap"><span class="eyebrow">{{ eyebrow }}</span><h1>{{ heading }}<span class="amber-dot">.</span></h1><p>{{ description }}</p><a href="{{ feed | relative_url }}" class="text-link">Subscribe to the {{ feed_label }} feed ↗</a></div>
+<section class="latest wrap" aria-label="{{ section_label }}"><div class="section-heading"><h2>{{ section_heading }}</h2></div><div class="story-grid">
+{% for item in items %}{% if item.date <= site.time %}{% include editorial-card.html item=item category=category %}{% endif %}{% endfor %}
+</div></section>

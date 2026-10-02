@@ -2,7 +2,7 @@ require 'nokogiri'
 require 'uri'
 require 'time'
 
-root = File.expand_path('../_site', __dir__)
+root = File.expand_path(ARGV[0] || ENV['SITE_DIR'] || '../_site', __dir__)
 def page(root, path)
   file = File.join(root, path.sub(%r{^/}, ''))
   raise "Missing #{path}" unless File.file?(file)
@@ -32,11 +32,32 @@ archives = {
 }
 archives.each do |path, (category, count)|
   doc = page(root, path)
+  slash_path = path.sub(/\.html$/, '/index.html')
+  slash_doc = page(root, slash_path)
   cards = doc.css('.story-tile')
+  slash_cards = slash_doc.css('.story-tile')
   check(cards.length >= count, "#{path}: expected at least #{count} cards, got #{cards.length}")
   check(cards.all? { |card| card['data-category'] == category }, "#{path}: wrong card category")
+  links = ->(nodes) { nodes.map { |card| card.at_css('h3 a')&.[]('href') } }
+  check(links.call(cards) == links.call(slash_cards), "#{path}: slash archive card links differ")
+  check(!links.call(cards).include?(nil), "#{path}: card link missing")
   check(!doc.text.include?('Hospitality Was in the Brief'), "#{path}: future story leaked") if hold_is_future
 end
+
+{ '/media-kit/index.html' => '/media-kit.html', '/archive/index.html' => '/' }.each do |path, target|
+  doc = page(root, path)
+  check(doc.at_css('meta[http-equiv="refresh"]')&.[]('content') == "0; url=#{target}", "#{path}: redirect missing")
+  check(URI(doc.at_css('link[rel="canonical"]')&.[]('href')).path == target, "#{path}: canonical target changed")
+  check(doc.at_css('main a')&.[]('href') == target, "#{path}: visible fallback missing")
+  check(doc.at_css('link[rel="stylesheet"]')&.[]('href')&.include?('/assets/css/editorial.css'), "#{path}: stylesheet missing")
+  check(!doc.at_css('.hero, .hero-modern'), "#{path}: old template remained")
+end
+
+copy_script = File.read(File.join(root, 'assets/js/editorial.js'))
+media_kit = page(root, '/media-kit.html')
+check(media_kit.css('[data-copy-target]').length == 1, 'Media kit copy action missing')
+check(media_kit.css('script:not([src])').none? { |script| script.text.include?('data-copy-target') }, 'Duplicate media kit copy handler')
+check(copy_script.include?("button.innerHTML = original") && copy_script.include?("button.textContent = 'Copy failed'"), 'Copy feedback restoration missing')
 
 articles = Dir.glob(File.join(root, '{blog,press,case-studies}', '**', '*.html')).select do |file|
   Nokogiri::HTML(File.read(file)).at_css('.article__body')

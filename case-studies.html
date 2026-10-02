@@ -3,8 +3,4 @@ layout: default
 title: Case Studies
 permalink: /case-studies.html
 ---
-<div class="archive-head wrap"><span class="eyebrow">Field work and analysis</span><h1>Case studies<span class="amber-dot">.</span></h1><p>What infrastructure can teach us about better charging.</p><a href="{{ '/feed-case-studies.xml' | relative_url }}" class="text-link">Subscribe to the case study feed ↗</a></div>
-{% assign studies = site.case_studies | sort: 'date' | reverse %}
-<section class="latest wrap" aria-label="All case studies"><div class="section-heading"><h2>Case study archive</h2></div><div class="story-grid">
-{% for study in studies %}{% if study.date <= site.time %}{% include editorial-card.html item=study category='Case studies' %}{% endif %}{% endfor %}
-</div></section>
+{% include editorial-archive.html kind='case-studies' %}
