@@ -9,7 +9,7 @@ User=deploy
 Group=deploy
 Environment=HOME=/var/lib/rangeway-newsroom
 ExecStart=/usr/local/bin/rangeway-newsroom-publish
-TimeoutStartSec=90
+TimeoutStartSec=240
 UMask=0022
 NoNewPrivileges=true
 PrivateTmp=true

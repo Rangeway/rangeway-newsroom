@@ -6,7 +6,7 @@ The Newsroom is served by Nginx at https://newsroom.rangeway.co from
 ## Publishing
 
 Push approved changes to main. The dedicated server timer
-rangeway-newsroom-publish.timer checks main and builds every minute. It runs
+rangeway-newsroom-publish.timer checks every minute and builds when idle. It runs
 content, feed, archive, and Media Kit checks before syncing the generated site.
 A failed fetch uses the last fetched source so already-scheduled posts can still
 publish during a GitHub outage. A failed build or validation leaves the live site
@@ -33,6 +33,11 @@ Blog posts are excluded from output before their date. Press-release listings
 and RSS also apply their existing date filters. Never use --future for production.
 
 ## Server components
+
+System prerequisites: Git, rsync, unzip, coreutils, and flock. The Media Kit
+validation uses unzip to inspect the downloadable brand package. Allow up to
+four minutes for a build and its validation on the VPS; ticks while a build is
+running do not start overlapping builds.
 
 - /usr/local/bin/rangeway-newsroom-publish (source: ops/rangeway-newsroom-publish)
 - /etc/systemd/system/rangeway-newsroom-publish.service and .timer
