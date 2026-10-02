@@ -69,6 +69,7 @@ defaults:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - Gemfile.lock
   - README.md
   - DEPLOY.md
   - .gitignore
