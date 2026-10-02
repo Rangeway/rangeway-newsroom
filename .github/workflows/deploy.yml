@@ -4,6 +4,11 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      package_runtime:
+        description: Package the tested Ruby 3.3 Linux dependencies for the VPS
+        type: boolean
+        default: false
 
 concurrency:
   group: deploy-newsroom
@@ -36,3 +41,13 @@ jobs:
 
       # The dedicated VPS timer builds main every minute, runs these content
       # checks, then deploys. GitHub's best-effort cron is not a publication clock.
+      - name: Package tested server dependencies
+        if: inputs.package_runtime == true
+        run: tar -czf "$RUNNER_TEMP/newsroom-ruby33-linux.tar.gz" -C vendor/bundle ruby
+
+      - uses: actions/upload-artifact@v4
+        if: inputs.package_runtime == true
+        with:
+          name: newsroom-ruby33-linux
+          path: ${{ runner.temp }}/newsroom-ruby33-linux.tar.gz
+          retention-days: 7

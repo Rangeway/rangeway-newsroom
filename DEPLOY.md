@@ -44,6 +44,9 @@ The service runs as deploy with write access limited to its state and Newsroom
 webroot. Source, tests, and operational files are never served. Dependencies are
 installed separately from publication; when Gemfile.lock changes, install the
 new locked bundle before relying on scheduled publication.
+The validation workflow's optional package_runtime input produces a tested
+Ruby 3.3 Linux dependency archive. Validate it on the VPS before installing it
+as the service's bundle, since native gems depend on the server runtime ABI.
 
 Read-only checks:
 
