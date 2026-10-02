@@ -37,6 +37,7 @@ jobs:
         run: |
           bundle exec ruby scripts/scheduled_build.rb "$PWD" "$PWD/_site"
           bundle exec ruby tests/editorial_integration.rb
+          bundle exec ruby tests/editorial_validation.rb
           bundle exec ruby tests/media_kit.rb
 
       # The dedicated VPS timer builds main every minute, runs these content

@@ -1,6 +1,7 @@
 require 'nokogiri'
 require 'uri'
 require 'time'
+require 'jekyll'
 
 root = File.expand_path(ARGV[0] || ENV['SITE_DIR'] || '../_site', __dir__)
 def page(root, path)
@@ -10,6 +11,24 @@ def page(root, path)
 end
 def check(condition, message)
   raise message unless condition
+end
+
+# Editorial edits may add, remove, hold or reschedule content. Compare output
+# with the current published source, not a fixed count from the redesign date.
+source = File.expand_path('..', __dir__)
+source_site = Jekyll::Site.new(Jekyll.configuration(
+  'source' => source,
+  'destination' => root,
+  'config' => File.join(source, '_config.yml'),
+  'future' => false,
+  'quiet' => true
+))
+source_site.read
+published = %w[posts press_releases case_studies].to_h do |name|
+  docs = source_site.collections.fetch(name).docs.select do |doc|
+    doc.data['published'] != false && doc.date <= source_site.time
+  end.sort_by(&:date).reverse
+  [name, docs]
 end
 
 home = page(root, '/index.html')
@@ -26,19 +45,20 @@ hold_is_future = Time.now.utc < Time.parse('2026-10-02T14:00:00Z')
 check(!home.text.include?('Hospitality Was in the Brief'), 'Future story on homepage') if hold_is_future
 
 archives = {
-  '/blog.html' => ['Stories', 20],
-  '/press.html' => ['Announcements', 8],
-  '/case-studies.html' => ['Case studies', 1]
+  '/blog.html' => ['Stories', 'posts'],
+  '/press.html' => ['Announcements', 'press_releases'],
+  '/case-studies.html' => ['Case studies', 'case_studies']
 }
-archives.each do |path, (category, count)|
+archives.each do |path, (category, collection)|
   doc = page(root, path)
   slash_path = path.sub(/\.html$/, '/index.html')
   slash_doc = page(root, slash_path)
   cards = doc.css('.story-tile')
   slash_cards = slash_doc.css('.story-tile')
-  check(cards.length >= count, "#{path}: expected at least #{count} cards, got #{cards.length}")
   check(cards.all? { |card| card['data-category'] == category }, "#{path}: wrong card category")
   links = ->(nodes) { nodes.map { |card| card.at_css('h3 a')&.[]('href') } }
+  expected_links = published.fetch(collection).map(&:url)
+  check(links.call(cards) == expected_links, "#{path}: archive differs from published source (expected #{expected_links.length} cards, got #{cards.length})")
   check(links.call(cards) == links.call(slash_cards), "#{path}: slash archive card links differ")
   check(!links.call(cards).include?(nil), "#{path}: card link missing")
   check(!doc.text.include?('Hospitality Was in the Brief'), "#{path}: future story leaked") if hold_is_future
@@ -62,7 +82,9 @@ check(copy_script.include?("button.innerHTML = original") && copy_script.include
 articles = Dir.glob(File.join(root, '{blog,press,case-studies}', '**', '*.html')).select do |file|
   Nokogiri::HTML(File.read(file)).at_css('.article__body')
 end
-check(articles.length >= 29, "Expected at least 29 published articles, got #{articles.length}")
+expected_routes = published.values.flatten.map(&:url).sort
+actual_routes = articles.map { |file| file.delete_prefix(root).sub(%r{index\.html$}, '') }.sort
+check(actual_routes == expected_routes, "Article routes differ from published source: missing #{(expected_routes - actual_routes).inspect}; unexpected #{(actual_routes - expected_routes).inspect}")
 articles.each do |file|
   doc = Nokogiri::HTML(File.read(file))
   route = file.delete_prefix(root)
