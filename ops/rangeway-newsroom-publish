@@ -4,7 +4,11 @@ set -euo pipefail
 STATE=/var/lib/rangeway-newsroom
 REPO="$STATE/repository.git"
 DEST=/var/www/rangeway-newsroom
-export BUNDLE_PATH="$STATE/bundle"
+export BUNDLE_PATH="$STATE/bundle-tested"
+export PATH="$STATE/runtime/bin:$PATH"
+export LD_LIBRARY_PATH="$STATE/runtime/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+RUBY="$STATE/runtime/bin/ruby"
+BUNDLE="$STATE/runtime/bin/bundle"
 export BUNDLE_FROZEN=true
 export BUNDLE_USER_HOME="$STATE/bundler"
 export JEKYLL_ENV=production
@@ -27,10 +31,10 @@ mkdir "$stage/source"
 git -C "$REPO" archive "$revision" | tar -xf - -C "$stage/source"
 export BUNDLE_GEMFILE="$stage/source/Gemfile"
 cd "$stage/source"
-bundle check
-bundle exec ruby scripts/scheduled_build.rb "$stage/source" "$stage/site"
-bundle exec ruby tests/editorial_integration.rb "$stage/site"
-bundle exec ruby tests/media_kit.rb "$stage/site"
+"$RUBY" "$BUNDLE" check
+"$RUBY" "$BUNDLE" exec ruby scripts/scheduled_build.rb "$stage/source" "$stage/site"
+"$RUBY" "$BUNDLE" exec ruby tests/editorial_integration.rb "$stage/site"
+"$RUBY" "$BUNDLE" exec ruby tests/media_kit.rb "$stage/site"
 
 # No live files are touched until the build and content checks have passed.
 test -f "$stage/site/index.html"

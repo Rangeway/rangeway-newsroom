@@ -37,7 +37,8 @@ and RSS also apply their existing date filters. Never use --future for productio
 - /usr/local/bin/rangeway-newsroom-publish (source: ops/rangeway-newsroom-publish)
 - /etc/systemd/system/rangeway-newsroom-publish.service and .timer
 - /var/lib/rangeway-newsroom/repository.git: source cache, main only
-- /var/lib/rangeway-newsroom/bundle: locked Ruby dependencies
+- /var/lib/rangeway-newsroom/runtime: tested Ruby 3.3.12 Linux runtime
+- /var/lib/rangeway-newsroom/bundle-tested: matching locked Ruby dependencies
 - /var/lib/rangeway-newsroom/last-success: last successful source revision and UTC time
 
 The service runs as deploy with write access limited to its state and Newsroom
@@ -45,8 +46,10 @@ webroot. Source, tests, and operational files are never served. Dependencies are
 installed separately from publication; when Gemfile.lock changes, install the
 new locked bundle before relying on scheduled publication.
 The validation workflow's optional package_runtime input produces a tested
-Ruby 3.3 Linux dependency archive. Validate it on the VPS before installing it
-as the service's bundle, since native gems depend on the server runtime ABI.
+Ruby 3.3.12 Linux runtime and dependency archives. Install the pair together and
+validate on the VPS before enabling the timer. Do not mix native gems compiled
+for GitHub's Ruby with Ubuntu's differently-linked system Ruby. The publisher
+explicitly invokes the matching runtime and library path.
 
 Read-only checks:
 

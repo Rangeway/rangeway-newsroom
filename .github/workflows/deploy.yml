@@ -25,7 +25,7 @@ jobs:
 
       - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.3'
+          ruby-version: '3.3.12'
           bundler-cache: true
 
       - name: Test publication boundaries
@@ -43,11 +43,14 @@ jobs:
       # checks, then deploys. GitHub's best-effort cron is not a publication clock.
       - name: Package tested server dependencies
         if: inputs.package_runtime == true
-        run: tar -czf "$RUNNER_TEMP/newsroom-ruby33-linux.tar.gz" -C vendor/bundle ruby
+        run: |
+          tar -czf "$RUNNER_TEMP/newsroom-ruby33-linux.tar.gz" -C vendor/bundle ruby
+          ruby_prefix=$(ruby -rrbconfig -e 'puts RbConfig::CONFIG["prefix"]')
+          tar -czf "$RUNNER_TEMP/newsroom-ruby33-runtime.tar.gz" -C "$ruby_prefix" .
 
       - uses: actions/upload-artifact@v4
         if: inputs.package_runtime == true
         with:
           name: newsroom-ruby33-linux
-          path: ${{ runner.temp }}/newsroom-ruby33-linux.tar.gz
+          path: ${{ runner.temp }}/newsroom-ruby33-*.tar.gz
           retention-days: 7
