@@ -38,6 +38,8 @@ and RSS also apply their existing date filters. Never use --future for productio
 - /etc/systemd/system/rangeway-newsroom-publish.service and .timer
 - /var/lib/rangeway-newsroom/repository.git: source cache, main only
 - /var/lib/rangeway-newsroom/runtime: tested Ruby 3.3.12 Linux runtime
+- /opt/hostedtoolcache/Ruby/3.3.12/x64: compatibility symlink to that runtime;
+  required because the packaged interpreter uses its compiled library prefix
 - /var/lib/rangeway-newsroom/bundle-tested: matching locked Ruby dependencies
 - /var/lib/rangeway-newsroom/last-success: last successful source revision and UTC time
 
