@@ -40,9 +40,10 @@ Implementation details:
 
 - [x] Confirm clean source and origin/main b16ef8c.
 - [x] Archive current live output and verify archive index.
-- [ ] Capture baseline article bodies/routes/feeds before integration.
-- [ ] Review Task 1 diff, fix important findings, verify new build against baseline.
-- [ ] Browser-test home, archives, representative post/press/case/media pages, mobile nav, TOC, system dark mode and Fireside clipping.
-- [ ] Final whole-branch review. Merge authorized release to main and push after all gates pass.
+- [x] Capture baseline article bodies/routes/feeds before integration.
+- [x] Review Task 1 diff, fix important findings, verify new build against baseline.
+- [x] Browser-test home, archives, representative post/press/case/media pages, mobile nav, TOC, system dark mode and Fireside clipping.
+- [x] Final whole-branch review: approved dbdf42b after related-card, legacy-route, copy-handler and archive-sharing fixes. Targeted UI checks passed.
+- [ ] Merge authorized release to main and push after all gates pass.
 - [ ] Wait for deploy workflow and server pull; verify actual HTTPS output, assets, article route, widget and screenshot.
 - [ ] Report production URL and archived rollback availability.
