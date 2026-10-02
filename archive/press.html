@@ -3,45 +3,8 @@ layout: default
 title: Press Releases
 permalink: /press/
 ---
-
-<!-- Hero Section -->
-<section class="hero" style="padding: 120px 0 80px;">
-    <div class="container">
-        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-            <h1>Press <span style="color: var(--accent-color);">Releases</span></h1>
-            <p style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 2rem;">Official announcements and company news</p>
-            <a href="{{ '/feed-press.xml' | relative_url }}" class="btn-secondary">
-                <i class="fas fa-rss"></i> Subscribe to Feed
-            </a>
-        </div>
-    </div>
-</section>
-
-<!-- All Press Releases -->
-<section class="services">
-    <div class="container">
-        <div class="services-grid">
-            {% assign published_releases = site.press_releases | where_exp: "release", "release.date <= site.time" %}
-            {% for release in published_releases reversed %}
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-newspaper" style="font-size: 2rem;"></i>
-                </div>
-                <span style="display: block; color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">{{ release.date | date: "%B %d, %Y" }}</span>
-                <h3>{{ release.title }}</h3>
-                <p>{{ release.excerpt | strip_html | truncatewords: 30 }}</p>
-                <a href="{{ release.url | relative_url }}" class="card-link">
-                    Read full release <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-            {% endfor %}
-
-            {% if published_releases.size == 0 %}
-            <div class="service-card" style="grid-column: 1 / -1; text-align: center; padding: 4rem;">
-                <h3>No press releases yet</h3>
-                <p>Check back soon for official announcements.</p>
-            </div>
-            {% endif %}
-        </div>
-    </div>
-</section>
+<div class="archive-head wrap"><span class="eyebrow">The official record</span><h1>Announcements<span class="amber-dot">.</span></h1><p>Rangeway news and press releases.</p><a href="{{ '/feed-press.xml' | relative_url }}" class="text-link">Subscribe to the press feed ↗</a></div>
+{% assign releases = site.press_releases | sort: 'date' | reverse %}
+<section class="latest wrap" aria-label="All press releases"><div class="section-heading"><h2>Press archive</h2></div><div class="story-grid">
+{% for release in releases %}{% if release.date <= site.time %}{% include editorial-card.html item=release category='Announcements' %}{% endif %}{% endfor %}
+</div></section>

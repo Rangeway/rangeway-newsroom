@@ -1,0 +1,9 @@
+{% assign item = include.item %}
+{% assign summary = item.subtitle | default: item.description | default: item.excerpt %}
+<article class="story-tile" data-category="{{ include.category }}">
+  {% if item.image %}<a class="story-image" href="{{ item.url | relative_url }}"><img src="{{ item.image | relative_url }}" alt="{{ item.title | escape }}" loading="lazy"></a>{% endif %}
+  {% include editorial-meta.html item=item category=include.category %}
+  <h3><a href="{{ item.url | relative_url }}">{{ item.title | escape }}</a></h3>
+  {% if summary %}<p class="summary">{{ summary | strip_html | truncatewords: 35 }}</p>{% endif %}
+  <a class="text-link" href="{{ item.url | relative_url }}">Read {% if include.category == 'Stories' %}story{% elsif include.category == 'Case studies' %}case study{% else %}announcement{% endif %} <span aria-hidden="true">↗</span></a>
+</article>

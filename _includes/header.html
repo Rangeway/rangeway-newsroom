@@ -1,117 +1,57 @@
+{% assign page_summary = page.description | default: page.subtitle | default: site.description %}
+{% assign social_image = page.og_image | default: page.image | default: '/assets/images/brand/rangeway-social.png' %}
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Primary Meta Tags -->
-    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-    <meta name="title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
-    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-    <meta name="author" content="{{ site.organization.name }}">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="{{ page.url | absolute_url }}">
-
-    <link rel="icon" type="image/svg+xml" href="/assets/images/brand/rangeway-avatar.svg">
-
-    <!-- Theme Color for Mobile -->
-    <meta name="theme-color" content="#f4a855">
-
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ page.url | absolute_url }}">
-    <meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
-    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-    <meta property="og:image" content="{% if page.og_image %}{{ page.og_image }}{% else %}{{ site.url }}/assets/images/brand/rangeway-social.png{% endif %}">
-    <meta property="og:site_name" content="{{ site.organization.name }}">
-
-    <!-- Twitter Card -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="{{ page.url | absolute_url }}">
-    <meta property="twitter:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
-    <meta property="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-    <meta property="twitter:image" content="{% if page.og_image %}{{ page.og_image }}{% else %}{{ site.url }}/assets/images/brand/rangeway-social.png{% endif %}">
-    <meta name="twitter:site" content="@rangewayenergy">
-
-    <!-- Fonts: Raleway + Source Sans 3 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="{{ '/assets/css/style-main.css' | relative_url }}?v={{ site.asset_version }}">
-
-    <!-- RSS Feeds -->
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }} - All Content" href="{{ '/feed.xml' | absolute_url }}">
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }} - Press Releases" href="{{ '/feed-press.xml' | absolute_url }}">
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }} - Case Studies" href="{{ '/feed-case-studies.xml' | absolute_url }}">
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }} - Blog" href="{{ '/feed-blog.xml' | absolute_url }}">
-
-    {% if site.analytics.enabled %}
-    <script src="https://tinylytics.app/embed/{{ site.analytics.tinylytics_id }}.js" defer></script>
-    {% endif %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}</title>
+  <meta name="description" content="{{ page_summary | strip_html | escape }}">
+  <meta name="author" content="{{ page.author | default: site.organization.name | escape }}">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/brand/rangeway-avatar.svg' | relative_url }}">
+  <meta name="theme-color" content="#282A29">
+  <meta property="og:type" content="{% if page.layout == 'post' or page.layout == 'press-release' or page.layout == 'case-study' %}article{% else %}website{% endif %}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:title" content="{{ page.title | default: site.title | escape }}">
+  <meta property="og:description" content="{{ page_summary | strip_html | escape }}">
+  <meta property="og:image" content="{{ social_image | absolute_url }}">
+  <meta property="og:site_name" content="{{ site.organization.name | escape }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@rangewayenergy">
+  <meta name="twitter:title" content="{{ page.title | default: site.title | escape }}">
+  <meta name="twitter:description" content="{{ page_summary | strip_html | escape }}">
+  <meta name="twitter:image" content="{{ social_image | absolute_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;650;700;750;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  {% if page.url == '/media-kit.html' %}<link rel="stylesheet" href="{{ '/assets/css/style-main.css' | relative_url }}?v={{ site.asset_version }}">{% endif %}
+  <link rel="stylesheet" href="{{ '/assets/css/editorial.css' | relative_url }}?v={{ site.asset_version }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }} - All Content" href="{{ '/feed.xml' | absolute_url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }} - Press Releases" href="{{ '/feed-press.xml' | absolute_url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }} - Case Studies" href="{{ '/feed-case-studies.xml' | absolute_url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }} - Blog" href="{{ '/feed-blog.xml' | absolute_url }}">
+  {% if site.analytics.enabled %}<script src="https://tinylytics.app/embed/{{ site.analytics.tinylytics_id }}.js" defer></script>{% endif %}
 </head>
-
-<body class="{% if page.layout == 'post' or page.layout == 'press-release' or page.layout == 'case-study' %}has-hero{% endif %}">
-
-<a href="#main-content" class="skip-link">Skip to main content</a>
-
-<!-- Floating pill nav -->
-<div class="nav-wrap" data-nav>
-    <div class="container">
-        <div class="nav-inner">
-            <a class="nav-brand" href="{{ '/' | relative_url }}" aria-label="Rangeway Newsroom home">
-                <img class="nav-brand-logo" src="/assets/images/brand/rangeway-cream-amber.svg" alt="Rangeway" width="332" height="72">
-                <span class="nav-brand-sub">Newsroom</span>
-            </a>
-
-            <ul class="nav-links" aria-label="Primary">
-                <li><a href="{{ '/' | relative_url }}" {% if page.url == '/' or page.url == '/index.html' %}aria-current="page"{% endif %}>Home</a></li>
-                <li><a href="{{ '/press.html' | relative_url }}" {% if page.url contains '/press' %}aria-current="page"{% endif %}>Press Releases</a></li>
-                <li><a href="{{ '/blog.html' | relative_url }}" {% if page.url contains '/blog' %}aria-current="page"{% endif %}>Blog</a></li>
-                <li><a href="{{ '/case-studies.html' | relative_url }}" {% if page.url contains '/case-studies' %}aria-current="page"{% endif %}>Case Studies</a></li>
-                <li><a href="{{ '/media-kit.html' | relative_url }}" {% if page.url contains '/media-kit' %}aria-current="page"{% endif %}>Media Kit</a></li>
-                <li><a href="{{ site.organization.main_site }}" target="_blank" rel="noopener noreferrer">Main Site</a></li>
-                <li class="nav-social" aria-label="Social">
-                    <a href="{{ site.social.instagram }}" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="3" y="3" width="18" height="18" rx="5" />
-                            <circle cx="12" cy="12" r="4" />
-                            <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none" />
-                        </svg>
-                    </a>
-                    <a href="{{ site.social.linkedin }}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M4.98 3.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM3 9h4v12H3V9zm7 0h3.8v1.7h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.4c0-1.3-.03-2.98-1.82-2.98-1.82 0-2.1 1.42-2.1 2.88V21h-4V9z" />
-                        </svg>
-                    </a>
-                    <a href="{{ site.social.twitter }}" target="_blank" rel="noopener noreferrer" aria-label="X">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M18.244 2H21l-6.52 7.45L22 22h-6.77l-5.3-6.93L3.75 22H1l7-8L1.55 2h6.93l4.8 6.34L18.24 2zm-2.37 18h1.86L7.21 4h-2L15.87 20z" />
-                        </svg>
-                    </a>
-                </li>
-            </ul>
-
-            <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu" data-toggle>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                    <line x1="3" y1="7" x2="21" y2="7" />
-                    <line x1="3" y1="12" x2="21" y2="12" />
-                    <line x1="3" y1="17" x2="21" y2="17" />
-                </svg>
-            </button>
-        </div>
-
-        <div class="nav-mobile" id="mobile-menu" hidden data-mobile>
-            <a href="{{ '/' | relative_url }}">Home</a>
-            <a href="{{ '/press.html' | relative_url }}">Press Releases</a>
-            <a href="{{ '/blog.html' | relative_url }}">Blog</a>
-            <a href="{{ '/case-studies.html' | relative_url }}">Case Studies</a>
-            <a href="{{ '/media-kit.html' | relative_url }}">Media Kit</a>
-            <a href="{{ site.organization.main_site }}" target="_blank" rel="noopener noreferrer">Main Site</a>
-            <div class="nav-mobile__social">
-                <a href="{{ site.social.instagram }}" target="_blank" rel="noopener noreferrer">Instagram</a>
-                <a href="{{ site.social.linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                <a href="{{ site.social.twitter }}" target="_blank" rel="noopener noreferrer">X</a>
-            </div>
-        </div>
-    </div>
-</div>
+<body>
+<a class="skip" href="#main-content">Skip to content</a>
+<header class="nav">
+  <a class="brand" href="{{ '/' | relative_url }}" aria-label="Rangeway Newsroom home">
+    <img src="{{ '/assets/images/brand/rangeway-cream-amber.svg' | relative_url }}" width="332" height="72" alt="Rangeway">
+    <span>Newsroom</span>
+  </a>
+  <nav class="desktop-links" aria-label="Primary">
+    <a href="{{ '/blog.html' | relative_url }}" {% if page.url contains '/blog' %}aria-current="page"{% endif %}>Stories</a>
+    <a href="{{ '/press.html' | relative_url }}" {% if page.url contains '/press' %}aria-current="page"{% endif %}>Announcements</a>
+    <a href="{{ '/case-studies.html' | relative_url }}" {% if page.url contains '/case-studies' %}aria-current="page"{% endif %}>Case studies</a>
+    <a href="{{ '/media-kit.html' | relative_url }}" {% if page.url contains '/media-kit' %}aria-current="page"{% endif %}>Media resources</a>
+    <a class="main-site" href="{{ site.organization.main_site }}">Rangeway.co <span aria-hidden="true">↗</span></a>
+  </nav>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">Menu <span aria-hidden="true">＋</span></button>
+  <nav id="mobile-menu" hidden aria-label="Mobile navigation">
+    <a href="{{ '/blog.html' | relative_url }}">Stories</a>
+    <a href="{{ '/press.html' | relative_url }}">Announcements</a>
+    <a href="{{ '/case-studies.html' | relative_url }}">Case studies</a>
+    <a href="{{ '/media-kit.html' | relative_url }}">Media resources</a>
+    <a href="{{ site.organization.main_site }}">Rangeway.co ↗</a>
+  </nav>
+</header>

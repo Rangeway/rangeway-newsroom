@@ -1,20 +1,4 @@
 ---
-layout: default
+layout: article
 ---
-
-<article class="has-hero">
-    {% include content-hero.html badge="Blog" title=page.title date=page.date author=page.author image=page.image %}
-
-    <section class="article">
-        <div class="container-narrow">
-            <div class="article__body">
-                {{ content }}
-            </div>
-            {% include social-share.html title=page.title url=page.url type="post" %}
-        </div>
-    </section>
-
-    {% if site.posts.size > 1 %}
-    {% include related-content.html title="Recent posts" collection=site.posts current_url=page.url show_date=true eyebrow="Keep reading" %}
-    {% endif %}
-</article>
+{{ content }}

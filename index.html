@@ -1,108 +1,40 @@
 ---
 layout: default
-title: Rangeway Energy Newsroom
+title: Newsroom
 ---
-
-<section class="page-hero">
-    <div class="container">
-        <div class="page-hero__inner">
-            <span class="eyebrow">Newsroom</span>
-            <h1>News, announcements &amp; insights from Rangeway Energy.</h1>
-            <p class="page-hero__lede">The official record for America's premier scenic corridor charging network — press releases, case studies, and stories from the road.</p>
-        </div>
-    </div>
-</section>
-
-{% assign latest_release = site.press_releases | where_exp: "release", "release.date <= site.time" | reverse | first %}
-{% if latest_release %}
-<section class="feature-band reveal">
-    <div class="container">
-        <div class="feature-band__grid">
-            {% if latest_release.image %}
-            <a href="{{ latest_release.url | relative_url }}" class="feature-band__media" aria-label="{{ latest_release.title }}">
-                <img src="{{ latest_release.image | relative_url }}" alt="{{ latest_release.title }}" loading="lazy" decoding="async">
-            </a>
-            {% endif %}
-            <div class="feature-band__content">
-                <span class="eyebrow">Latest Press Release</span>
-                <h2><a href="{{ latest_release.url | relative_url }}">{{ latest_release.title }}</a></h2>
-                <p class="feature-band__date">{{ latest_release.date | date: "%B %d, %Y" }}</p>
-                <p class="feature-band__excerpt">{{ latest_release.excerpt | strip_html | truncatewords: 40 }}</p>
-                <a href="{{ latest_release.url | relative_url }}" class="btn btn-primary">Read Full Release
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
-                </a>
-            </div>
-        </div>
-    </div>
+{% assign published_posts = site.posts | where_exp: 'post', 'post.date <= site.time' %}
+{% assign lead = published_posts | first %}
+{% assign published_releases = site.press_releases | where_exp: 'release', 'release.date <= site.time' | sort: 'date' | reverse %}
+{% assign published_studies = site.case_studies | where_exp: 'study', 'study.date <= site.time' | sort: 'date' | reverse %}
+<div class="masthead wrap"><h1>Newsroom<span class="amber-dot">.</span></h1><p>News, announcements &amp; insights<br>from Rangeway.</p></div>
+{% if lead %}
+<section class="lead wrap" aria-labelledby="lead-title">
+  {% if lead.image %}<a class="lead-image" href="{{ lead.url | relative_url }}"><img src="{{ lead.image | relative_url }}" alt="{{ lead.title | escape }}" fetchpriority="high"></a>{% endif %}
+  <div class="lead-copy">
+    {% include editorial-meta.html item=lead category='Stories' %}
+    {% assign lead_title_parts = lead.title | split: ',' %}
+    <h2 id="lead-title"><a href="{{ lead.url | relative_url }}">{% if lead_title_parts.size > 1 %}{{ lead_title_parts.first | escape }},<br><span>{{ lead.title | remove_first: lead_title_parts.first | remove_first: ',' | strip | escape }}</span>{% else %}{{ lead.title | escape }}{% endif %}</a></h2>
+    <p>{{ lead.subtitle | default: lead.description | default: lead.excerpt | strip_html | truncatewords: 40 }}</p>
+    <a class="lead-link" href="{{ lead.url | relative_url }}">Read the story <span aria-hidden="true">↗</span></a>
+  </div>
 </section>
 {% endif %}
-
-{% assign latest_case_study = site.case_studies | reverse | first %}
-{% assign latest_post = site.posts | first %}
-{% if latest_release or latest_case_study or latest_post %}
-<section class="section reveal">
-    <div class="container">
-        <div class="listing__header">
-            <span class="eyebrow">Latest Updates</span>
-            <h2>Our most recent work</h2>
-            <p>Fresh news across every category.</p>
-        </div>
-
-        <div class="grid-3">
-            {% if latest_release %}
-            <a href="{{ latest_release.url | relative_url }}" class="card card--link">
-                {% if latest_release.image %}
-                <div class="card__media">
-                    <img src="{{ latest_release.image | relative_url }}" alt="{{ latest_release.title }}" loading="lazy" decoding="async">
-                </div>
-                {% endif %}
-                <span class="card__tag">Press Release</span>
-                <p class="card__date">{{ latest_release.date | date: "%B %d, %Y" }}</p>
-                <h3 class="card__title">{{ latest_release.title }}</h3>
-                <p class="card__excerpt">{{ latest_release.excerpt | strip_html | truncatewords: 24 }}</p>
-                <span class="card__more">Read more
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
-                </span>
-            </a>
-            {% endif %}
-
-            {% if latest_post %}
-            <a href="{{ latest_post.url | relative_url }}" class="card card--link">
-                {% if latest_post.image %}
-                <div class="card__media">
-                    <img src="{{ latest_post.image | relative_url }}" alt="{{ latest_post.title }}" loading="lazy" decoding="async">
-                </div>
-                {% endif %}
-                <span class="card__tag">Blog</span>
-                <p class="card__date">{{ latest_post.date | date: "%B %d, %Y" }}</p>
-                <h3 class="card__title">{{ latest_post.title }}</h3>
-                <p class="card__excerpt">{{ latest_post.excerpt | strip_html | truncatewords: 24 }}</p>
-                <span class="card__more">Read more
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
-                </span>
-            </a>
-            {% endif %}
-
-            {% if latest_case_study %}
-            <a href="{{ latest_case_study.url | relative_url }}" class="card card--link">
-                {% if latest_case_study.image %}
-                <div class="card__media">
-                    <img src="{{ latest_case_study.image | relative_url }}" alt="{{ latest_case_study.title }}" loading="lazy" decoding="async">
-                </div>
-                {% endif %}
-                <span class="card__tag">Case Study</span>
-                <h3 class="card__title">{{ latest_case_study.title }}</h3>
-                {% if latest_case_study.subtitle %}
-                <p class="card__excerpt">{{ latest_case_study.subtitle }}</p>
-                {% else %}
-                <p class="card__excerpt">{{ latest_case_study.excerpt | strip_html | truncatewords: 24 }}</p>
-                {% endif %}
-                <span class="card__more">Read case study
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
-                </span>
-            </a>
-            {% endif %}
-        </div>
-    </div>
+<section class="latest wrap" id="latest">
+  <div class="section-heading"><h2>The latest</h2><div class="filters" aria-label="Filter articles">
+    <button type="button" data-filter="All" aria-pressed="true">All</button>
+    <button type="button" data-filter="Stories" aria-pressed="false">Stories</button>
+    <button type="button" data-filter="Announcements" aria-pressed="false">Announcements</button>
+    <button type="button" data-filter="Case studies" aria-pressed="false">Case studies</button>
+  </div></div>
+  <div class="story-grid">
+    {% for post in published_posts offset:1 limit:3 %}{% include editorial-card.html item=post category='Stories' %}{% endfor %}
+    {% assign latest_release = published_releases | first %}{% if latest_release %}{% include editorial-card.html item=latest_release category='Announcements' %}{% endif %}
+    {% assign latest_study = published_studies | first %}{% if latest_study %}{% include editorial-card.html item=latest_study category='Case studies' %}{% endif %}
+  </div>
 </section>
-{% endif %}
+<section class="podcast wrap" aria-labelledby="podcast-title">
+  <div class="podcast-title"><span class="eyebrow">The Rangeway podcast</span><h2 id="podcast-title">Trail Marker</h2><a href="https://podcast.rangeway.co/" class="text-link">All episodes <span aria-hidden="true">↗</span></a></div>
+  <div class="podcast-embed"><iframe src="https://player.fireside.fm/v2/los7u-af/latest?theme=dark" title="Latest Trail Marker podcast episode" scrolling="no" loading="lazy" allow="autoplay"></iframe></div>
+</section>
+<section class="archive-row wrap" id="announcements"><div><span class="eyebrow">The official record</span><h2>Rangeway announcements</h2></div><a href="{{ '/press.html' | relative_url }}" class="text-link">View the press archive <span aria-hidden="true">↗</span></a></section>
+<nav class="archive-links wrap" aria-label="Newsroom archives"><a href="{{ '/blog.html' | relative_url }}">All stories ↗</a><a href="{{ '/press.html' | relative_url }}">All announcements ↗</a><a href="{{ '/case-studies.html' | relative_url }}">All case studies ↗</a></nav>

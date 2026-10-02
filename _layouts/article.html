@@ -1,0 +1,63 @@
+---
+layout: default
+---
+{% if page.collection == 'press_releases' %}
+  {% assign category = 'Announcements' %}
+  {% assign archive_url = '/press.html' %}
+  {% assign share_type = 'release' %}
+{% elsif page.collection == 'case_studies' %}
+  {% assign category = 'Case studies' %}
+  {% assign archive_url = '/case-studies.html' %}
+  {% assign share_type = 'case study' %}
+{% else %}
+  {% assign category = 'Stories' %}
+  {% assign archive_url = '/blog.html' %}
+  {% assign share_type = 'story' %}
+{% endif %}
+{% assign intro = page.subtitle | default: page.description %}
+{% assign word_count = content | strip_html | number_of_words %}
+{% assign reading_minutes = word_count | plus: 219 | divided_by: 220 %}
+<article>
+  <header class="article-head wrap">
+    <a class="back" href="{{ archive_url | relative_url }}">← {{ category }}</a>
+    {% include editorial-meta.html item=page category=category %}
+    <h1>{{ page.title | escape }}</h1>
+    <div class="article-intro">{% if intro %}<p>{{ intro | strip_html }}</p>{% endif %}<span>{% if page.author %}By {{ page.author | escape }}<br>{% endif %}{{ reading_minutes }} min read</span></div>
+  </header>
+  {% if page.image %}
+  <figure class="article-cover wrap"><img src="{{ page.image | relative_url }}" alt="{{ page.title | escape }}"></figure>
+  {% endif %}
+  <div class="reading-layout wrap">
+    <aside class="contents" data-article-toc aria-label="In this article"><span class="eyebrow">In this article</span></aside>
+    <div class="prose">
+      {% if page.collection == 'press_releases' %}
+      <div class="article-resource"><span class="eyebrow">Media contact</span><a href="mailto:{{ site.organization.email }}">{{ site.organization.email }}</a>{% if page.pdf %}<a href="{{ page.pdf | relative_url }}" download>Download PDF ↗</a>{% endif %}</div>
+      {% endif %}
+      <div class="article__body">{{ content }}</div>
+      {% if page.pdf and page.collection == 'case_studies' %}<p class="article-resource"><a href="{{ page.pdf | relative_url }}" download>Download full case study (PDF) ↗</a></p>{% endif %}
+      <div class="article-end"><span class="end-mark" aria-hidden="true">●</span>{% include social-share.html title=page.title url=page.url type=share_type %}</div>
+    </div>
+  </div>
+</article>
+{% if page.collection == 'posts' %}
+  {% assign related_items = site.posts %}
+{% elsif page.collection == 'press_releases' %}
+  {% assign related_items = site.press_releases | sort: 'date' | reverse %}
+{% else %}
+  {% assign related_items = site.case_studies | sort: 'date' | reverse %}
+{% endif %}
+{% assign related_count = 0 %}
+{% capture related_cards %}
+    {% for item in related_items %}
+      {% if item.url != page.url and item.date <= site.time and related_count < 2 %}
+        {% include editorial-card.html item=item category=category %}
+        {% assign related_count = related_count | plus: 1 %}
+      {% endif %}
+    {% endfor %}
+{% endcapture %}
+{% if related_count > 0 %}
+<section class="read-next wrap">
+  <div class="section-heading"><h2>Keep reading</h2><a href="{{ archive_url | relative_url }}" class="text-link">Full archive ↗</a></div>
+  <div class="related-grid">{{ related_cards }}</div>
+</section>
+{% endif %}

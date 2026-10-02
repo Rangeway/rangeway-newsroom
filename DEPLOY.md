@@ -5,9 +5,10 @@ served by Nginx at **https://newsroom.rangeway.co** from `/var/www/rangeway-news
 `72.60.71.39`.
 
 ## How to deploy
-**Push to `main`.** GitHub Actions (`.github/workflows/deploy.yml`) builds Jekyll and rsyncs
-`_site/` to the VPS automatically. **You never run `jekyll build` by hand.**
-- On failure the live site keeps its last good build; the deploy retries rsync 3×.
+**Push to `main`.** GitHub Actions (`.github/workflows/deploy.yml`) builds Jekyll and
+publishes the generated site to the `deploy-dist` branch. The VPS polls that branch every
+two minutes and syncs the latest successful build into `/var/www/rangeway-newsroom/`.
+The live site keeps its last good build if CI fails.
 
 ## ⭐ Scheduling posts & press releases (the important part)
 To publish at a specific date/time, set the item's `date:` in the **future**. Best format —
@@ -16,11 +17,12 @@ and handles daylight saving for you):
 ```yaml
 date: 2026-07-01 06:00:00     # goes live ~6:00 AM Pacific on Jul 1
 ```
-- The item stays hidden until that time, then appears **within ~15 minutes**, automatically —
-  a `*/15` cron in the deploy workflow rebuilds the site (`future: false`). **No manual build
+- The item stays hidden until that time, then appears after the next scheduled CI build and
+  VPS poll (normally within about 17 minutes). A `*/15` cron in the deploy workflow rebuilds
+  the site (`future: false`). **No manual build
   or trigger needed** (this replaced the old once-daily rebuild that caused late posts).
 - Blog posts (`_posts/`) are gated by `future: false`. Press releases (`_press_releases/`) are
-  a collection; the homepage, `/press/`, and `/archive/` filter them with
+  a collection; the homepage and `/press.html` filter them with
   `where_exp: "release.date <= site.time"` so future-dated ones stay hidden everywhere.
 - **Don't** use malformed offsets like `-800` or `-070`; if you must add an offset, use four
   digits (`-0800` winter / `-0700` summer). Simplest is to omit it (above).
@@ -40,6 +42,6 @@ bundle exec jekyll build   # _site/
 
 ## Infra notes
 - Server path: `/var/www/rangeway-newsroom/`; Nginx server block for `newsroom.rangeway.co`.
-- CI auth: SSH deploy key in repo secrets `VPS_SSH_KEY` + `VPS_KNOWN_HOSTS`.
+- CI uses `GITHUB_TOKEN` to publish `deploy-dist`; the VPS pulls that branch.
 - GitHub Pages is **disabled** for this repo — the VPS is the only host.
 - `DEPLOY.md` is in `_config.yml`'s `exclude:` so it is not published.
