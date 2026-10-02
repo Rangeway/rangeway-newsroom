@@ -18,10 +18,10 @@ exec 9>"$STATE/publish.lock"
 flock -n 9 || exit 0
 
 # Cached source still permits time-based publication during a GitHub outage.
-if ! timeout 15s git -C "$REPO" fetch --quiet --depth=1 origin main; then
+if ! timeout 15s git -C "$REPO" fetch --quiet --depth=1 origin +refs/heads/main:refs/heads/main; then
   echo 'WARNING: source fetch failed; building last fetched source' >&2
 fi
-revision=$(git -C "$REPO" rev-parse FETCH_HEAD)
+revision=$(git -C "$REPO" rev-parse refs/heads/main)
 stage=$(mktemp -d "$STATE/build.XXXXXXXX")
 cleanup() {
   case "$stage" in "$STATE"/build.*) rm -rf -- "$stage" ;; esac
