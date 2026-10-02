@@ -1,0 +1,66 @@
+revision: "October 2026"
+overview: >-
+  Rangeway is building a hospitality-first EV charging network. Built on the conviction that EV charging is a hospitality problem, not a utility one, Rangeway treats every stop as an experience worth designing. The stop itself should be worth the time.
+boilerplate: >-
+  Rangeway is building a hospitality-first EV charging network, shaped by the conviction that the stop itself should be worth the time. Its three destination formats, Waystation, Basecamp, and Summit, bring charging together with indoor comfort, full-service hospitality, and overnight stays at different scales. ChargeVia by Rangeway extends the approach through a gas station-style fast-charging concept that can stand on its own or adapt to existing retail and roadside destinations. Founded by Zak Winnick, whose background includes 15+ years in luxury hospitality operations, Rangeway is based in San Francisco, California. Learn more at rangeway.co.
+facts:
+  - label: Founded
+    value: "2025"
+  - label: Based in
+    value: San Francisco, California
+  - label: Founder and CEO
+    value: Zak Winnick
+  - label: Website
+    value: rangeway.co
+formats:
+  - name: Waystation
+    line: Streamlined comfort
+    description: An automated, unstaffed stop pairing ultra-fast charging with a climate-controlled driver's lounge, premium restrooms, seating, Wi-Fi, and automated retail.
+  - name: Basecamp
+    line: The full-service destination
+    description: A staffed, full-service destination with a larger driver's lounge, a hospitality-trained on-site team, and food-and-beverage or retail space for a local operator.
+  - name: Summit
+    line: Where the road meets rest
+    description: A hospitality destination designed for overnight stays, with Lookouts, a central clubhouse, and off-grid charging.
+chargevia: ChargeVia is Rangeway's gas station-style fast-charging concept, designed to stand on its own or adapt to existing retail and roadside destinations through a flexible site-partner format.
+founder_bio: >-
+  Zak Winnick is the founder and CEO of Rangeway. He brings 15+ years in luxury hospitality operations and firsthand experience as an EV driver to the company. His work starts with a simple conviction: charging should feel like hospitality.
+logos:
+  - name: Charcoal & amber
+    file: rangeway-charcoal-amber.svg
+    surface: light
+  - name: Cream & amber
+    file: rangeway-cream-amber.svg
+    surface: dark
+  - name: Charcoal monochrome
+    file: rangeway-charcoal-mono.svg
+    surface: light
+  - name: Cream monochrome
+    file: rangeway-cream-mono.svg
+    surface: dark
+  - name: Charcoal mark
+    file: rangeway-icon-charcoal.svg
+    surface: light
+  - name: Cream mark
+    file: rangeway-icon-cream.svg
+    surface: dark
+images:
+  - name: Basecamp
+    file: basecamp-concept.jpg
+    alt: Basecamp concept with a warm timber lounge and covered charging spaces.
+    width: 2496
+    height: 1696
+  - name: Driver's lounge
+    file: drivers-lounge-concept.jpg
+    alt: Concept of a driver's lounge with warm lighting and comfortable seating.
+    width: 1024
+    height: 1024
+  - name: ChargeVia by Rangeway
+    file: chargevia-concept.jpg
+    alt: ChargeVia fast-charging concept illuminated at night beneath a timber canopy.
+    width: 2000
+    height: 1116
+usage: >-
+  Use the supplied logo artwork without stretching, recoloring, or rearranging it. The stylized R is the first letter of the wordmark; do not add a second R or a separate mark beside it. Use cream artwork on dark backgrounds and charcoal artwork on light backgrounds.
+credits: >-
+  Images: Rangeway. Identify all destination images as concept renderings when reproduced. They illustrate the intended experience, not operating properties. For additional assets or usage questions, contact media@rangeway.co.

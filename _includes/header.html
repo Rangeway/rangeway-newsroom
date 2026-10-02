@@ -24,8 +24,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;650;700;750;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
-  {% if page.url == '/media-kit.html' %}<link rel="stylesheet" href="{{ '/assets/css/style-main.css' | relative_url }}?v={{ site.asset_version }}">{% endif %}
   <link rel="stylesheet" href="{{ '/assets/css/editorial.css' | relative_url }}?v={{ site.asset_version }}">
+  {% if page.url == '/media-kit.html' %}<link rel="stylesheet" href="{{ '/assets/css/media-kit.css' | relative_url }}?v={{ site.asset_version }}">{% endif %}
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }} - All Content" href="{{ '/feed.xml' | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }} - Press Releases" href="{{ '/feed-press.xml' | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }} - Case Studies" href="{{ '/feed-case-studies.xml' | absolute_url }}">

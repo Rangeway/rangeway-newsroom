@@ -1,156 +1,62 @@
 ---
 layout: default
 title: Media Kit
+description: Company information, approved SVG logos, concept imagery, and founder resources for coverage of Rangeway.
 permalink: /media-kit.html
 ---
-
-<style>
-    /* Tightened spacing scoped to the media kit page */
-    .media-kit .page-hero {
-        padding: calc(var(--nav-height) + var(--space-5)) 0 var(--space-6);
-    }
-    .media-kit .page-hero h1 {
-        font-size: clamp(2.2rem, 4vw, 3rem);
-        margin-bottom: var(--space-3);
-    }
-    .media-kit .page-hero__lede {
-        font-size: 1.08rem;
-        margin-bottom: 0;
-    }
-    .media-kit .section {
-        padding: var(--space-7) 0;
-    }
-    .media-kit .listing__header {
-        margin: 0 auto var(--space-6);
-    }
-    .media-kit .listing__header h2 {
-        font-size: clamp(1.7rem, 3.2vw, 2.2rem);
-        margin-bottom: var(--space-2);
-    }
-    .media-kit .listing__header p {
-        font-size: 1rem;
-    }
-    .media-kit .grid-2,
-    .media-kit .grid-3 {
-        gap: var(--space-5);
-    }
-    .media-kit .card {
-        padding: var(--space-5);
-    }
-    .media-kit .card .eyebrow {
-        margin-bottom: var(--space-3);
-    }
-    .media-kit .card__title {
-        font-size: 1.25rem !important;
-        margin-bottom: var(--space-3);
-    }
-    .media-kit .card__excerpt {
-        margin-bottom: var(--space-4);
-    }
-    .media-kit .card dl {
-        gap: var(--space-2) !important;
-        font-size: 0.98rem;
-    }
-    .media-kit .boilerplate-block {
-        font-size: 1.1rem;
-        line-height: 1.6;
-    }
-    @media (max-width: 560px) {
-        .media-kit .section { padding: var(--space-6) 0; }
-        .media-kit .page-hero { padding: calc(var(--nav-height) + var(--space-4)) 0 var(--space-5); }
-    }
-</style>
-
-<div class="media-kit">
-
-<section class="page-hero">
-    <div class="container">
-        <div class="page-hero__inner">
-            <span class="eyebrow">Media Kit</span>
-            <h1>Brand assets, fact sheets &amp; press resources.</h1>
-            <p class="page-hero__lede">Everything journalists, analysts, and partners need to cover Rangeway Energy.</p>
-        </div>
+{% assign kit = site.data.media_kit %}
+<!-- Paired wordmark specimens make the brand assets the visual centerpiece. -->
+<div class="press-kit wrap">
+  <header class="kit-head">
+    <span class="eyebrow">Rangeway / Media resources</span>
+    <h1>Media Kit<span class="amber-dot">.</span></h1>
+    <div class="kit-head-bottom">
+      <p>Company information, brand assets, and images for coverage of Rangeway.</p>
+      <a class="kit-button" href="{{ '/assets/downloads/rangeway-press-kit.zip' | relative_url }}" download>Download press kit <span aria-hidden="true">↓</span></a>
     </div>
-</section>
-
-<section class="section section-cream reveal">
-    <div class="container">
-        <div class="grid-2">
-            <div class="card">
-                <span class="eyebrow">Media Contact</span>
-                <h2 class="card__title" style="font-size: 1.5rem;">For all press inquiries</h2>
-                <p class="card__excerpt">Interview requests, background briefings, and media opportunities — we respond within one business day.</p>
-                <p style="margin: 0 0 var(--space-2);">
-                    <strong>Email</strong> &middot; <a href="mailto:{{ site.organization.email }}">{{ site.organization.email }}</a>
-                </p>
-                <p style="margin: 0;">
-                    <strong>Phone</strong> &middot; {{ site.organization.phone }}
-                </p>
-            </div>
-            <div class="card">
-                <span class="eyebrow">About Rangeway</span>
-                <h2 class="card__title" style="font-size: 1.5rem;">Company overview</h2>
-                <p class="card__excerpt">Rangeway is America's first hospitality-driven premium EV charging network. Built on the conviction that EV charging is a hospitality problem, not a utility one, Rangeway treats every stop as an experience worth designing. Every location is built around a climate-controlled driver's lounge and the principle that the stop itself should be worth the time.</p>
-                <dl style="display: grid; gap: var(--space-3); margin: 0;">
-                    <div><strong>Founded</strong> &middot; 2025</div>
-                    <div><strong>Headquarters</strong> &middot; San Francisco, California</div>
-                    <div><strong>Network Model</strong> &middot; Four formats, one standard: Trailhead, Waystation, Basecamp, and Summit</div>
-                </dl>
-            </div>
+  </header>
+  <div class="kit-layout">
+    <nav class="kit-index" aria-label="Media Kit sections">
+      <span class="eyebrow">In this kit</span>
+      <a href="#company">Company</a><a href="#formats">Formats</a><a href="#logos">Logos</a><a href="#images">Images</a><a href="#founder">Founder</a><a href="#press-contact">Contact</a>
+      <span class="kit-revision">Updated {{ kit.revision }}</span>
+    </nav>
+    <div class="kit-content">
+      <section class="kit-section" id="company" aria-labelledby="company-title">
+        <span class="eyebrow">01 / Company</span>
+        <h2 id="company-title">The stop itself should<br>be worth the time.</h2>
+        <p class="kit-intro">{{ kit.overview }}</p>
+        <dl class="kit-facts">{% for fact in kit.facts %}<div><dt>{{ fact.label }}</dt><dd>{% if fact.label == 'Website' %}<a href="https://rangeway.co/">{{ fact.value }} ↗</a>{% else %}{{ fact.value }}{% endif %}</dd></div>{% endfor %}</dl>
+        <div class="kit-boilerplate">
+          <h3>Company boilerplate</h3>
+          <p id="boilerplate">{{ kit.boilerplate }}</p>
+          <div class="kit-actions"><button class="kit-copy" type="button" data-copy-target="#boilerplate" aria-live="polite">Copy boilerplate <span aria-hidden="true">↗</span></button><a href="{{ '/assets/downloads/media-kit/company-fact-sheet.txt' | relative_url }}" download>Download fact sheet <span>TXT ↓</span></a></div>
         </div>
+      </section>
+      <section class="kit-section" id="formats" aria-labelledby="formats-title">
+        <span class="eyebrow">02 / The network</span>
+        <h2 id="formats-title">Three formats.<br>One unwavering standard.</h2>
+        <div class="kit-formats">{% for format in kit.formats %}<article data-format="{{ format.name }}"><div><h3>{{ format.name }}</h3><p class="kit-caption">{{ format.line }}</p></div><p>{{ format.description }}</p></article>{% endfor %}</div>
+        <article class="kit-chargevia" id="chargevia"><span class="eyebrow">ChargeVia by Rangeway</span><h3>The stop that always works.</h3><p>{{ kit.chargevia }}</p><a class="text-link" href="https://chargevia.net/">Visit ChargeVia.net <span aria-hidden="true">↗</span></a></article>
+      </section>
+      <section class="kit-section" id="logos" aria-labelledby="logos-title">
+        <span class="eyebrow">03 / Brand assets</span><h2 id="logos-title">The Rangeway identity.</h2>
+        <p class="kit-section-lede">Original vector artwork. Ready for light and dark backgrounds.</p>
+        <div class="kit-logo-grid">{% for logo in kit.logos %}<div class="kit-logo{% if forloop.index > 2 %} kit-logo--small{% endif %}"><div class="kit-specimen kit-specimen--{{ logo.surface }}{% if logo.file contains 'icon' %} kit-specimen--icon{% endif %}"><img src="{{ '/assets/images/brand/' | append: logo.file | relative_url }}" alt="{{ logo.name }} Rangeway {% if logo.file contains 'icon' %}mark{% else %}wordmark{% endif %}" loading="lazy"></div><a href="{{ '/assets/images/brand/' | append: logo.file | relative_url }}" download>{{ logo.name }} <span>SVG ↓</span></a></div>{% endfor %}</div>
+        <p class="kit-note">{{ kit.usage }}</p>
+        <div class="kit-palette" aria-label="Brand colors"><div><i style="background:#505B4D"></i><span>Sage<br><code>#505B4D</code></span></div><div><i style="background:#F5EBDD"></i><span>Cream<br><code>#F5EBDD</code></span></div><div><i style="background:#282A29"></i><span>Charcoal<br><code>#282A29</code></span></div><div><i style="background:#F4A855"></i><span>Amber<br><code>#F4A855</code></span></div></div>
+        <p class="kit-note">Raleway for headings. Source Sans 3 for body copy.</p><a class="text-link" href="{{ '/brand.html' | relative_url }}">Brand guidelines <span aria-hidden="true">↗</span></a>
+      </section>
+      <section class="kit-section" id="images" aria-labelledby="images-title">
+        <span class="eyebrow">04 / Images</span><h2 id="images-title">A sense of the stop.</h2>
+        <p class="kit-section-lede">{{ kit.credits }}</p>
+        <div class="kit-image-grid">{% for asset in kit.images %}<figure><a href="{{ '/assets/downloads/media-kit/' | append: asset.file | relative_url }}" download aria-label="Download {{ asset.name }} concept image"><img src="{{ '/assets/downloads/media-kit/' | append: asset.file | relative_url }}" alt="{{ asset.alt }}" width="{{ asset.width }}" height="{{ asset.height }}" loading="lazy"></a><figcaption><div><strong>{{ asset.name }}</strong><span>Concept rendering · Image: Rangeway</span></div><a href="{{ '/assets/downloads/media-kit/' | append: asset.file | relative_url }}" download aria-label="Download {{ asset.name }} JPG">JPG ↓</a></figcaption></figure>{% endfor %}</div>
+      </section>
+      <section class="kit-section" id="founder" aria-labelledby="founder-title">
+        <span class="eyebrow">05 / Founder</span>
+        <div class="kit-founder"><img src="{{ '/assets/downloads/media-kit/zak-winnick.jpg' | relative_url }}" alt="Zak Winnick" width="800" height="800" loading="lazy"><div><h2 id="founder-title">Zak Winnick</h2><p class="kit-role">Founder and CEO</p><p id="founder-bio">{{ kit.founder_bio }}</p><div class="kit-actions"><a href="{{ '/assets/downloads/media-kit/zak-winnick.jpg' | relative_url }}" download>Headshot <span>JPG ↓</span></a><a href="{{ '/assets/downloads/media-kit/zak-winnick-bio.txt' | relative_url }}" download>Biography <span>TXT ↓</span></a></div><a class="text-link" href="https://rangeway.co/team">Meet the team <span aria-hidden="true">↗</span></a></div></div>
+      </section>
+      <section class="kit-section kit-contact" id="press-contact" aria-labelledby="contact-title"><span class="eyebrow">06 / Get in touch</span><h2 id="contact-title">Let’s talk.</h2><p>For interviews, background information, and additional images.</p><a href="mailto:{{ site.organization.email }}">{{ site.organization.email }} <span aria-hidden="true">↗</span></a></section>
     </div>
-</section>
-
-<section class="section reveal">
-    <div class="container">
-        <div class="listing__header">
-            <span class="eyebrow">Brand Assets</span>
-            <h2>Logos &amp; visual resources</h2>
-            <p>Download the approved SVG wordmarks, or contact us for photography.</p>
-        </div>
-        <div class="grid-3">
-            <div class="card">
-                <h3 class="card__title">Logos</h3>
-                <p class="card__excerpt">Approved Rangeway wordmarks in cream, charcoal, and monochrome SVG.</p>
-                <a href="{{ '/brand.html#logo' | relative_url }}" class="arrow-link">
-                    Download logos
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
-                </a>
-            </div>
-            <div class="card">
-                <h3 class="card__title">Photos</h3>
-                <p class="card__excerpt">High-resolution images of locations, renderings, and infrastructure.</p>
-                <a href="mailto:{{ site.organization.email }}?subject=Photo%20Request" class="arrow-link">
-                    Request photos
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
-                </a>
-            </div>
-            <div class="card">
-                <h3 class="card__title">Brand Guidelines</h3>
-                <p class="card__excerpt">Color palette, typography, and usage guidelines.</p>
-                <a href="{{ '/brand.html' | relative_url }}" class="arrow-link">
-                    View guidelines
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section section-cream reveal">
-    <div class="container-narrow">
-        <span class="eyebrow">Boilerplate</span>
-        <h2 style="margin-bottom: var(--space-5);">Company boilerplate</h2>
-        <p id="boilerplate" class="boilerplate-block" style="font-style: italic; color: var(--color-text); border-left: 3px solid var(--color-warm); padding-left: var(--space-5); margin: 0 0 var(--space-5);">
-            Rangeway is America's first hospitality-driven premium EV charging network. Built on the conviction that EV charging is a hospitality problem, not a utility one, Rangeway treats every stop as an experience worth designing. Across four complementary formats, Trailhead, Waystation, Basecamp, and Summit, every Rangeway location is built around a climate-controlled driver's lounge and the principle that the stop itself should be worth the time. The company partners with leading hardware, energy, structural, and software providers to deliver a network held to a single hospitality standard, at the scale each corridor requires.
-        </p>
-        <p style="margin-top: var(--space-5);">
-            <button type="button" class="btn btn-primary" data-copy-target="#boilerplate">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                Copy boilerplate
-            </button>
-        </p>
-    </div>
-</section>
-
-</div><!-- /.media-kit -->
+  </div>
+</div>

@@ -2,15 +2,15 @@
 # Jekyll configuration for GitHub Pages
 
 # Site settings
-title: Rangeway Energy Newsroom
-description: "Official newsroom for Rangeway Energy. Latest announcements, press releases, and media kit for America's premier scenic corridor charging network."
+title: Rangeway Newsroom
+description: "Stories, announcements, and media resources from Rangeway, a hospitality-first EV charging network in development."
 url: "https://newsroom.rangeway.co"
 baseurl: ""
-asset_version: "2026-10-01-editorial"
+asset_version: "2026-10-01-media-kit"
 
 # Organization info
 organization:
-  name: Rangeway Energy
+  name: Rangeway
   tagline: "Travel farther. Stop better."
   main_site: "https://rangeway.co"
   email: media@rangeway.co

@@ -1,6 +1,6 @@
 # Rangeway Media Kit refresh
 
-Status: proposed design and copy, awaiting written-spec review. No public changes.
+Status: implemented locally. Zak directed implementation without further brief or approval stops. Public deployment has not been performed as part of this update.
 
 ## Outcome and scope
 
@@ -133,6 +133,6 @@ Checked October 1, 2026: current Newsroom repository at e6438a1; its live Media 
 - [x] Record the integrated approach and alternatives.
 - [x] Draft page structure, copy, download scope and verification requirements.
 - [x] Self-review scope, consistency, disclosure boundaries and acceptance criteria.
-- [ ] Obtain written-spec review.
-- [ ] Produce the implementation plan, then build and verify the local preview.
-- [ ] Obtain finished-preview approval before publication.
+- [x] Proceed directly under Zak's implementation instruction.
+- [x] Build and verify the local preview, downloads, clipboard behavior, mobile menu, responsive widths and system themes.
+- [ ] Publish when deployment is requested.
