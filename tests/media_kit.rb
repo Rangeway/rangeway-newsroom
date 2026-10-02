@@ -9,6 +9,9 @@ def check(value, message)
   raise message unless value
 end
 doc = Nokogiri::HTML(File.read(File.join(root, 'media-kit.html')))
+home = Nokogiri::HTML(File.read(File.join(root, 'index.html')))
+check(home.css('footer a').none? { |a| a.text.match?(/Logos\s*&\s*brand guidelines/i) }, 'Standalone brand-guidelines footer link remains')
+check(home.at_css('footer a[href="/media-kit.html"]'), 'Media Kit footer entry missing')
 main = doc.at_css('main')
 check(main.at_css('.press-kit'), 'Editorial press kit missing')
 check(!main.text.match?(/Trailhead|four formats|one business day|Rangeway Energy|Theo|Mojave|Hawai|St\. Louis|Beverly Hills/i), 'Stale or restricted public copy')
