@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Rangeway Newsroom is a Jekyll-based static site serving as the media center for Rangeway Energy (America's premier scenic highway EV charging network). Hosted on GitHub Pages at https://newsroom.rangeway.co.
+Rangeway Newsroom is a Jekyll-based static site serving as the media center for Rangeway. Hosted on the Rangeway VPS at https://newsroom.rangeway.co; GitHub Pages is disabled.
 
 ## Common Commands
 
@@ -79,9 +79,10 @@ pdf: /assets/downloads/case-study.pdf  # Optional
 
 ## Deployment
 
-- **Automatic:** Push to `main` branch triggers GitHub Pages build (live in 1-2 minutes)
-- **Scheduled:** GitHub Actions runs daily at 14:00 UTC (6:00 AM PST) to trigger rebuilds
-- Check Actions tab for build status (green checkmark = success)
+- **Automatic:** The dedicated VPS publisher checks `main` every minute, builds, validates, and publishes.
+- **Scheduled:** The same server timer evaluates publication dates every minute; GitHub Actions cron is not used.
+- Check `rangeway-newsroom-publish.timer`, its service journal, and `/var/lib/rangeway-newsroom/last-success` for production status. GitHub Actions validates independently.
+- See `DEPLOY.md` for current operations and explicit Pacific date offsets.
 
 ## Brand System
 
@@ -106,4 +107,5 @@ pdf: /assets/downloads/case-study.pdf  # Optional
 
 - Jekyll config: `_config.yml`
 - Custom domain: `CNAME` file (newsroom.rangeway.co)
-- GitHub Actions: `.github/workflows/scheduled-build.yml`
+- GitHub Actions: `.github/workflows/deploy.yml` (validation only)
+- Server timer and service: `ops/rangeway-newsroom-publish.*`

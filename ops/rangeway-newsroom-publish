@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+STATE=/var/lib/rangeway-newsroom
+REPO="$STATE/repository.git"
+DEST=/var/www/rangeway-newsroom
+export BUNDLE_PATH="$STATE/bundle"
+export BUNDLE_FROZEN=true
+export BUNDLE_USER_HOME="$STATE/bundler"
+export JEKYLL_ENV=production
+export TZ=America/Los_Angeles
+
+exec 9>"$STATE/publish.lock"
+flock -n 9 || exit 0
+
+# Cached source still permits time-based publication during a GitHub outage.
+if ! timeout 15s git -C "$REPO" fetch --quiet --depth=1 origin main; then
+  echo 'WARNING: source fetch failed; building last fetched source' >&2
+fi
+revision=$(git -C "$REPO" rev-parse FETCH_HEAD)
+stage=$(mktemp -d "$STATE/build.XXXXXXXX")
+cleanup() {
+  case "$stage" in "$STATE"/build.*) rm -rf -- "$stage" ;; esac
+}
+trap cleanup EXIT
+mkdir "$stage/source"
+git -C "$REPO" archive "$revision" | tar -xf - -C "$stage/source"
+export BUNDLE_GEMFILE="$stage/source/Gemfile"
+cd "$stage/source"
+bundle check
+bundle exec ruby scripts/scheduled_build.rb "$stage/source" "$stage/site"
+bundle exec ruby tests/editorial_integration.rb "$stage/site"
+bundle exec ruby tests/media_kit.rb "$stage/site"
+
+# No live files are touched until the build and content checks have passed.
+test -f "$stage/site/index.html"
+test -f "$stage/site/feed-blog.xml"
+test ! -e "$stage/site/ops"
+test ! -e "$stage/site/_posts"
+rsync -a --delete --chmod=D755,F644 "$stage/site/" "$DEST/"
+printf '%s %s\n' "$revision" "$(date -u +%FT%TZ)" > "$STATE/last-success"
+echo "Published newsroom $revision at $(date -u +%FT%TZ)"

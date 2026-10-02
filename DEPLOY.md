@@ -1,47 +1,79 @@
-# Deploy & Ops — rangeway-newsroom (newsroom.rangeway.co)
+# Deploy & Ops — Rangeway Newsroom
 
-Media center / blog / press releases. **Self-hosted on a Hostinger VPS** (not GitHub Pages),
-served by Nginx at **https://newsroom.rangeway.co** from `/var/www/rangeway-newsroom/` on
-`72.60.71.39`.
+The Newsroom is served by Nginx at https://newsroom.rangeway.co from
+/var/www/rangeway-newsroom on the Rangeway VPS (72.60.71.39).
 
-## How to deploy
-**Push to `main`.** GitHub Actions (`.github/workflows/deploy.yml`) builds Jekyll and
-publishes the generated site to the `deploy-dist` branch. The VPS polls that branch every
-two minutes and syncs the latest successful build into `/var/www/rangeway-newsroom/`.
-The live site keeps its last good build if CI fails.
+## Publishing
 
-## ⭐ Scheduling posts & press releases (the important part)
-To publish at a specific date/time, set the item's `date:` in the **future**. Best format —
-local time with **no UTC offset** (the `timezone: America/Los_Angeles` config applies Pacific
-and handles daylight saving for you):
-```yaml
-date: 2026-07-01 06:00:00     # goes live ~6:00 AM Pacific on Jul 1
-```
-- The item stays hidden until that time, then appears after the next scheduled CI build and
-  VPS poll (normally within about 17 minutes). A `*/15` cron in the deploy workflow rebuilds
-  the site (`future: false`). **No manual build
-  or trigger needed** (this replaced the old once-daily rebuild that caused late posts).
-- Blog posts (`_posts/`) are gated by `future: false`. Press releases (`_press_releases/`) are
-  a collection; the homepage and `/press.html` filter them with
-  `where_exp: "release.date <= site.time"` so future-dated ones stay hidden everywhere.
-- **Don't** use malformed offsets like `-800` or `-070`; if you must add an offset, use four
-  digits (`-0800` winter / `-0700` summer). Simplest is to omit it (above).
-- To unpublish: set the date back to the future, or add `published: false`.
+Push approved changes to main. The dedicated server timer
+rangeway-newsroom-publish.timer checks main and builds every minute. It runs
+content, feed, archive, and Media Kit checks before syncing the generated site.
+A failed fetch uses the last fetched source so already-scheduled posts can still
+publish during a GitHub outage. A failed build or validation leaves the live site
+unchanged. Inspect errors in the service journal; last-success records the source
+commit and the last successful UTC publication time.
 
-## Local development
-Jekyll (github-pages gem). CI uses Ruby 3.3.
-```bash
-bundle install
-bundle exec jekyll serve   # http://localhost:4000  (add --future to preview scheduled items)
-bundle exec jekyll build   # _site/
-```
+GitHub Actions independently runs build and publication-boundary tests on pushes.
+It is not the production scheduling clock. The old deploy-dist branch is no longer
+consumed for this repository; other sites still use the shared pull-deploy timer.
 
-## TLS / DNS
-- HTTPS via **Let's Encrypt** (certbot on the VPS) — auto-renews.
-- DNS at **Cloudflare, DNS-only (grey cloud)**: A record `newsroom.rangeway.co` → `72.60.71.39`.
+## Scheduling posts
 
-## Infra notes
-- Server path: `/var/www/rangeway-newsroom/`; Nginx server block for `newsroom.rangeway.co`.
-- CI uses `GITHUB_TOKEN` to publish `deploy-dist`; the VPS pulls that branch.
-- GitHub Pages is **disabled** for this repo — the VPS is the only host.
-- `DEPLOY.md` is in `_config.yml`'s `exclude:` so it is not published.
+Use an explicit Pacific UTC offset in front matter:
+
+    date: 2026-10-02 07:00:00 -0700
+
+Use -0700 during daylight saving time and -0800 during standard time. Bare YAML
+timestamps can be parsed as UTC, so do not rely on an unquoted offset-free date.
+Keep future: false. Set published: false to hold an article regardless of date.
+A due post should appear after the next one-minute timer tick plus build time;
+this is not an exact-to-the-second publication guarantee.
+
+Blog posts are excluded from output before their date. Press-release listings
+and RSS also apply their existing date filters. Never use --future for production.
+
+## Server components
+
+- /usr/local/bin/rangeway-newsroom-publish (source: ops/rangeway-newsroom-publish)
+- /etc/systemd/system/rangeway-newsroom-publish.service and .timer
+- /var/lib/rangeway-newsroom/repository.git: source cache, main only
+- /var/lib/rangeway-newsroom/bundle: locked Ruby dependencies
+- /var/lib/rangeway-newsroom/last-success: last successful source revision and UTC time
+
+The service runs as deploy with write access limited to its state and Newsroom
+webroot. Source, tests, and operational files are never served. Dependencies are
+installed separately from publication; when Gemfile.lock changes, install the
+new locked bundle before relying on scheduled publication.
+
+Read-only checks:
+
+    systemctl status rangeway-newsroom-publish.timer
+    journalctl -u rangeway-newsroom-publish.service -n 80 --no-pager
+    cat /var/lib/rangeway-newsroom/last-success
+
+Manual publication, when authorized:
+
+    systemctl start rangeway-newsroom-publish.service
+
+## Local verification
+
+    bundle exec ruby tests/scheduled_publishing.rb
+    bundle exec ruby scripts/scheduled_build.rb "$PWD" "$PWD/_site"
+    bundle exec ruby tests/editorial_integration.rb
+    bundle exec ruby tests/media_kit.rb
+
+Scheduling tests cover pre-date exclusion, exact due-time inclusion, homepage,
+RSS, direct article output, held posts, and explicit Pacific winter offsets.
+
+## Rollback
+
+Stop the dedicated timer before restoring a prior site archive. To return to the
+old deployment mechanism, also restore the saved /etc/rangeway-deploy.conf and
+previous workflow. Do not leave both publishers writing the Newsroom webroot.
+Backups live outside the webroot under /var/backups.
+
+## Hosting
+
+TLS uses Let's Encrypt. DNS is Cloudflare DNS-only. GitHub Pages is disabled.
+The workflow and ops files are maintained here; installing changed systemd or
+publisher files requires a deliberate server deployment, not merely a Git push.

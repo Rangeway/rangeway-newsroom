@@ -79,7 +79,7 @@ check(Dir.glob(File.join(root, 'blog/2026/10/02/*')).empty?, 'Future story outpu
   xml = Nokogiri::XML(File.read(File.join(root, name)))
   check(xml.errors.empty? && !xml.css('item').empty?, "#{name}: invalid or empty feed")
 end
-%w[docs tests scripts .superpowers CLAUDE.md CONTENT-GUIDE.md].each do |name|
+%w[docs tests scripts ops .superpowers CLAUDE.md CONTENT-GUIDE.md].each do |name|
   check(!File.exist?(File.join(root, name)), "Internal material published: #{name}")
 end
 %w[assets/css/editorial.css assets/js/editorial.js assets/downloads/nevada-electric-highway.pdf].each do |name|
