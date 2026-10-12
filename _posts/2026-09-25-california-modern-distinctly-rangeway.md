@@ -9,8 +9,6 @@ description: "Zak Winnick shares how California Modern, warm materials, and a se
 image: /assets/images/blog2026-09-25.png
 ---
 
-*Rangeway's coastal beginnings still shape how we think about comfort, design, and a sense of place.*
-
 The first vision for Rangeway was California Coastal.
 
 I imagined charging stops along Pacific Coast Highway, on the ocean side of the road, overlooking the coastline. You would pull in, plug in your car, and walk into a lounge with floor-to-ceiling windows. Outside, you could see the cliffs, the rocks below, and waves coming in from the Pacific.
@@ -66,5 +64,3 @@ Your car is charging. You're sitting in a comfortable chair. Through the windows
 The view will change as Rangeway develops. The intention stays the same: give people somewhere they feel welcome, somewhere they can get comfortable, and somewhere they would choose to stop again.
 
 This is why we say, "Travel farther. Stop better." The places you stop should be part of what makes the trip worthwhile.
-
-*Cover image: Concept illustration of Rangeway's California Modern design direction.*
