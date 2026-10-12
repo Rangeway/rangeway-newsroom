@@ -9,8 +9,6 @@ description: "Zak Winnick explains how hospitality shaped Rangeway from day one,
 image: /assets/images/blog2026-10-02.png?v=20260930
 ---
 
-*The details of a better charging stop have shaped Rangeway from the beginning.*
-
 More of the conversation about EV charging has moved beyond kilowatts lately. Drivers and networks are talking about whether sites are kept up, whether the amenities work and how much the phone should be part of a charging stop.
 
 Much of that conversation would sound familiar in a hotel operations meeting. Does the property look cared for? Do the things we provide actually work? Can guests find what they need without asking someone to explain it?
