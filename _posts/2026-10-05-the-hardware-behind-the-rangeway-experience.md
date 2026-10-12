@@ -9,8 +9,6 @@ description: "Zak Winnick explains Rangeway's choice of Ekoenergetyka, from serv
 image: /assets/images/hardware-behind-rangeway-experience-winter.png
 ---
 
-*Why we chose Ekoenergetyka as our primary hardware provider.*
-
 I first heard about Ekoenergetyka while watching an Out of Spec Reviews video covering EVCS in 2025. Kyle was looking at their chargers, and I remember thinking the hardware was interesting. Rangeway wasn't what I was thinking about at the time, but the name stuck with me.
 
 Later, Chad Dickens, one of their account managers, reached out to me and asked whether I had selected a hardware company for Rangeway. I hadn't. I had a few manufacturers in mind and was particularly interested in distributed charging.
@@ -68,5 +66,3 @@ Those conversations are why we chose them.
 Whether it's snowing outside or the middle of a desert summer, the experience we're working toward is the same. You arrive, plug in, and feel comfortable stepping away from the car because you trust that the charging is being taken care of.
 
 That confidence is part of what we want Rangeway to offer.
-
-*Cover image: Concept illustration of a Rangeway location in winter.*
