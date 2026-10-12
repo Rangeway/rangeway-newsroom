@@ -60,5 +60,3 @@ More listening is good for everyone who drives electric, and I'm glad to see the
 Rangeway is rooted in hospitality because I have spent my career thinking about the person arriving, not just the equipment serving them. Listening to drivers will help us improve what we build. It does not need to introduce us to the idea of looking after them.
 
 That's why we say, "Travel farther. Stop better." A good charging stop should leave you ready to continue your trip, and glad you chose to stop there.
-
-*Cover image: Concept illustration of a Rangeway driver's lounge overlooking covered charging stalls.*
