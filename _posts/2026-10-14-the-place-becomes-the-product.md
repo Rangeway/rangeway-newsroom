@@ -17,15 +17,25 @@ A national charging network recently previewed a system rated up to 750 kW, whic
 
 The detail that’s easy to miss is how that power gets used. The network’s design shares power across its dispensers, shifting it toward the cars that can use it. Very few cars on sale today can draw more than 350 kW, so a 750 kW unit isn’t really built for one car. Shared between two charging spaces, it has enough power for two of today’s fastest-charging vehicles to charge side by side at full speed, as long as the power behind the dispensers is there to support it. That’s the version of fast charging drivers will feel: full speed even when the space next to them is busy.
 
-We’re building Rangeway as a hospitality company, so we watch this hardware closely. Here is what I think it means. When the charge gets this fast, the charger stops being the thing that sets a stop apart. The place becomes the product.
+We’re building Rangeway like a hospitality company, so we watch this hardware closely. 
+
+Here is what I think it means. When the charge gets this fast, the charger stops being the thing that sets a stop apart.
+
+The place becomes the product.
 
 ## The Industry Spent a Decade Selling Kilowatts
 
 Charging networks have competed on speed and coverage for years, and for good reason. Speed was the bottleneck. In a McKinsey survey of mobility users across 15 countries, 42% said charging speed was their most important consideration when choosing a public charger.
 
-That race is tightening. The same network says the charge rates it sees have risen nearly 20% in two years, and it expects the trend to continue. The cars will take years to catch up to the newest hardware, because people keep their cars for a long time. Still, the direction is clear.
+That race is tightening. The same network says the charge rates it sees have risen nearly 20% in two years, and it expects the trend to continue. The cars will take years to catch up to the newest hardware, because people keep their cars for a long time. 
 
-Once most networks can deliver a fast, dependable charge, speed stops setting any of them apart. A kilowatt from one charger is the same as a kilowatt from the next, much as a gallon of regular is the same at every gas station. What can still differ is everything around the charger. That’s where the real friction is heading.
+Still, the direction is clear.
+
+Once most networks can deliver a fast, dependable charge, speed stops setting any of them apart.
+
+A kilowatt from one charger is the same as a kilowatt from the next, much as a gallon of regular is the same at every gas station. What can still differ is everything around the charger.
+
+That’s where the real friction is heading.
 
 ## The Friction Moves to the Minutes in Between
 
@@ -39,11 +49,13 @@ Ten minutes of dead time in the rain feels longer than forty minutes in a warm l
 
 ## The Data Already Points the Same Way
 
-The research on amenities is consistent. A spring 2026 study by Paren, the charging data platform, found that charging sites with 11 or more nearby amenities averaged 28 sessions a day, compared with nine at sites with only some nearby amenities. That’s about three times the use. Busy commercial areas would attract more charging anyway, so the study shows an association rather than proof that amenities alone made the difference. The link is still hard to ignore.
+The research on amenities is consistent. A spring 2026 study by Paren found that charging sites with 11 or more nearby amenities averaged 28 sessions a day, compared with nine at sites with only some nearby amenities. That’s about three times the use. Busy commercial areas would attract more charging anyway, so the study shows an association rather than proof that amenities alone made the difference. The link is still hard to ignore.
 
 UC Davis research for Next 10, published in 2024, points the same way. At average use, it estimated that charging infrastructure can take more than ten years to break even, and it concluded that co-located services and amenities are needed to improve the return. Drivers in that research were 37% more likely to choose a charger near other services than one in isolation.
 
-[Our own driver study](/blog/2026/08/24/what-ev-drivers-told-us.html) adds a useful caution. Respondents put reliability and charging speed first, with clean restrooms close behind, and most were willing to pay only a modest premium for a better stop. It was a voluntary sample, so I treat it as a signal. It suggests the value of a good place shows up in where drivers choose to stop and what they buy while they’re there, more than in a higher price for electricity. A location deserves to be judged by the minutes around the charge as much as by the charger itself.
+[Our own driver study](/blog/2026/08/24/what-ev-drivers-told-us.html) adds a useful caution. Respondents put reliability and charging speed first, with clean restrooms close behind, and most were willing to pay only a modest premium for a better stop. It was a voluntary sample, so I treat it as a signal. It suggests the value of a good place shows up in where drivers choose to stop and what they buy while they’re there, more than in a higher price for electricity.
+
+A location deserves to be judged by the minutes around the charge as much as by the charger itself.
 
 ## Ten Minutes Is Long Enough to Be Intentional
 
@@ -55,7 +67,7 @@ The design question changes. You stop asking how to minimize the stop and start 
 
 - **Indoor comfort** comes first. Our Waystations and Basecamps are being designed with a climate-controlled driver’s lounge. A short stop in fog, wind, or desert heat calls for shelter, and a parking lot doesn’t provide it.
 - **Clean, premium restrooms** sound basic. On long drives they’re often missing, and travelers remember the places that get them right.
-- **Food and drink** should be worth stopping for. Waystations are planned with automated retail for something quick. At Basecamps, we plan to lease space to local food and beverage operators, so what you find reflects where you are.
+- **Food and drink** should be worth stopping for. Waystations are planned with automated retail for something quick. At Basecamps, we plan to curate the space so what you find reflects where you are.
 - **A sense of place** matters, too. Our design direction, California Modern updated for contemporary hospitality, uses warm wood, concrete, comfortable furniture, and a connection to the surrounding landscape. A stop should feel like it belongs where it is.
 
 Faster, shared charging strengthens this approach. When a fast charge is available almost everywhere, drivers can choose a stop based on everything around the charger. The stop with the best ten minutes has the advantage.
