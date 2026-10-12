@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2026-10-14 07:00:00 -0700
+date: 2026-10-14 06:45:00 -0700
 author: Zak Winnick
 title: "What Faster Charging Doesn’t Change"
 subtitle: "Charging keeps getting quicker. A shorter stop still has to be a good one."
