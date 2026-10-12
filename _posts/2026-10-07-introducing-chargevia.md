@@ -9,6 +9,8 @@ description: "Introducing ChargeVia by Rangeway, our fast-charging format for ex
 image: /assets/images/chargevia-intro-concept.png
 ---
 
+## A Better Way to Stop
+
 A good charging stop doesn’t always need a new building. Sometimes, the ingredients are already there: a store people like, something good to eat, clean restrooms, and an operator who takes care of the property.
 
 The opportunity is to bring fast charging into that setting and make the two work together.
