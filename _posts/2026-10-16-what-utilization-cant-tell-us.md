@@ -6,7 +6,7 @@ subtitle: "Reading Paren's Q3 2026 report through the choices drivers make."
 author: Zak Winnick
 category: blog
 description: "Utilization tells us how often a charger is used. It doesn't tell us why drivers choose it, what makes a stop worth returning to, or whether they'll come back."
-image: /assets/images/blog2026-10-16.png
+image: /assets/images/blog2026-10-16-v2.png
 ---
 
 [Paren's Q3 2026 report on the U.S. fast-charging industry](https://www.paren.app/reports/us-ev-fast-charging-q3-2026) is worth reading closely. The network has crossed 80,000 DCFC ports for the first time. National utilization held at 15.9%. The reliability index sits at 93.9. Charging sessions reached a record 50.4 million in the quarter, peaking at 17.6 million in July.
