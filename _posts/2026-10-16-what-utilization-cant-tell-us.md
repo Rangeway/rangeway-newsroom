@@ -5,7 +5,7 @@ title: "What Utilization Can't Tell Us"
 subtitle: "Reading Paren's Q3 2026 report through the choices drivers make."
 author: Zak Winnick
 category: blog
-description: "Zak Winnick reads Paren's Q3 2026 charging report through driver choice, repeat visits, and the operating questions Rangeway still needs to answer."
+description: "Utilization tells us how often a charger is used. It doesn't tell us why drivers choose it, what makes a stop worth returning to, or whether they'll come back."
 image: /assets/images/blog2026-10-16.png
 ---
 
