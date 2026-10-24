@@ -1,11 +1,21 @@
 source "https://rubygems.org"
 
-gem "github-pages", group: :jekyll_plugins
+# GitHub Pages is disabled; the VPS publisher builds with scripts/scheduled_build.rb.
+# These pins match what github-pages 232 provided, so the generated site is unchanged.
+gem "jekyll", "3.10.0"
+gem "kramdown-parser-gfm", "1.1.0"
 
 group :jekyll_plugins do
-  gem "jekyll-feed"
-  gem "jekyll-seo-tag"
+  gem "jekyll-feed", "0.17.0"
+  gem "jekyll-seo-tag", "2.8.0"
 end
+
+# The editorial and Media Kit tests parse the built HTML.
+gem "nokogiri", "~> 1.19"
+
+# Formerly pulled in by github-pages; leaving the standard library in Ruby 3.4.
+gem "base64", "0.3.0"
+gem "bigdecimal", "4.1.2"
 
 # Lock to webrick for Ruby 3.0+
 gem "webrick", "~> 1.8"
