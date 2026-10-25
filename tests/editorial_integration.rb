@@ -40,7 +40,7 @@ check(lead && normalize_title.call(lead.text) == normalize_title.call(latest_arc
 cards = home.css('.latest .story-grid .story-tile')
 check(cards.length == 5, "Expected five latest cards, got #{cards.length}")
 check(cards.map { |card| card['data-category'] }.tally == { 'Stories' => 3, 'Announcements' => 1, 'Case studies' => 1 }, 'Latest category mix changed')
-check(home.at_css('.podcast-embed iframe[src*="player.fireside.fm"][src*="/latest"]'), 'Live podcast player missing')
+check(home.at_css('.podcast-embed iframe[src^="https://embed.podcasts.apple.com/"][src*="id1850064796"]'), 'Apple Podcasts player missing')
 hold_is_future = Time.now.utc < Time.parse('2026-10-02T14:00:00Z')
 check(!home.text.include?('Hospitality Was in the Brief'), 'Future story on homepage') if hold_is_future
 
