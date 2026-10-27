@@ -9,7 +9,9 @@ description: "From local operators to national brands, finding the right food an
 image: /assets/images/blog2026-10-28.png
 ---
 
-“Would I actually want to stop here?” That’s one of the first questions I ask when I’m considering a food or retail business as a potential Rangeway partner.
+“Would I actually want to stop here?” 
+
+That’s one of the first questions I ask when I’m considering a food or retail business as a potential Rangeway partner.
 
 It sounds like a casual question, but it covers a lot of ground quickly.
 
