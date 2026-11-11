@@ -33,7 +33,7 @@
     }
     
     body {
-      font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: 'Source Sans 3', Arial, sans-serif;
       background: var(--white);
       color: var(--charcoal);
       line-height: 1.6;
@@ -42,9 +42,8 @@
     }
     
     .wordmark {
-      font-family: 'Raleway', sans-serif;
+      font-family: 'Raleway', Arial, sans-serif;
       font-weight: 700;
-      letter-spacing: -0.01em;
     }
     
     /* Navigation */
@@ -119,7 +118,7 @@
     }
     
     .hero h1 {
-      font-family: 'Raleway', sans-serif;
+      font-family: 'Raleway', Arial, sans-serif;
       font-size: 56px;
       font-weight: 700;
       margin-bottom: 16px;
@@ -161,7 +160,7 @@
     }
     
     .section-title {
-      font-family: 'Raleway', sans-serif;
+      font-family: 'Raleway', Arial, sans-serif;
       font-size: 36px;
       font-weight: 700;
       color: var(--charcoal);
@@ -184,7 +183,7 @@
     }
     
     .subsection-title {
-      font-family: 'Raleway', sans-serif;
+      font-family: 'Raleway', Arial, sans-serif;
       font-size: 20px;
       font-weight: 700;
       color: var(--charcoal);
@@ -300,7 +299,7 @@
       border-radius: 999px;
       background: rgba(255,255,255,0.06);
       color: rgba(255,255,255,0.82);
-      font-family: 'Raleway', sans-serif;
+      font-family: 'Raleway', Arial, sans-serif;
       font-weight: 600;
       font-size: 13px;
       text-decoration: none;
@@ -412,7 +411,7 @@
     }
     
     .type-sample-text {
-      font-family: 'Raleway', sans-serif;
+      font-family: 'Raleway', Arial, sans-serif;
       margin-bottom: 12px;
     }
     
@@ -427,7 +426,7 @@
     }
     
     .type-sample-text.body {
-      font-family: 'Source Sans 3', sans-serif;
+      font-family: 'Source Sans 3', Arial, sans-serif;
       font-size: 16px;
       font-weight: 400;
     }
@@ -458,7 +457,7 @@
     }
     
     .voice-column h4 {
-      font-family: 'Raleway', sans-serif;
+      font-family: 'Raleway', Arial, sans-serif;
       font-weight: 700;
       margin-bottom: 16px;
     }
@@ -518,8 +517,41 @@
       text-align: center;
     }
     
-    .dont-item svg {
+    .dont-item svg,
+    .dont-item img {
       margin-bottom: 12px;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .dont-demo {
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 0 auto 12px;
+      max-width: 100%;
+    }
+
+    .dont-demo img,
+    .dont-demo svg {
+      margin-bottom: 0;
+    }
+
+    .dont-crop {
+      width: 28px;
+      height: 22px;
+      overflow: hidden;
+      flex: 0 0 auto;
+    }
+
+    .dont-crop img {
+      display: block;
+      width: 40px;
+      max-width: none;
+      height: auto;
     }
     
     .dont-item span {
@@ -543,6 +575,9 @@
       display: flex;
       align-items: center;
       gap: 16px;
+      box-sizing: border-box;
+      max-width: 100%;
+      min-width: 0;
     }
     
     /* Min sizes */
@@ -585,7 +620,7 @@
     }
     
     .essence-box .tagline {
-      font-family: 'Raleway', sans-serif;
+      font-family: 'Raleway', Arial, sans-serif;
       font-size: 32px;
       font-weight: 700;
       margin-bottom: 16px;
@@ -615,7 +650,7 @@
     }
     
     .promise-card h4 {
-      font-family: 'Raleway', sans-serif;
+      font-family: 'Raleway', Arial, sans-serif;
       font-weight: 700;
       margin-bottom: 12px;
       color: var(--charcoal);
@@ -640,6 +675,23 @@
     .footer a {
       color: var(--warm);
       text-decoration: none;
+    }
+
+    /* Later component rules would otherwise override the small-screen layout. */
+    @media (max-width: 900px) {
+      .promise-grid { grid-template-columns: 1fr; gap: 16px; }
+      .donts-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+      .voice-table { grid-template-columns: 1fr; gap: 16px; }
+      .clearspace-demo { padding: 24px; max-width: 100%; }
+      .logo-box { padding: 28px; }
+      .min-sizes { flex-wrap: wrap; }
+      .usage-table-wrap { max-width: 100%; overflow-x: auto; }
+      .footer {
+        flex-direction: column;
+        gap: 12px;
+        padding: 32px 24px;
+        text-align: center;
+      }
     }
   </style>
 </head>
@@ -687,7 +739,7 @@
     <header class="hero">
       <h1>Brand Guidelines</h1>
       <p>A comprehensive guide to the Rangeway brand identity, visual system, and communication standards.</p>
-      <div class="hero-version">Updated October 2026</div>
+      <div class="hero-version">Updated November 2026</div>
     </header>
     
     <!-- Brand Foundation -->
@@ -700,21 +752,21 @@
       
       <div class="essence-box">
         <div class="tagline">Travel farther. <span>Stop better.</span></div>
-        <p>Rangeway is building a hospitality-first EV charging network, shaped by the conviction that the stop itself should be worth the time.</p>
+        <p>Rangeway is a hospitality-first premium EV charging network. Sage gives the identity a grounded setting, and cream keeps it warm and welcoming.</p>
       </div>
       
       <div class="promise-grid">
         <div class="promise-card">
-          <h4>Our Promise</h4>
-          <p>Thoughtful hospitality, indoor comfort, and reliable charging shape our Waystation, Basecamp, and Summit destination formats.</p>
+          <h4>Waystations and Basecamps</h4>
+          <p>Waystations are automated and unstaffed. Basecamps are staffed.</p>
         </div>
         <div class="promise-card">
-          <h4>Our Differentiator</h4>
-          <p>Our destination formats put the guest experience first. ChargeVia by Rangeway brings a gas station-style fast-charging concept to standalone and host-site settings.</p>
+          <h4>Summit and Lookouts</h4>
+          <p>Use Summit on its own. Guest accommodations are Lookouts.</p>
         </div>
         <div class="promise-card">
-          <h4>Our Philosophy</h4>
-          <p>We think like hotel operators, not utility companies. Every stop should be an experience worth designing.</p>
+          <h4>ChargeVia by Rangeway</h4>
+          <p>ChargeVia by Rangeway is the primary product expression. ChargeVia remains a Rangeway product and host-site format.</p>
         </div>
       </div>
     </section>
@@ -724,58 +776,58 @@
       <div class="section-header">
         <div class="section-number">02</div>
         <h2 class="section-title">Logo System</h2>
-        <p class="section-intro">The stylized R is the first letter of Rangeway, followed directly by angeway. The amber path mark sits inside the R. Always use the approved vector artwork.</p>
+        <p class="section-intro">The integrated R begins the name. The amber dot inside the R is the path mark. Use the supplied wordmark, and do not place the standalone R next to it.</p>
       </div>
       
       <div class="subsection">
         <h3 class="subsection-title">Primary Logo</h3>
-        <p class="subsection-text">The primary logo should be used in most applications. The cream wordmark with its amber path mark on charcoal is our default configuration.</p>
+        <p class="subsection-text">The primary logo is the integrated wordmark. On sage, the primary brand field, use the cream wordmark with the amber path mark. On cream, the main light canvas, use the charcoal wordmark with the amber path mark.</p>
         
-        <div class="logo-box charcoal">
-          <img class="brand-wordmark" src="/assets/images/brand/rangeway-cream-amber.svg" alt="Rangeway" width="332" height="72">
+        <div class="logo-box sage">
+          <img class="brand-wordmark" src="/assets/images/brand/rangeway-cream-amber.svg" alt="Rangeway cream wordmark with amber path mark" width="332" height="72">
         </div>
-        <p class="logo-caption">Primary logo: Cream wordmark with amber path mark on charcoal</p>
-        <div class="brand-downloads"><a href="/assets/images/brand/rangeway-cream-amber.svg" download>Download cream SVG</a><a href="/assets/images/brand/rangeway-charcoal-amber.svg" download>Download charcoal SVG</a><a href="/assets/images/brand/rangeway-charcoal-mono.svg" download>Download monochrome SVG</a></div>
+        <p class="logo-caption">Cream wordmark with amber path mark on sage</p>
+        <div class="brand-downloads"><a href="/assets/images/brand/rangeway-cream-amber.svg" download>Cream and amber SVG</a><a href="/assets/images/brand/rangeway-charcoal-amber.svg" download>Charcoal and amber SVG</a><a href="/assets/images/brand/rangeway-charcoal-mono.svg" download>Charcoal one-color SVG</a><a href="/assets/images/brand/rangeway-cream-mono.svg" download>Cream one-color SVG</a><a href="/assets/images/brand/rangeway-avatar.svg" download>Sage avatar SVG</a></div>
       </div>
       
       <div class="subsection">
         <h3 class="subsection-title">Logo Variations</h3>
-        <p class="subsection-text">Approved variations for different contexts and backgrounds.</p>
+        <p class="subsection-text">Use the charcoal and amber wordmark on cream. Use the cream and amber wordmark on sage or charcoal. Use a supplied one-color version when two colors are unavailable.</p>
         
         <div class="grid-2">
           <div>
-            <div class="logo-box warm">
-              <img class="brand-wordmark" src="/assets/images/brand/rangeway-charcoal-mono.svg" alt="Rangeway" width="332" height="72">
+            <div class="logo-box cream">
+              <img class="brand-wordmark" src="/assets/images/brand/rangeway-charcoal-amber.svg" alt="Rangeway charcoal wordmark with amber path mark" width="332" height="72">
             </div>
-            <p class="logo-caption">On warm: Marketing, merchandise, events</p>
+            <p class="logo-caption">On cream: charcoal wordmark with amber path mark</p>
+          </div>
+          
+          <div>
+            <div class="logo-box charcoal">
+              <img class="brand-wordmark" src="/assets/images/brand/rangeway-cream-amber.svg" alt="Rangeway cream wordmark with amber path mark" width="332" height="72">
+            </div>
+            <p class="logo-caption">On charcoal: cream wordmark with amber path mark</p>
           </div>
           
           <div>
             <div class="logo-box cream">
-              <img class="brand-wordmark" src="/assets/images/brand/rangeway-charcoal-amber.svg" alt="Rangeway" width="332" height="72">
+              <img class="brand-wordmark" src="/assets/images/brand/rangeway-charcoal-mono.svg" alt="Rangeway one-color charcoal wordmark" width="332" height="72">
             </div>
-            <p class="logo-caption">On light: Partnerships, documents, proposals</p>
+            <p class="logo-caption">One color on cream, when two colors are unavailable</p>
           </div>
           
           <div>
-            <div class="logo-box sage">
-              <img class="brand-wordmark" src="/assets/images/brand/rangeway-cream-amber.svg" alt="Rangeway" width="332" height="72">
+            <div class="logo-box charcoal">
+              <img class="brand-wordmark" src="/assets/images/brand/rangeway-cream-mono.svg" alt="Rangeway one-color cream wordmark" width="332" height="72">
             </div>
-            <p class="logo-caption">On sage: Special campaigns, seasonal content</p>
-          </div>
-          
-          <div>
-            <div class="logo-box white">
-              <img class="brand-wordmark" src="/assets/images/brand/rangeway-charcoal-mono.svg" alt="Rangeway" width="332" height="72">
-            </div>
-            <p class="logo-caption">Monochrome: Single-color print applications</p>
+            <p class="logo-caption">One color on charcoal, when two colors are unavailable</p>
           </div>
         </div>
       </div>
       
       <div class="subsection">
         <h3 class="subsection-title">Clear Space</h3>
-        <p class="subsection-text">Maintain clear space equal to the height of the warm accent dot on all sides of the logo.</p>
+        <p class="subsection-text">Leave at least one path-mark diameter of clear space on all sides of the visible logo. Keep the background quiet, and do not place text inside this area.</p>
         
         <div class="clearspace-demo">
           <div class="clearspace-box">
@@ -785,45 +837,78 @@
       </div>
       
       <div class="subsection">
+        <h3 class="subsection-title">App Icon</h3>
+        <p class="subsection-text">The primary avatar and app icon is the sage-field R. It is the same artwork as the favicon. The standalone R is for small labels, repeated brand details, and other compact avatar uses.</p>
+
+        <div class="min-sizes">
+          <div class="min-size-item">
+            <img src="/assets/images/brand/rangeway-avatar.svg" alt="Rangeway sage-field app icon" width="96" height="96">
+            <span>Sage-field R</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection">
         <h3 class="subsection-title">Minimum Sizes</h3>
-        <p class="subsection-text">To ensure legibility, never use the logo smaller than these minimum sizes.</p>
+        <p class="subsection-text">Working minimums are 140px wide for the wordmark and 24px for the standalone R. Check the artwork at final size. The 16px favicon is the compact exception.</p>
         
         <div class="min-sizes">
           <div class="min-size-item">
-            <img src="/assets/images/brand/rangeway-avatar.svg" alt="Rangeway app icon" width="64" height="64">
-            <span>64px digital</span>
+            <img src="/assets/images/brand/rangeway-charcoal-amber.svg" alt="Rangeway wordmark at the 140 pixel minimum width" width="140" height="30">
+            <span>140px wordmark</span>
           </div>
           <div class="min-size-item">
-            <img src="/assets/images/brand/rangeway-avatar.svg" alt="Rangeway app icon" width="32" height="32">
-            <span>32px icon</span>
+            <img src="/assets/images/brand/rangeway-icon-charcoal.svg" alt="Rangeway standalone R at the 24 pixel minimum" width="24" height="26">
+            <span>24px standalone R</span>
           </div>
           <div class="min-size-item">
-            <img src="/assets/images/brand/rangeway-avatar.svg" alt="Rangeway favicon" width="16" height="16">
-            <span>16px favicon</span>
+            <img src="/assets/images/brand/rangeway-avatar.svg" alt="Rangeway favicon at 16 pixels" width="16" height="16">
+            <span>16px favicon exception</span>
           </div>
         </div>
       </div>
       
       <div class="subsection">
         <h3 class="subsection-title">Incorrect Usage</h3>
-        <p class="subsection-text">Maintain the integrity of our logo by avoiding these modifications.</p>
+        <p class="subsection-text">Do not stretch, rotate, add shadows, redraw the lettering, recolor the dot independently, or crop the R. Do not place the standalone R next to the wordmark.</p>
         
         <div class="donts-grid">
           <div class="dont-item">
-            <img src="/assets/images/brand/rangeway-icon-charcoal.svg" alt="Rangeway mark" width="32" style="transform: rotate(15deg);">
-            <span>Don't rotate</span>
+            <img src="/assets/images/brand/rangeway-icon-charcoal.svg" alt="Incorrectly stretched Rangeway mark" width="32" height="34" style="transform: scaleX(1.5);">
+            <span>Do not stretch</span>
           </div>
           <div class="dont-item">
-            <img src="/assets/images/brand/rangeway-icon-charcoal.svg" alt="Rangeway mark" width="32" style="opacity: 0.4;">
-            <span>Don't reduce opacity</span>
+            <img src="/assets/images/brand/rangeway-icon-charcoal.svg" alt="Incorrectly rotated Rangeway mark" width="32" height="34" style="transform: rotate(15deg);">
+            <span>Do not rotate</span>
           </div>
           <div class="dont-item">
-            <img src="/assets/images/brand/rangeway-icon-charcoal.svg" alt="Incorrectly recolored Rangeway mark" width="32" style="filter: sepia(1) saturate(4) hue-rotate(150deg);">
-            <span>Don't change colors</span>
+            <img src="/assets/images/brand/rangeway-icon-charcoal.svg" alt="Rangeway mark with an added shadow" width="32" height="34" style="filter: drop-shadow(3px 4px 2px rgba(0,0,0,0.55));">
+            <span>Do not add shadows</span>
           </div>
           <div class="dont-item">
-            <img src="/assets/images/brand/rangeway-icon-charcoal.svg" alt="Incorrectly stretched Rangeway mark" width="32" style="transform: scaleX(1.5);">
-            <span>Don't stretch</span>
+            <div class="dont-demo" style="font-family: 'Raleway', Arial, sans-serif; font-weight: 700; font-size: 15px;">Rangeway</div>
+            <span>Do not redraw the lettering</span>
+          </div>
+          <div class="dont-item">
+            <div class="dont-demo" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 60" width="32" height="34"><path d="M10 49.5 L10 10 C10 7 12 5 15 5 L28 5 C36 5 40 10 40 18 C40 25 36 29 29 30 L41 49.5" stroke="#282A29" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="29" cy="18" r="5" fill="#2F6FED"/></svg>
+            </div>
+            <span>Do not recolor the dot</span>
+          </div>
+          <div class="dont-item">
+            <div class="dont-demo">
+              <div class="dont-crop">
+                <img src="/assets/images/brand/rangeway-icon-charcoal.svg" alt="" width="40" height="43">
+              </div>
+            </div>
+            <span>Do not crop the R</span>
+          </div>
+          <div class="dont-item">
+            <div class="dont-demo">
+              <img src="/assets/images/brand/rangeway-icon-charcoal.svg" alt="" width="18" height="19">
+              <img src="/assets/images/brand/rangeway-charcoal-amber.svg" alt="" width="108" height="23">
+            </div>
+            <span>Do not place the R beside the wordmark</span>
           </div>
         </div>
       </div>
@@ -834,19 +919,45 @@
       <div class="section-header">
         <div class="section-number">03</div>
         <h2 class="section-title">Color Palette</h2>
-        <p class="section-intro">Our colors evoke warmth, premium quality, and the golden hour moments that define the Rangeway experience.</p>
+        <p class="section-intro">Sage is the primary brand field. Cream is the main light canvas. Charcoal carries text. Amber highlights the path mark and selected accents. Hex values are the digital masters.</p>
       </div>
       
       <div class="subsection">
-        <h3 class="subsection-title">Primary Colors</h3>
+        <h3 class="subsection-title">Brand Fields</h3>
+        <div class="grid-2">
+          <div class="color-card">
+            <div class="color-swatch sage"></div>
+            <div class="color-info">
+              <div class="color-name">Sage</div>
+              <div class="color-values">
+                <code>#505B4D</code> · RGB 80, 91, 77<br>
+                Primary brand field
+              </div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch cream"></div>
+            <div class="color-info">
+              <div class="color-name">Cream</div>
+              <div class="color-values">
+                <code>#F5EBDD</code> · RGB 245, 235, 221<br>
+                Main light canvas
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="subsection">
+        <h3 class="subsection-title">Text and Accent</h3>
         <div class="grid-2">
           <div class="color-card">
             <div class="color-swatch charcoal"></div>
             <div class="color-info">
               <div class="color-name">Charcoal</div>
               <div class="color-values">
-                <code>#282a29</code> · RGB 40, 42, 41<br>
-                Primary backgrounds, text, mark
+                <code>#282A29</code> · RGB 40, 42, 41<br>
+                Text
               </div>
             </div>
           </div>
@@ -855,37 +966,22 @@
             <div class="color-info">
               <div class="color-name">Amber</div>
               <div class="color-values">
-                <code>#f4a855</code> · RGB 244, 168, 85<br>
-                Accent, destination dot, CTAs
+                <code>#F4A855</code> · RGB 244, 168, 85<br>
+                Path mark and selected accents
               </div>
             </div>
           </div>
         </div>
       </div>
-      
+
       <div class="subsection">
-        <h3 class="subsection-title">Secondary Colors</h3>
-        <div class="grid-2">
-          <div class="color-card">
-            <div class="color-swatch cream"></div>
-            <div class="color-info">
-              <div class="color-name">Cream</div>
-              <div class="color-values">
-                <code>#f5ebdd</code> · RGB 245, 235, 221<br>
-                Light backgrounds, alternate layouts
-              </div>
-            </div>
-          </div>
-          <div class="color-card">
-            <div class="color-swatch sage"></div>
-            <div class="color-info">
-              <div class="color-name">Sage</div>
-              <div class="color-values">
-                <code>#505b4d</code> · RGB 80, 91, 77<br>
-                Campaigns, seasonal, secondary accent
-              </div>
-            </div>
-          </div>
+        <h3 class="subsection-title">Contrast</h3>
+        <p class="subsection-text">Use charcoal text on cream or amber, and cream text on sage or charcoal. Avoid amber for small text on cream. Check contrast whenever adding a new combination. Print conversions depend on paper, ink, and the printer profile, so approve a physical proof before production.</p>
+        <div class="grid-4">
+          <div class="card" style="background: var(--cream); color: var(--charcoal);">Charcoal on cream</div>
+          <div class="card" style="background: var(--warm); color: var(--charcoal);">Charcoal on amber</div>
+          <div class="card" style="background: var(--sage); color: var(--cream);">Cream on sage</div>
+          <div class="card" style="background: var(--charcoal); color: var(--cream);">Cream on charcoal</div>
         </div>
       </div>
     </section>
@@ -895,48 +991,52 @@
       <div class="section-header">
         <div class="section-number">04</div>
         <h2 class="section-title">Typography</h2>
-        <p class="section-intro">Our type system balances the refined elegance of Raleway with the readability of Source Sans for a premium yet approachable feel.</p>
+        <p class="section-intro">Headings use Raleway, semibold or bold. Body copy uses Source Sans 3, regular or semibold. Arial is the practical fallback for email and office documents.</p>
       </div>
       
       <div class="subsection">
-        <h3 class="subsection-title">Wordmark & Headlines</h3>
-        <p class="subsection-text">Use the outlined SVG artwork for the wordmark; do not recreate it with a font. Raleway is used for headlines, with Source Sans 3 for body copy.</p>
+        <h3 class="subsection-title">Wordmark and Headings</h3>
+        <p class="subsection-text">The logo lettering is supplied as vector outlines. Do not recreate the wordmark by typing Rangeway. Raleway is for headings, in semibold or bold. The samples below show the fonts in use. They are not a required size scale.</p>
         
         <div class="type-sample">
-          <div class="type-sample-text large">Rangeway</div>
-          <div class="type-meta">Raleway Bold (700) · Title case · letter-spacing: -0.01em</div>
+          <div class="type-sample-text large">Direct and warm</div>
+          <div class="type-meta">Raleway Bold · Headings</div>
         </div>
         
         <div class="type-sample">
-          <div class="type-sample-text medium">Travel farther. Stop better.</div>
-          <div class="type-meta">Raleway Bold (700) · Headlines and subheadlines</div>
+          <div class="type-sample-text medium" style="font-weight: 600;">Semibold headings</div>
+          <div class="type-meta">Raleway Semibold · Headings</div>
         </div>
       </div>
       
       <div class="subsection">
         <h3 class="subsection-title">Body Copy</h3>
-        <p class="subsection-text">Source Sans 3 is used for body copy, providing excellent readability across all sizes.</p>
+        <p class="subsection-text">Source Sans 3 is the body face, in regular or semibold. Use Arial when email or an office document cannot use the brand fonts.</p>
         
         <div class="type-sample">
-          <div class="type-sample-text body">Rangeway is building a hospitality-first EV charging network. Built on the conviction that EV charging is a hospitality problem, not a utility one, Rangeway treats every stop as an experience worth designing.</div>
-          <div class="type-meta">Source Sans 3 · Regular (400) · 16px base size</div>
+          <div class="type-sample-text body">Rangeway is a hospitality-first premium EV charging network. Describe the guest experience in concrete terms.</div>
+          <div class="type-meta">Source Sans 3 Regular · Body</div>
+        </div>
+        <div class="type-sample">
+          <div class="type-sample-text body" style="font-weight: 600;">Use semibold when body copy needs emphasis.</div>
+          <div class="type-meta">Source Sans 3 Semibold · Body</div>
         </div>
       </div>
       
       <div class="subsection">
-        <h3 class="subsection-title">Type Hierarchy</h3>
+        <h3 class="subsection-title">Type Roles</h3>
         <div class="grid-3">
           <div class="card">
-            <div style="font-family: 'Raleway', sans-serif; font-size: 32px; font-weight: 700; margin-bottom: 8px;">H1</div>
-            <div style="font-size: 13px; color: var(--gray-600);">Raleway Bold · 32-48px</div>
+            <div style="font-family: 'Raleway', Arial, sans-serif; font-weight: 700; margin-bottom: 8px;">Headings</div>
+            <div style="font-size: 13px; color: var(--gray-600);">Raleway Semibold or Bold</div>
           </div>
           <div class="card">
-            <div style="font-family: 'Raleway', sans-serif; font-size: 24px; font-weight: 700; margin-bottom: 8px;">H2</div>
-            <div style="font-size: 13px; color: var(--gray-600);">Raleway Bold · 24-32px</div>
+            <div style="font-family: 'Source Sans 3', Arial, sans-serif; font-weight: 400; margin-bottom: 8px;">Body</div>
+            <div style="font-size: 13px; color: var(--gray-600);">Source Sans 3 Regular or Semibold</div>
           </div>
           <div class="card">
-            <div style="font-family: 'Raleway', sans-serif; font-size: 18px; font-weight: 600; margin-bottom: 8px;">H3</div>
-            <div style="font-size: 13px; color: var(--gray-600);">Raleway SemiBold · 18-20px</div>
+            <div style="font-family: Arial, sans-serif; font-weight: 400; margin-bottom: 8px;">Fallback</div>
+            <div style="font-size: 13px; color: var(--gray-600);">Arial for email and office documents</div>
           </div>
         </div>
       </div>
@@ -947,25 +1047,25 @@
       <div class="section-header">
         <div class="section-number">05</div>
         <h2 class="section-title">Voice & Tone</h2>
-        <p class="section-intro">How we speak reflects who we are: thoughtful, welcoming, and premium without pretense.</p>
+        <p class="section-intro">Write directly and warmly. Describe the guest experience in concrete terms.</p>
       </div>
       
       <div class="subsection">
         <h3 class="subsection-title">Brand Voice</h3>
-        <p class="subsection-text">Our voice is warm, confident, and refined. We speak like hospitality professionals, not utility companies. We celebrate the journey and make every interaction feel considered.</p>
+        <p class="subsection-text">The public name is Rangeway. Reserve Rangeway Energy, Inc. for legal or formal contexts. Use lowercase driver's lounge and hotel operators.</p>
         
         <div class="grid-3" style="margin-top: 24px;">
           <div class="card">
-            <h4 style="font-family: 'Raleway', sans-serif; font-weight: 700; margin-bottom: 8px;">Thoughtful</h4>
-            <p style="font-size: 14px; color: var(--gray-600);">Every word is intentional. We communicate with purpose and clarity.</p>
+            <h4 style="font-family: 'Raleway', Arial, sans-serif; font-weight: 700; margin-bottom: 8px;">Direct</h4>
+            <p style="font-size: 14px; color: var(--gray-600);">Say what the experience is, in plain language.</p>
           </div>
           <div class="card">
-            <h4 style="font-family: 'Raleway', sans-serif; font-weight: 700; margin-bottom: 8px;">Welcoming</h4>
-            <p style="font-size: 14px; color: var(--gray-600);">We make everyone feel like a valued guest, not just a customer.</p>
+            <h4 style="font-family: 'Raleway', Arial, sans-serif; font-weight: 700; margin-bottom: 8px;">Warm</h4>
+            <p style="font-size: 14px; color: var(--gray-600);">Sound welcoming. Write the way a host would speak to a guest.</p>
           </div>
           <div class="card">
-            <h4 style="font-family: 'Raleway', sans-serif; font-weight: 700; margin-bottom: 8px;">Elevated</h4>
-            <p style="font-size: 14px; color: var(--gray-600);">Premium without pretense. Quality you can feel in every detail.</p>
+            <h4 style="font-family: 'Raleway', Arial, sans-serif; font-weight: 700; margin-bottom: 8px;">Concrete</h4>
+            <p style="font-size: 14px; color: var(--gray-600);">Describe the guest experience in concrete terms. Skip inflated claims.</p>
           </div>
         </div>
       </div>
@@ -977,27 +1077,23 @@
           <div class="voice-column do">
             <h4>Use This Language</h4>
             <ul>
-              <li>"driver's lounge"</li>
-              <li>"Destination experiences"</li>
-              <li>"A moment worth savoring"</li>
-              <li>"Thoughtful amenities"</li>
-              <li>"Premium hospitality"</li>
-              <li>"Travel farther. Stop better."</li>
-              <li>"ChargeVia by Rangeway"</li>
-              <li>"Lookouts" for Summit accommodations</li>
+              <li>Rangeway</li>
+              <li>driver's lounge</li>
+              <li>hotel operators</li>
+              <li>Waystation, Basecamp, and Summit</li>
+              <li>Lookouts for guest accommodations</li>
+              <li>ChargeVia by Rangeway</li>
+              <li>Pathfinder Rewards, still pre-launch</li>
             </ul>
           </div>
           <div class="voice-column dont">
             <h4>Avoid This Language</h4>
             <ul>
-              <li>Technical jargon (350kW, NOC)</li>
-              <li>"Just chargers" framing</li>
-              <li>Utility/infrastructure language</li>
-              <li>"Discounts" or "cheaper rates"</li>
-              <li>Hub-satellite terminology</li>
-              <li>"Station" (use "location")</li>
-              <li>Em dashes in writing</li>
-              <li>Overly casual language</li>
+              <li>Em dashes</li>
+              <li>Inflated claims</li>
+              <li>Generic utility language</li>
+              <li>Rangeway Energy, Inc. outside legal or formal contexts</li>
+              <li>Rangeway Summit</li>
             </ul>
           </div>
         </div>
@@ -1009,7 +1105,7 @@
       <div class="section-header">
         <div class="section-number">06</div>
         <h2 class="section-title">Usage Guidelines</h2>
-        <p class="section-intro">Quick reference for when to use each logo variation and brand element.</p>
+        <p class="section-intro">Quick reference for logo pairings, the app icon, and contrast.</p>
       </div>
       
       <div class="subsection">
@@ -1020,55 +1116,55 @@
           <thead>
             <tr>
               <th>Context</th>
-              <th>Logo Version</th>
+              <th>Artwork</th>
               <th>Notes</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>App icon, website header</td>
-              <td>Primary (Charcoal bg)</td>
-              <td>Default for digital</td>
+              <td>Sage field</td>
+              <td>Cream wordmark, amber path mark</td>
+              <td>Primary brand field</td>
             </tr>
             <tr>
-              <td>Physical signage</td>
-              <td>Primary (Charcoal bg)</td>
-              <td>Ensure contrast</td>
+              <td>Cream canvas</td>
+              <td>Charcoal wordmark, amber path mark</td>
+              <td>Main light canvas</td>
             </tr>
             <tr>
-              <td>Business cards, investor deck</td>
-              <td>Primary (Charcoal bg)</td>
-              <td>Professional contexts</td>
+              <td>Charcoal field</td>
+              <td>Cream wordmark, amber path mark</td>
+              <td>Cream on charcoal</td>
             </tr>
             <tr>
-              <td>Marketing campaigns, social</td>
-              <td>Warm bg or Primary</td>
-              <td>Choose based on content</td>
+              <td>App icon, avatar, favicon</td>
+              <td>Sage-field R</td>
+              <td>Primary avatar. Same artwork as the favicon</td>
             </tr>
             <tr>
-              <td>Merchandise, apparel</td>
-              <td>Warm bg</td>
-              <td>Energetic, visible</td>
+              <td>Small labels and repeated details</td>
+              <td>Standalone R</td>
+              <td>At least 24px. Do not place it next to the wordmark</td>
             </tr>
             <tr>
-              <td>Co-branded materials</td>
-              <td>Light (Cream/White bg)</td>
-              <td>Plays well with partners</td>
+              <td>Favicon at 16px</td>
+              <td>Sage-field R</td>
+              <td>Compact exception to the 24px minimum</td>
             </tr>
             <tr>
-              <td>Documents, proposals</td>
-              <td>Light (Cream/White bg)</td>
-              <td>Clean, readable</td>
+              <td>One-color production</td>
+              <td>Supplied one-color artwork</td>
+              <td>When two colors are unavailable</td>
             </tr>
             <tr>
-              <td>Special campaigns</td>
-              <td>Sage bg</td>
-              <td>Seasonal, unique moments</td>
+              <td>Text on cream or amber</td>
+              <td>Charcoal</td>
+              <td>Avoid amber for small text on cream</td>
             </tr>
             <tr>
-              <td>Single-color print</td>
-              <td>Mono black or white</td>
-              <td>Production constraints</td>
+              <td>Text on sage or charcoal</td>
+              <td>Cream</td>
+              <td>Check contrast for any new combination</td>
             </tr>
           </tbody>
         </table>
