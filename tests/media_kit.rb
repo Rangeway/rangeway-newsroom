@@ -38,7 +38,7 @@ check(main.css('#logos img').all? { |n| n['src'].end_with?('.svg') }, 'Raster lo
 archive = File.join(root, 'assets/downloads/rangeway-press-kit.zip')
 entries, status = Open3.capture2('unzip', '-Z1', archive)
 check(status.success?, 'ZIP unreadable')
-expected = %w[basecamp-concept.jpg drivers-lounge-concept.jpg chargevia-concept.jpg zak-winnick.jpg boilerplate.txt company-fact-sheet.txt zak-winnick-bio.txt usage-and-credits.txt rangeway-charcoal-amber.svg rangeway-cream-amber.svg rangeway-charcoal-mono.svg rangeway-cream-mono.svg rangeway-icon-charcoal.svg rangeway-icon-cream.svg]
+expected = %w[basecamp-concept.jpg drivers-lounge-concept.jpg chargevia-concept.jpg zak-winnick.jpg boilerplate.txt company-fact-sheet.txt zak-winnick-bio.txt usage-and-credits.txt rangeway-avatar.svg rangeway-charcoal-amber.svg rangeway-cream-amber.svg rangeway-charcoal-mono.svg rangeway-cream-mono.svg rangeway-icon-charcoal.svg rangeway-icon-cream.svg]
 check(entries.lines.map(&:strip).sort == expected.sort, 'Unexpected ZIP content')
 expected.each do |name|
   data, result = Open3.capture2('unzip', '-p', archive, name)

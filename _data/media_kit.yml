@@ -1,4 +1,4 @@
-revision: "October 2026"
+revision: "November 2026"
 overview: >-
   Rangeway is building a hospitality-first EV charging network. Built on the conviction that EV charging is a hospitality problem, not a utility one, Rangeway treats every stop as an experience worth designing. The stop itself should be worth the time.
 boilerplate: >-
@@ -22,7 +22,7 @@ formats:
   - name: Summit
     line: Where the road meets rest
     description: A hospitality destination designed for overnight stays, with Lookouts, a central clubhouse, and off-grid charging.
-chargevia: ChargeVia is Rangeway's gas station-style fast-charging concept, designed to stand on its own or adapt to existing retail and roadside destinations through a flexible site-partner format.
+chargevia: ChargeVia by Rangeway is the primary product expression. It can stand on its own, and it remains a Rangeway product and host-site format.
 founder_bio: >-
   Zak Winnick is the founder and CEO of Rangeway. He brings 15+ years in luxury hospitality operations and firsthand experience as an EV driver to the company. His work starts with a simple conviction: charging should feel like hospitality.
 logos:
@@ -32,6 +32,9 @@ logos:
   - name: Cream & amber
     file: rangeway-cream-amber.svg
     surface: dark
+  - name: Sage avatar
+    file: rangeway-avatar.svg
+    surface: light
   - name: Charcoal monochrome
     file: rangeway-charcoal-mono.svg
     surface: light
@@ -61,6 +64,6 @@ images:
     width: 2000
     height: 1116
 usage: >-
-  Use the supplied logo artwork without stretching, recoloring, or rearranging it. The stylized R is the first letter of the wordmark; do not add a second R or a separate mark beside it. Use cream artwork on dark backgrounds and charcoal artwork on light backgrounds.
+  Sage #505B4D is the primary brand field. Cream #F5EBDD is the main light canvas. Charcoal #282A29 carries text. Amber #F4A855 is the path mark and selected accents. On cream, use the charcoal wordmark with the amber path mark. On sage or charcoal, use the cream wordmark with the amber path mark. The primary avatar and app icon is the sage-field R. Keep the wordmark at least 140px wide and the standalone R at least 24px. The 16px favicon is the compact exception. Do not stretch, rotate, add shadows, redraw the lettering, recolor the dot independently, crop the R, or place the standalone R next to the wordmark.
 credits: >-
   Images: Rangeway. Identify all destination images as concept renderings when reproduced. They illustrate the intended experience, not operating properties. For additional assets or usage questions, contact media@rangeway.co.
